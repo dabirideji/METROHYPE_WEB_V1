@@ -1,15 +1,15 @@
-/** @type {import('eslint').Linter.Config} */
-const config = {
-    extends: ['eslint:recommended'],
-    parserOptions: {
-      ecmaVersion: 2020, // Use the latest ECMAScript features
-      sourceType: 'module', // Allow for the use of imports
+/** @type {import('eslint').Linter.FlatConfig} */
+const config = [
+    {
+        // Use the recommended ESLint rules
+        rules: {
+            // Add the rules from eslint:recommended directly
+            'no-alert': 'warn',
+            'no-console': 'warn',
+            'no-empty': 'error',
+            // Add any other rules you want here
+        },
     },
-    rules: {
-      // Add your custom rules here
-      'no-console': 'warn', // Warn on console.log statements
-    },
-  };
-  
-  module.exports = config;
-  
+];
+
+module.exports = config;
