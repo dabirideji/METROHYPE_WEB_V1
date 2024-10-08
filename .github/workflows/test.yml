@@ -1,0 +1,46 @@
+name: CI
+
+on:
+  push:
+    branches: [ "develop" ]
+  pull_request:
+    branches: [ "develop" ]
+  workflow_dispatch:
+
+jobs:
+  code_quality:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      # Install HTMLHint (for HTML linting)
+      - name: Install HTMLHint
+        run: npm install -g htmlhint
+
+      # Install Stylelint and its standard config
+      - name: Install Stylelint and Config
+        run: |
+          npm install -g stylelint stylelint-config-standard
+
+      # Install ESLint (for JS linting)
+      - name: Install ESLint
+        run: npm install -g eslint
+
+      # Lint HTML, CSS, and JS files
+      - name: Run HTML, CSS, and JS lint checks
+        run: |
+          htmlhint 'WEB_ROOT/**/*.html'
+          stylelint 'WEB_ROOT/**/*.css'
+          eslint 'WEB_ROOT/**/*.js'
+
+  test:
+    runs-on: ubuntu-latest
+    needs: code_quality
+
+    steps:
+      - uses: actions/checkout@v4
+
+      # Run tests (if any)
+      - name: Run tests
+        run: echo 'Run your test commands here'
