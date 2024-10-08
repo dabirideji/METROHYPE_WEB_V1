@@ -18,9 +18,10 @@ jobs:
       - name: Install HTMLHint
         run: npm install -g htmlhint
 
-      # Install Stylelint (for CSS linting)
-      - name: Install Stylelint
-        run: npm install -g stylelint
+      # Install Stylelint (for CSS linting) along with the standard config
+      - name: Install Stylelint and config
+        run: |
+          npm install -g stylelint stylelint-config-standard
 
       # Install ESLint (for JS linting)
       - name: Install ESLint
