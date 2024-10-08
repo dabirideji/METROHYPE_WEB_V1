@@ -1,0 +1,51 @@
+name: CI
+
+on:
+  push:
+    branches: [ "develop" ]
+  pull_request:
+    branches: [ "develop" ]
+  workflow_dispatch:
+
+jobs:
+  code_quality:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      # Install HTMLHint (for HTML linting)
+      - name: Install HTMLHint
+        run: npm install -g htmlhint
+
+      # Install Stylelint and its standard config
+      - name: Install Stylelint and Config
+        run: |
+          npm install -g stylelint stylelint-config-standard
+
+      # Install ESLint (for JS linting)
+      - name: Install ESLint
+        run: npm install -g eslint
+
+      # Lint HTML files, excluding the PLUGINS folder
+      - name: Run HTML lint checks
+        run: htmlhint 'WEB_ROOT/**/*.html' '!WEB_ROOT/PLUGINS/**/*.html'
+
+      # Lint CSS files, excluding the PLUGINS folder
+      - name: Run CSS lint checks
+        run: stylelint 'WEB_ROOT/**/*.css' '!WEB_ROOT/PLUGINS/**/*.css'
+
+      # Lint JS files, excluding the PLUGINS folder
+      - name: Run JS lint checks
+        run: eslint 'WEB_ROOT/**/*.js' --ignore-pattern 'WEB_ROOT/PLUGINS/**/*.js'
+
+  test:
+    runs-on: ubuntu-latest
+    needs: code_quality
+
+    steps:
+      - uses: actions/checkout@v4
+
+      # Run tests (if any)
+      - name: Run tests
+        run: echo 'Run your test commands here'
