@@ -1,0 +1,60 @@
+name: CI
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events for the "develop" branch
+  push:
+    branches: [ "develop" ]
+  pull_request:
+    branches: [ "develop" ]
+  
+  # Allows manual trigger from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  # Job to check code quality
+  code_quality:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Check out the repository
+      - uses: actions/checkout@v4
+
+      # Set up Node.js environment
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      # Install project dependencies
+      - run: npm install
+
+      # Lint HTML, CSS, and JavaScript
+      - name: Run HTML, CSS, and JS lint checks
+        run: |
+          npm run lint:html
+          npm run lint:css
+          npm run lint:js
+
+      # Format code (optional, based on project setup)
+      - name: Run Prettier for consistent formatting
+        run: npm run format
+
+  # Job to run tests (if applicable)
+  test:
+    runs-on: ubuntu-latest
+    needs: code_quality
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      - run: npm install
+
+      # Run tests
+      - name: Run tests
+        run: npm test
