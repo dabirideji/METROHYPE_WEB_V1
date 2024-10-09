@@ -1,11 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login</title>
+    <style src="../../../PLUGINS/TAILWIND/tailwind.min.css"></style>
+    <script src="../../../PLUGINS/TAILWIND/tailwind.js"></script>
+    <script src="../../../PLUGINS/TAILWIND/tailwind-config.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+    <style>
+        @keyframes fade-up {
+            0% {
+                opacity: 0;
+                transform: translateY(100px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes nav-down {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .nav-down {
+            animation: button-down 1.5s ease forwards;
+        }
+
+        .fade-up {
+            animation: fade-up 1.5s ease-in-out forwards;
+        }
+
+        .picture {
+            animation: fade-up 1.9s ease-in-out forwards;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <div class="flex flex-col h-[100%] overflow-x-hidden">
+        <header>
+            <nav id="big"
+                class="w-screen bg-white z-50 lg:bg-white h-[10vh] shadow-md shadow-neutral-50 fixed flex flex-row items-center justify-between px-5 lg:justify-around border">
+                <div class="flex items-center space-x-2">
+                    <i class="fa fa-earth text-gray-500"></i>
+                    <a href="/" class="text-gray-700 text-[21px] font-semibold font-[inter]">Metrohyp</a>
+                </div>
+
+
+                <div class="gap-x-14 lg:flex items-center hidden text-text-color font-normal">
+                    <a href="/" class=" hover:text-blue-300">Home</a>
+                    <a href="/" class=" hover:text-blue-300">Blog</a>
+                    <a href="/" class=" hover:text-blue-300">API</a>
+                    <a href="/" class=" hover:text-blue-300">Login</a>
+                    <button
+                        class="border-[1px] border-gray-700 rounded-3xl px-3 py-1  hover:border-blue-300  hover:text-blue-300">Freelance</button>
+                    <button
+                        class="border-[1px] border-gray-700 rounded-3xl px-2 py-1  hover:border-blue-300  hover:text-blue-300">Advertise
+                        on Metrohyp</button>
+                </div>
+                <button class=" block lg:hidden border-[0.5px] border-stone-300 px-3 py-1" id="menu"
+                    aria-label="Toggle menu">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </nav>
+
+            <!-- mobile view -->
+            <div class="menu nav-down hidden fixed z-20 w-full shadow-md" id="mobile-nav">
+                <div class="relative bg-white h-80 flex flex-col flex-grow mt-14 gap-y-6 px-4 py-6">
+                    <a href="/" class=" hover:text-blue-300">Home</a>
+                    <a href="/" class=" hover:text-blue-300">Blog</a>
+                    <a href="/" class=" hover:text-blue-300">API</a>
+                    <a href="/" class=" hover:text-blue-300">Login</a>
+                    <button
+                        class="hover:text-blue-300 border-[1px] border-gray-700 rounded-3xl px-3 py-1 w-72">Freelance</button>
+                    <button
+                        class="hover:text-blue-300 border-[1px] border-gray-700 rounded-3xl px-2 py-1 w-72">Advertise on
+                        Metrohyp</button>
+                </div>
+            </div>
+        </header>
+
+        <main
+            class="flex flex-col h-[70vh] mt-28 md:mt-32 px-4 md:flex-row sm:px-9  container mx-[auto] max-w-[1200px]">
+            <div class="flex flex-col sm:container sm:mx-auto items-center  fade-up">
+                <h1 class="text-3xl leading-4 font-inter text-center mb-10">Welcome back!</h1>
+                <p class="w-12 h-[2 px] mx-auto bg-gradient-to-r from-blue-100 to-blue-500"></p>
+
+                <form class="fade-up space-y-4 mt-6">
+                    <input type="text" placeholder="Email/Username/Phone number"
+                        class="w-[100%] h-10 rounded-md border-[1px] p-3  text-stone-600 border-stone-300 outline-blue-700">
+
+                    <input type="password" placeholder="Password"
+                        class="w-[100%] h-10 rounded-md border-[1px] p-3 border border-stone-300 outline-blue-700">
+
+
+                    <div class="flex justify-center">
+                        <button
+                            class=" fade-up w-full md:w-[70%] h-10 rounded-md p-2 bg-stone-200 mt-4 text-center col-span-2"><i
+                                class="fa-solid fa-lock mr-2"></i>Login</button>
+                    </div>
+                    <hr>
+                    <div class="flex flex-col space-y-5 text-[15px] text-blue-500 font-[inter] text-center">
+                        <a href="#">Forgot password? Click here to reset your password</a>
+                        <hr>
+                        <a href="#">Don't have an account? Register Here</a>
+                        <hr>
+                        <a href="#">Or will you like to make money on Metrohyp? Click Here</a>
+                    </div>
+                </form>
+
+            </div>
+        </main>
+
+        <footer class="bg-slate-800 text-white w-screen h-[20vh] mt-[8%] md:mt-[3%] flex items-center justify-center">
+            <p class="text-[16px]">© 2020 Metrohyp. All rights reserved.</p>
+        </footer>
+    </div>
+
+
+    <!-- JavaScript for Mobile Menu -->
+    <script>
+        const menuBtn = document.getElementById('menu');
+        const mobileMenu = document.getElementById('mobile-nav');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            big.classList.toggle('shadow-md');
+
+        });
+    </script>
 </body>
+
 </html>
