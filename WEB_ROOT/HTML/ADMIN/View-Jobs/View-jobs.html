@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Responsive Dashboard</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     /* Smooth transition for the sidebar */
@@ -17,21 +18,32 @@
   <nav class="bg-white shadow-md p-4 fixed w-full top-0 z-30 flex items-center justify-between">
     <!-- Logo Area -->
     <div class="flex items-center space-x-4">
-      <img src="logo.png" alt="Logo" class="h-8 w-8"> <!-- Placeholder for logo -->
-      <span class="text-2xl font-bold">Dashboard</span>
+      <span class="text-2xl font-bold">Metrohyp</span>
     </div>
 
-    <!-- Hamburger Icon for Mobile -->
-    <button id="sidebarToggle" class="lg:hidden text-gray-600 focus:outline-none">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-      </svg>
-    </button>
+    <!-- Mobile Menu and User Info (visible on mobile) -->
+    <div class="flex items-center lg:hidden space-x-4">
+      <!-- Hamburger Icon for Mobile -->
+      <button id="sidebarToggle" class="text-gray-600 focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </button>
+      
+      <!-- User Profile Image and Name (visible on mobile) -->
+      <div class="flex items-center space-x-2">
+        <img src="../../../ASSETS/user.png" alt="User" class="h-8 w-8 rounded-full">
+        <span class="text-gray-700">John Doe</span> <!-- Replace 'John Doe' with dynamic username -->
+      </div>
+    </div>
 
-    <!-- Navbar links (visible on larger screens) -->
-    <div class="space-x-4 hidden lg:block">
-      <a href="#" class="text-gray-600 hover:text-blue-500">Profile</a>
-      <a href="#" class="text-gray-600 hover:text-blue-500">Settings</a>
+    <!-- Navbar links and User Info (visible on larger screens) -->
+    <div class="hidden lg:flex items-center space-x-4">
+      <!-- User Profile Image and Name (visible on desktop) -->
+      <div class="flex items-center space-x-2">
+        <img src="../../../ASSETS/user.png" alt="User" class="h-8 w-8 rounded-full">
+        <span class="text-gray-700">John Doe</span> <!-- Replace 'John Doe' with dynamic username -->
+      </div>
     </div>
   </nav>
 
@@ -43,10 +55,24 @@
     <!-- Fixed Sidebar Behind the Header -->
     <aside id="sidebar" class="bg-white w-full lg:w-1/5 h-screen fixed left-0 top-0 z-10 shadow-md sidebar lg:translate-x-0 -translate-x-full lg:block">
       <ul class="space-y-4 p-4 mt-20"> <!-- Adjusted for header height -->
-        <li><a href="#" class="block text-gray-700 hover:bg-blue-500 hover:text-white p-2 rounded">Dashboard</a></li>
-        <li><a href="#" class="block text-gray-700 hover:bg-blue-500 hover:text-white p-2 rounded">Analytics</a></li>
-        <li><a href="#" class="block text-gray-700 hover:bg-blue-500 hover:text-white p-2 rounded">Reports</a></li>
-        <li><a href="#" class="block text-gray-700 hover:bg-blue-500 hover:text-white p-2 rounded">Settings</a></li>
+       
+        <li><a href="#" class="block text-gray-700 capitalize hover:bg-blue-500 hover:text-white p-2 rounded"><i class="fa-solid fa-light fa-chess-board"></i>   Dashboard</a></li>
+        
+        <li><a href="#" class="block text-gray-700 capitalize hover:bg-blue-500 hover:text-white p-2 rounded"><i class="fa-solid fa-check"></i> completed job</a></li>
+      
+        <li><a href="#" class="block text-gray-700 capitalize hover:bg-blue-500 hover:text-white p-2 rounded"><i class="fa-solid fa-signal"></i> my transactions</a></li>
+      
+        <li><a href="#" class="block text-gray-700 capitalize hover:bg-blue-500 hover:text-white p-2 rounded"> <i class="fa-solid fa-bag-shopping"> </i> order</a></li>
+        
+        <li><a href="#" class="block text-gray-700 capitalize hover:bg-blue-500 hover:text-white p-2 rounded"> <i class="fa-sharp fa-solid fa-briefcase"></i> orders</a></li>
+
+        <li><a href="#" class="block text-gray-700 capitalize hover:bg-blue-500 hover:text-white p-2 rounded"> <i class="fa-sharp-duotone fa-solid fa-wallet"></i> load wallet</a></li>
+        
+        <li><a href="#" class="block text-gray-700 capitalize hover:bg-blue-500 hover:text-white p-2 rounded"> <i class="fa-regular fa-speaker"></i> blog</a></li>
+       
+        <li><a href="#" class="block text-gray-700 capitalize hover:bg-blue-500 hover:text-white p-2 rounded"> <i class="fa-solid fa-user"></i>  my account</a></li>
+        
+        <li><a href="#" class="block text-gray-700 capitalize hover:bg-blue-500 hover:text-white p-2 rounded"> <i class="fa-solid fa-square"></i>  my referral</a></li>
       </ul>
     </aside>
 
