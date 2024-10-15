@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Dashboard</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    
+    .sidebar {
+      transition: transform 0.3s ease;
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+  
+  <nav class="bg-white shadow-md p-4 fixed w-full top-0 z-30 flex items-center justify-between">
+   
+    <div class="flex items-center space-x-4">
+      <span class="text-2xl font-bold">Metrohyp</span>
+    </div>
+
+  
+    <div class="flex items-center lg:hidden space-x-4">
+   
+      <button id="sidebarToggle" class="text-gray-600 focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </button>
+      
+    
+      <div class="flex items-center space-x-2">
+        <img src="../../../ASSETS/user.png" alt="User" class="h-8 w-8 rounded-full">
+        <span class="text-gray-700">John Doe</span> 
+      </div>
+    </div>
+
+    
+    <div class="hidden lg:flex items-center space-x-4">
+    
+      <div class="flex items-center space-x-2">
+        <img src="../../../ASSETS/user.png" alt="User" class="h-8 w-8 rounded-full">
+        <span class="text-gray-700">John Doe</span>
+      </div>
+    </div>
+  </nav>
+
+  
+  <div id="overlay" class="fixed inset-0 hidden z-20"></div>
+
+ 
+  <div class="flex pt-16">
+  
+    <aside id="sidebar" class="bg-white w-full lg:w-1/5 h-screen overflow-y-auto fixed left-0 top-0 z-10 shadow-md sidebar lg:translate-x-0 -translate-x-full lg:block">
+      <ul class="space-y-4 p-4 mt-20"> 
+       
+        <li><a href="#" class="block text-gray-700 capitalize hover:bg-blue-500 hover:text-white p-2 rounded"><i class="fa-solid fa-light fa-chess-board"></i>   Dashboard</a></li>
+        
+        <li><a href="#" class="block text-gray-700 capitalize hover:bg-blue-500 hover:text-white p-2 rounded"><i class="fa-solid fa-check"></i> completed job</a></li>
+      
+        <li><a href="#" class="block text-gray-700 capitalize hover:bg-blue-500 hover:text-white p-2 rounded"><i class="fa-solid fa-signal"></i> my transactions</a></li>
+      
+        <li><a href="#" class="block text-gray-700 capitalize hover:bg-blue-500 hover:text-white p-2 rounded"> <i class="fa-sharp fa-solid fa-briefcase"></i> orders</a></li>
+
+        <li><a href="#" class="block text-gray-700 capitalize hover:bg-blue-500 hover:text-white p-2 rounded"> <i class="fa-sharp-duotone fa-solid fa-wallet"></i> load wallet</a></li>
+        
+        <li><a href="#" class="block text-gray-700 capitalize hover:bg-blue-500 hover:text-white p-2 rounded"> <i class="fa-regular fa-speaker"></i> blog</a></li>
+       
+        <li><a href="#" class="block text-gray-700 capitalize hover:bg-blue-500 hover:text-white p-2 rounded"> <i class="fa-solid fa-user"></i>  my account</a></li>
+        
+        <li><a href="#" class="block text-gray-700 capitalize hover:bg-blue-500 hover:text-white p-2 rounded"> <i class="fa-solid fa-square"></i>  my referral</a></li>
+       
+        <li><a href="#" class="block text-gray-700 capitalize hover:bg-blue-500 hover:text-white p-2 rounded"><i class="fa-sharp fa-solid fa-chess-knight-piece"></i> gaming</a></li>
+      </ul>
+    </aside>
+
+   
+    <main class="flex-1 lg:ml-[20%] p-6 bg-gray-50 min-h-screen">
+      <h1 class="text-3xl font-semibold mb-4">Welcome to the Dashboard</h1>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      
+        <div class="bg-white p-4 rounded-lg shadow-md">
+          <h2 class="text-lg font-bold mb-2">Card 1</h2>
+          <p>Content for the first card goes here.</p>
+        </div>
+
+        <div class="bg-white p-4 rounded-lg shadow-md">
+          <h2 class="text-lg font-bold mb-2">Card 2</h2>
+          <p>Content for the second card goes here.</p>
+        </div>
+      
+        <div class="bg-white p-4 rounded-lg shadow-md">
+          <h2 class="text-lg font-bold mb-2">Card 3</h2>
+          <p>Content for the third card goes here.</p>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('overlay');
+    const sidebarToggle = document.getElementById('sidebarToggle');
+
+   
+    sidebarToggle.addEventListener('click', () => {
+      if (sidebar.classList.contains('-translate-x-full')) {
+        sidebar.classList.remove('-translate-x-full');
+        overlay.classList.remove('hidden');
+      } else {
+        sidebar.classList.add('-translate-x-full');
+        overlay.classList.add('hidden');
+      }
+    });
+
+    
+    overlay.addEventListener('click', () => {
+      sidebar.classList.add('-translate-x-full');
+      overlay.classList.add('hidden');
+    });
+  </script>
+</body>
+</html>
