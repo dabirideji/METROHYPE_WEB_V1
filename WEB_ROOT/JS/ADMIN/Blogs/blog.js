@@ -1,6 +1,4 @@
 
-
-
 function menuClick() {
   let menu = document.getElementById('menu');
   let sidebar = document.getElementById('sidebar');
