@@ -1,16 +1,7 @@
 {
     "extends": "stylelint-config-standard",
     "rules": {
-      "no-empty-source": null,
-      "selector-class-pattern": [
-      "^[a-z0-9\\-]+$", 
-      {
-        "resolveNestedSelectors": true,
-        "ignore": ["ck-editor__editable", "ck-*"]
-      }
-    ]
-
+      "no-empty-source": null
     }
-}
-
+  }
   
