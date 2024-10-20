@@ -1,0 +1,15 @@
+{
+  "mode": "development",
+  "development": {
+    "API_BASE_URL": "https://metrohype-api-v1.onrender.com",
+    "OTHER_CONFIG": "defaultDevValue"
+  },
+  "production": {
+    "API_BASE_URL": "https://metrohype-api-v1.onrender.com/",
+    "OTHER_CONFIG": "defaultProdValue"
+  },
+  "test": {
+    "API_BASE_URL": "https://metrohype-api-v1.onrender.com/",
+    "OTHER_CONFIG": "defaultTestValue"
+  }
+}
