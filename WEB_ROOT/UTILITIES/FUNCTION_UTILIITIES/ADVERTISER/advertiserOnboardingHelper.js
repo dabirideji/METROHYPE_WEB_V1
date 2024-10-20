@@ -1,12 +1,16 @@
-import { ConsumeApi } from "../../API_UTILITIIES/apiConsumeUtiliityHelper.js";
+import { AdvertiserLogin } from "../../API_UTILITIIES/apiFunctions.js";
 
-async function createAdvertiser() {
+
+export async function LoginAdvertiser(email, password) {
     try {
-        const response = await ConsumeApi("/users", "GET",);
-        console.log(response);
-    } catch (e) {
-        console.error("Failed to create advertiser:", e);
+        const result = await AdvertiserLogin(email, password);
+        console.log(result);
+    } catch (error) {
+        console.error("Error creating advertiser:", error);
     }
 }
 
-createAdvertiser();
+
+function goo(){
+    console.log("gooing");
+}

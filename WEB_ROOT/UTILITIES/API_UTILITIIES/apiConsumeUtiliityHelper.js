@@ -1,10 +1,11 @@
 import { getConfig } from "./../BASE_UTILITIES/configurationAccessor.js";
+import { API_METHOD } from "./apiDetailsProvider.js";
 
 
-export async function ConsumeApi(relativeEndpoint, method = 'GET', payload = null, routeParams = {}) {
+export async function ConsumeApi(relativeEndpoint, method = API_METHOD.GET, payload = null, routeParams = {}) {
   console.clear();
   const config = await getConfig();
-  // console.log("Loaded Config:", config);
+//   console.log("Loaded Config:", config);
   const API_BASE_URL = config.API_BASE_URL;
   if (!API_BASE_URL || !/^https?:\/\//.test(API_BASE_URL)) {
       throw new Error("Invalid API_BASE_URL: " + API_BASE_URL);
@@ -38,11 +39,28 @@ export async function ConsumeApi(relativeEndpoint, method = 'GET', payload = nul
       const mainResponseFromApi = await response.json();
       activityData.responseFromApi = mainResponseFromApi;
       activityData.repsonseMetadata = response;
-      if (Array.isArray(mainResponseFromApi)) {
-          return mainResponseFromApi;
-      } else {
-          throw new Error("Unexpected response format: " + JSON.stringify(mainResponseFromApi));
-      }
+
+      if (mainResponseFromApi && mainResponseFromApi.Status === true) {
+        // Check if the Data field exists and return it
+        if (mainResponseFromApi.Data) {
+            return mainResponseFromApi.Data;
+        } else {
+            throw new Error("Unexpected response format: No 'Data' field found in the response");
+        }
+    } else {
+        throw new Error(`API returned an error: ${mainResponseFromApi.ResponseMessage}`);
+    }
+
+
+    //   if (Array.isArray(mainResponseFromApi)) {
+    //     //  TODO
+    //     // if(method.toUpperCase().startsWith=="P"){
+    //         // showNotification(mainResponseFromApi.ResponseMessage);
+    //     // }
+    //       return mainResponseFromApi;
+    //   } else {
+    //       throw new Error("Unexpected response format: " + JSON.stringify(mainResponseFromApi));
+    //   }
   } catch (error) {
       console.error('Error consuming API:', error);
       throw error;
