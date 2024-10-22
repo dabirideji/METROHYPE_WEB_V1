@@ -1,11 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verify OTP</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    .error {
+      color: red;
+      font-size: 0.875rem;
+    }
+  </style>
 </head>
-<body>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+  <div class="bg-white p-6 rounded-lg shadow-md w-full max-w-sm">
+    <h2 class="text-2xl font-semibold text-center mb-4">Verify OTP</h2>
+    <p class="text-gray-600 text-sm text-center mb-6">Enter the 6-digit OTP sent to your email/phone</p>
+
+    <form id="otpForm">
+      <div class="mb-4 relative">
+        <label for="otp" class="block text-gray-700 text-sm font-bold mb-2">OTP</label>
+        
+        <!-- OTP Input Field -->
+        <input type="password" id="otp" name="otp" maxlength="6" required 
+               class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring focus:ring-blue-500">
+        
+        <!-- Error Message -->
+        <p id="error-msg" class="error hidden mt-1">OTP must be 6 digits.</p>
+
+        <!-- Toggle Visibility Button with FontAwesome Icons -->
+        <button type="button" id="toggleVisibility" 
+                class="absolute inset-y-0 right-2 text-gray-600 hover:text-gray-800 focus:outline-none">
+          <i id="toggleIcon" class="fas fa-eye"></i>
+        </button> 
+      </div>
+      
+     
+      <button type="submit" class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:ring focus:ring-blue-300">
+        Verify OTP
+      </button>
+    </form> uy
+
+    <p class="text-gray-500 text-sm text-center mt-4">Didn’t receive the OTP? 
+      <a href="#" class="text-blue-500 hover:underline">Resend OTP</a>
+    </p>
+  </div>
+
+  <script>
+    const otpForm = document.getElementById('otpForm');
+    const otpInput = document.getElementById('otp');
+    const errorMsg = document.getElementById('error-msg');
+    const toggleVisibility = document.getElementById('toggleVisibility');
+    const toggleIcon = document.getElementById('toggleIcon');
     
+    let isOtpVisible = false; 
+   
+    otpForm.addEventListener('submit', function(e) {
+      e.preventDefault(); 
+      const otpValue = otpInput.value.trim();
+
+      
+      if (otpValue.length !== 6 || isNaN(otpValue)) {
+        errorMsg.classList.remove('hidden'); 
+      } else {
+        errorMsg.classList.add('hidden');
+        
+       
+        alert('OTP verified successfully!');
+       
+      }
+    });
+
+    
+    toggleVisibility.addEventListener('click', function() {
+      isOtpVisible = !isOOtpVisible ? 'text' : 'password'; 
+      toggleIcon.classLitpVisible;
+      otpInput.type = isst.toggle('fa-eye'); 
+      toggleIcon.classList.toggle('fa-eye-slash');
+    });
+  </script>
 </body>
 </html>
