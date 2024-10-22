@@ -1,7 +1,7 @@
 body {
   font-family: Helvetica, Arial,sans-serif;
 }
-
+/* 
 @media (max-width: 1023px) {
   @keyframes fade-up {
     0% {
@@ -34,7 +34,7 @@ body {
     border-radius: 2px;
     background-color: #f1f1f1;
   }
-}
+} */
 
 .content-container {
   background: radial-gradient(#4fb459ba, #0d68a5fa),
@@ -68,9 +68,9 @@ body {
   }
 }
 
-.ck-editor__editable {
+/* .ck-editor__editable {
   min-height: 450px;
-}
+} */
 
 .fade-up {
   animation: fade-up 1.5s ease-in-out forwards;
