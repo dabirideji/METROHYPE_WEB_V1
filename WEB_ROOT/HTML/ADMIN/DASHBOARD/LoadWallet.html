@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallet</title>
+    <style src="../../../PLUGINS/TAILWIND/tailwind.min.css"></style>
+    <script src="../../../PLUGINS/TAILWIND/tailwind.js"></script>
+    <script src="../../../PLUGINS/TAILWIND/tailwind-config.js"></script>
+    <script src="../../../JS/ADMIN/admin.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="lg:grid lg:grid-cols-[250px_1] lg:h-screen ">
+    <aside class=" w-[250px] h-full fixed left-0 top-0 lg:flex flex-col gap-y-5 hidden md:flex">
+        <div class="flex gap-x-3 w-52 h-16 items-center justify-center mx-3 my-3">
+            <img src="../../../ASSETS/metro.png" class="w-10" alt="">
+            <h1 class="text-4xl">Metrohyp</h1>
+        </div>
+        <div class="flex flex-col lg:gap-y-5 md:gap-y-3 px-1 ">
+            <a href="" class="hover:bg-blue-700 hover:text-white h-10 flex flex-row items-center px-3 rounded-sm gap-x-2 cursor-pointer active:bg-blue-500 cb">
+                <i class="fa-solid fa-chart-bar"></i>
+                <p >Dashboard</p>
+            </a>
+            
+            <a href="" class="hover:bg-blue-700 hover:text-white h-10 flex items-center px-3 rounded-sm gap-x-2 cursor-pointer active:bg-blue-500 cb">
+                <i class="fa-solid fa-check"></i>
+                <p>Completed jobs</p>
+            </a>
+            <a href="" class="hover:bg-blue-700 hover:text-white h-10 flex items-center px-3 rounded-sm gap-x-2 cursor-pointer active:bg-blue-500 cb">
+                <i class="fas fa-credit-card"></i>
+                <p>My transactions</p>
+            </a>
+            <a href="" class="hover:bg-blue-700 hover:text-white h-10 flex items-center px-3 rounded-sm gap-x-2 cursor-pointer active:bg-blue-500 cb">
+                <i class="fas fa-shopping-cart "></i>
+                <p>Orders</p>
+            </a>
+            <a href="" class="hover:bg-blue-700 hover:text-white h-10 flex items-center px-3 rounded-sm gap-x-2 cursor-pointer active:bg-blue-500 cb">
+                <i class="fas fa-wallet"></i>
+                <p>Load Wallet</p>
+            </a>
+            <a href="" class="hover:bg-blue-700  hover:text-white h-10 flex items-center px-3 rounded-sm gap-x-2 cursor-pointer active:bg-blue-500 cb">
+                <i class="fas fa-th-large"></i>
+                <p>Blog</p>
+            </a>
+            <a href="" class="hover:bg-blue-700 hover:text-white h-10 flex items-center px-3 rounded-sm gap-x-2 cursor-pointer active:bg-blue-500 cb">
+                <i class="fa-solid fa-user"> </i>
+                <p>My Account</p>
+            </a>
+            <a href="" class="hover:bg-blue-700 hover:text-white h-10 flex items-center px-3 rounded-sm gap-x-2 cursor-pointer active:bg-blue-500 cb">
+                <i class="fas fas fas fa-user-friends"></i>
+                <p>My Referrals</p>
+            </a>
+            <a href="" class="hover:bg-blue-700 hover:text-white h-10 flex items-center px-3 rounded-sm gap-x-2 cursor-pointer active:bg-blue-500 cb">
+                <i class="fas fa-gamepad"></i>
+                <p>Gaming</p>
+            </a>
+            <a href="" class="hover:bg-blue-700 hover:text-white h-10 flex items-center px-3 rounded-sm gap-x-2 cursor-pointer active:bg-blue-900 cb">
+                <i class="fas fa-sign-out-alt"></i>
+                <p>Log Out</p>
+            </a>
+        </div>
+    </aside>
+ 
+
+    <!-- mobile sidebar -->
+    <aside id="sidebar" class="bg-white overflow-y-auto w-[65px] h-full fixed top-0 left-0 flex-col gap-y-5 hidden md:hidden lg:hidden">
+        <div class="mt-20 flex flex-col gap-y-10 ">
+            <a href="" class="flex items-center flex-col">
+                <i class="fa-solid fa-chart-bar text-black text-2xl"></i>
+                <p class="text-xs">Dashboard</p>
+            </a>
+            <a href="" class="flex items-center flex-col">
+                <i class="fa-solid fa-check text-2xl"></i>
+                <p class="text-xs text-center">Completed jobs</p>
+            </a>
+            <a href="" class="flex items-center flex-col">
+                <i class="fas fa-credit-card text-2xl"></i>
+                <p class="text-xs text-center">My transactions</p>
+            </a>
+            <a href="" class="flex items-center flex-col">
+                <i class="fas fa-shopping-cart text-2xl"></i>
+                <p class="text-xs">Orders</p>
+            </a>
+            <a href="" class="flex items-center flex-col">
+                <i class="fas fa-wallet text-2xl"></i>
+                <p class="text-xs">Load Wallet</p>
+            </a>
+            <a href="" class="flex items-center flex-col">
+                <i class="fas fa-th-large text-2xl"></i>
+                <p class="text-xs">Blog</p>
+            </a>
+            <a href="" class="flex items-center flex-col">
+                <i class="fa-solid fa-user text-2xl"> </i>
+                <p class="text-xs">My Account</p>
+            </a>
+            <a href="" class="flex items-center flex-col">
+                <i class="fas fas fas fa-user-friends text-2xl"></i>
+                <p class="text-xs text-center">My Referrals</p>
+            </a>
+            <a href="" class="flex items-center flex-col">
+                <i class="fas fa-gamepad text-2xl"></i>
+                <p class="text-xs">Gaming</p>
+            </a>
+            <a href="" class="flex items-center flex-col">
+                <i class="fas fa-sign-out-alt text-2xl"></i>
+                <p class="text-xs">Log Out</p>
+            </a>
+        </div>
+    </aside>
+    <main id="main" class="bg-zinc-200 w-screen lg:w-[83.5%] h-screen lg:ml-[250px] md:ml-[250px] overflow-x-hidden">
+        <nav class="lg:w-[83vw] w-screen md:fixed  bg-white h-14 flex items-center justify-end gap-x-3 fixed md:top-0 top-0">
+            <div class="rounded-full bg-blue-900 w-8 h-8 flex items-center justify-center">
+                <i class="fa-solid fa-user text-white" ></i>
+            </div>
+            <h1 class="font-medium mx-4 md:mx-0">Hi, Uthman Dabiri</h1>
+            <i id="menu" class="fa-solid fa-bars text-2xl mr-5 "></i>
+        </nav>
+        <section class="w-screen lg:w-full bg-zinc-200 flex flex-col gap-y-16 px-3 lg:pl-10 py-10 lg:pr-3 lg:mt-16 md:mt-14 mt-14">
+            <div class="flex gap-2">
+                <i class="fas fa-wallet text-3xl text-gray-700"></i>
+                <h1 class="text-3xl text-gray-700">Load Wallet</h1>
+            </div>
+            <div class="bg-blue-600 w-full lg:w-1/2 h-28 rounded-lg flex justify-center pl-6 flex-col">
+                <h1 class="text-white font-medium">Wallet Balance</h1>
+                <div class="flex flex-row gap-x-3">
+                    <img src="../../../ASSETS/nigeria-naira-currency-symbol (2).png" class="w-8" alt="">
+                    <p class="text-4xl font-light text-white">1000</p>
+                </div>
+            </div>
+            <div class="lg:w-full bg-white mb-12 lg:px-8 px-4 py-9 gap-y-2 flex flex-col">
+                <h1 class="font-medium"><i class="fas far fa-wallet"></i> Use Coupon Code</h1>
+                <form action="" class="flex flex-col gap-y-6 items-center mb-9 ">
+                    <input type="text" placeholder="Enter Amount" class="w-full lg:w-1/2 h-9 border border-stone-500 focus:outline-stone-500 rounded-md text-stone-800 pl-2">
+                    <select name="" id="" class="w-full lg:w-1/2 h-9 border border-stone-500 focus:outline-stone-500 rounded-md text-stone-800 pl-2">
+                        <option value="select Payment Method" disabled selected>Select Payment Method</option>
+                        <option value="select Payment Method">Option 1</option>
+                        <option value="select Payment Method">Option 2</option>
+                        <option value="select Payment Method">Option 3</option>
+                    </select>
+                </form>
+                <hr>
+                <div class="flex items-center flex-col gap-y-9 mt-9">
+                    <button class="bg-blue-600 w-1/2 lg:w-32 h-10 rounded-md text-white hover:bg-blue-700"><i class="fas far fa-credit-card"></i> Pay Now</button>
+                    <img src="../../../ASSETS/paystack.png" class="w-80" alt="">
+                </div>
+           </div>
+            <div class="lg:w-full bg-white mb-20 lg:px-8 px-4 py-9 gap-y-2 flex flex-col">
+                <h1 class="font-medium"><i class="fas far fa-credit-card"></i> Use Coupon Code</h1>
+                <form action="" class="flex items-center flex-col">
+                    <input type="text" placeholder="Enter Coupon Code" class="w-full lg:w-1/2 h-9 border border-stone-500 focus:outline-stone-500 rounded-md text-stone-800 pl-2">
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
