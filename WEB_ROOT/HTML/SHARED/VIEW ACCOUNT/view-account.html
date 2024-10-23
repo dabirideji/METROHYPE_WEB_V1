@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>view jobs</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../../../JS/VIEW-JOBS/view-jobs.js"></script>
+  <style>
+    .sidebar {
+      transition: transform 0.3s ease;
+    }
+    .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    scrollbar-width: none;
+  }
+  </style>
+</head>
+<body class="bg-gray-100">
+  
+  <nav class="bg-white shadow-md p-4 fixed w-full top-0 z-30 flex items-center justify-between">
+   
+    <div class="flex items-center space-x-4">
+      <span class="text-2xl font-bold">Metrohyp</span>
+    </div>
+
+  
+    <div class="flex items-center lg:hidden space-x-4">
+   
+      <button id="sidebarToggle" class="text-gray-600 focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </button>
+      
+    
+      <div class="flex items-center space-x-2">
+        <img src="../../../ASSETS/user.png" alt="User" class="h-8 w-8 rounded-full">
+        <span class="text-gray-700">John Doe</span> 
+      </div>
+    </div>
+
+    
+    <div class="hidden lg:flex items-center space-x-4">
+    
+      <div class="flex items-center space-x-2">
+        <img src="../../../ASSETS/user.png" alt="User" class="h-8 w-8 rounded-full">
+        <span class="text-gray-700">John Doe</span>
+      </div>
+    </div>
+  </nav>
+
+  
+  <div id="overlay" class="fixed inset-0 hidden z-20"></div>
+
+ 
+  <div class="flex pt-16">
+  
+    <aside id="sidebar" class="bg-white w-full lg:w-1/5 h-screen  overflow-y-scroll scrollbar-hide fixed left-0 top-0 z-10 shadow-md sidebar lg:translate-x-0 -translate-x-full lg:block">
+      <ul class="space-y-4 p-4 mt-20"> 
+       
+        <li><a href="#" class="block text-gray-700 capitalize hover:bg-[#337ab7] hover:text-white p-2 rounded"><i class="fa-solid fa-light fa-chess-board"></i>   Dashboard</a></li>
+        
+        <li><a href="#" class="block text-gray-700 capitalize hover:bg-[#337ab7] hover:text-white p-2 rounded"><i class="fa-solid fa-check"></i> completed job</a></li>
+      
+        <li><a href="#" class="block text-gray-700 capitalize hover:bg-[#337ab7] hover:text-white p-2 rounded"><i class="fa-solid fa-signal"></i> my transactions</a></li>
+      
+        <li><a href="#" class="block text-gray-700 capitalize hover:bg-[#337ab7] hover:text-white p-2 rounded"> <i class="fa-sharp fa-solid fa-briefcase"></i> orders</a></li>
+
+        <li><a href="#" class="block text-gray-700 capitalize hover:bg-[#337ab7] hover:text-white p-2 rounded"> <i class="fa-sharp-duotone fa-solid fa-wallet"></i> load wallet</a></li>
+        
+        <li><a href="#" class="block text-gray-700 capitalize hover:bg-[#337ab7] hover:text-white p-2 rounded"><i class="fa-solid fa-speaker"></i> blog</a></li>
+       
+        <li><a href="#" class="block text-gray-700 capitalize hover:bg-[#337ab7] hover:text-white p-2 rounded"> <i class="fa-solid fa-user"></i>  my account</a></li>
+        
+        <li><a href="#" class="block text-gray-700 capitalize hover:bg-[#337ab7] hover:text-white p-2 rounded"> <i class="fa-solid fa-square"></i>  my referral</a></li>
+       
+        <li><a href="#" class="block text-gray-700 capitalize hover:bg-[#337ab7] hover:text-white p-2 rounded"><i class="fa-sharp fa-solid fa-chess-knight"></i> gaming</a></li>
+       
+        <li><a href="#" class="block text-gray-700 capitalize hover:bg-[#337ab7] hover:text-white p-2 rounded"><i class="fa-solid fa-arrow-right-from-bracket"></i> log out </a></li>
+      </ul>
+    </aside>
+
+   
+    <main class="flex-1 lg:ml-[20%] p-6 bg-gray-50 min-h-screen">
+      <h1 class="text-3xl font-semibold mb-4 capitalize">  <i class="fa-sharp fa-solid fa-briefcase"></i> view job 
+</h1>
+     <p class="">adsense code</p>
+      <div class=" mt-[30px] bg-white p-[20px]">
+      
+        <div class="">
+          <button class="p-[9px] bg-[#337ab7] text-white rounded"> <i class="fa-sharp fa-solid fa-briefcase"></i> job details </button>
+          <div class="flex flex-col sm:flex-row justify-between mt-2">
+            <div class="border border-black w-full sm:w-[70%] mb-2 sm:mb-0">
+                <h3 class="font-bold text-[16px] text-black capitalize p-[10px]">description:</h3>
+                <p class="capitalize font-bold  p-[10px]">zazoo zehhhhh</p>
+
+                <div class="border-b border-black m-[20px]">
+                  <p class="text-3xl lowercase text-[#00ff00] bg-[#ffff00] w-[70px] h-[30px] font-bold p-0 ">yowa </p>
+                </div>
+                <p class="capitalize p-[20px]"> <i class="fa-solid fa-arrow-up-right-from-square"></i>  link:</p>
+                <p class="p-[20px]"> https://dabiridejialx.great-site.net</p>
+            </div>
+        
+            <div class=" w-full sm:w-[250px] sm:ml-4 p-2">
+              <div class="bg-[#3072AC] rounded-md">
+                <p class="p-[10px] text-white">
+                  <span><i class="fa-solid fa-exclamation bg-white text-blue-500 p-[10px] rounded-full"></i> </span>
+                  info
+                </p>
+                <p class="capitalize font-bold ml-[20px] text-white">fee :  N5</p>
+              </div>
+            </div>
+        </div>
+        </div>
+        <p class="">adsense code</p>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

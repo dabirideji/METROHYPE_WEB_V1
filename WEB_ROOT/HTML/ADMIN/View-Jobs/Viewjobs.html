@@ -6,8 +6,8 @@
   <title>view jobs</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../../../JS/VIEW-JOBS/view-jobs.js"></script>
   <style>
-    
     .sidebar {
       transition: transform 0.3s ease;
     }
@@ -120,28 +120,5 @@
       </div>
     </main>
   </div>
-
-  <script>
-    const sidebar = document.getElementById('sidebar');
-    const overlay = document.getElementById('overlay');
-    const sidebarToggle = document.getElementById('sidebarToggle');
-
-   
-    sidebarToggle.addEventListener('click', () => {
-      if (sidebar.classList.contains('-translate-x-full')) {
-        sidebar.classList.remove('-translate-x-full');
-        overlay.classList.remove('hidden');
-      } else {
-        sidebar.classList.add('-translate-x-full');
-        overlay.classList.add('hidden');
-      }
-    });
-
-    
-    overlay.addEventListener('click', () => {
-      sidebar.classList.add('-translate-x-full');
-      overlay.classList.add('hidden');
-    });
-  </script>
 </body>
 </html>
