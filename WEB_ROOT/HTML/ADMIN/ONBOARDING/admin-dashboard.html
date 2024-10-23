@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style src="../../../PLUGINS/TAILWIND/tailwind.min.css"></style>
+    <script src="../../../PLUGINS/TAILWIND/tailwind.js"></script>
+    <script src="../../../PLUGINS/TAILWIND/tailwind-config.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+
+
+    <style>
+        body {
+            font-family: "Helvetica Neue", "Roboto", "Arial", "Droid", "Sans", "sans-serif";
+
+        }
+
+        @media screen and (max-width: 1023px) {
+
+            @keyframes fade-up {
+                0% {
+                    opacity: 0;
+                    transform: translateY(100px);
+                }
+
+                100% {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+
+
+            .side-bar {
+                animation: nav-down 1s ease-in-out forwards;
+
+            }
+
+            .side-bar {
+                overflow-y: auto;
+            }
+
+            .side-bar::-webkit-scrollbar {
+                width: 5px;
+                scroll-behavior: smooth;
+            }
+
+            .side-bar::-webkit-scrollbar-thumb {
+                border-radius: 2px;
+                background-color: #5156be;
+            }
+
+            .side-bar::-webkit-scrollbar-track {
+                border-radius: 2px;
+                background-color: #f1f1f1;
+            }
+
+        }
+
+        .content_container {
+
+            background: radial-gradient(#4fb459ba, #0d68a5fa), url(../../../ASSETS/big_circles.svg)
+        }
+
+        .btn {
+            background-image: linear-gradient(#337ab7, #265a88);
+        }
+
+
+        .side-bar {
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            /* Internet Explorer 10+ */
+        }
+
+        .side-bar::-webkit-scrollbar {
+            display: none;
+            /* Chrome, Safari, Opera */
+        }
+
+        @keyframes nav-down {
+            0% {
+                opacity: 0;
+                transform: translateX(-10px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .fade-up {
+            animation: fade-up 1.5s ease-in-out forwards;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="">
+        <!-- Side bar -->
+        <aside class="hidden side-bar lg:block w-[40vw] md:w-[35vw] lg:w-[20vw] h-[100vh] fixed bg-[#ffffff] px-4 py-4 z-50 "
+            id="sidebar">
+            <a href="admin-dashboard.html" class="flex items-center lg:ml-4 space-x-1">
+                <img class="w-10 h-10 md:w-12 md:h-12 lg:w-8 lg:h-8 mx-auto lg:mx-0"
+                    src="../../../ASSETS/metrohyp-logo.png" alt="logo">
+                <h1 class="hidden lg:block leading-2 text-3xl font-[inter] text-[#242424]">Metrohyp</h1>
+            </a>
+
+            <div class="mt-10 space-y-3 md:space-y-14 lg:pb-20 h-[100%] overflow-y-auto">
+                <div class="space-y-3">
+                    <a href="#"
+                        class="w-full px-4 py-2 hover:bg-[#3A57E8] text-[15px] lg:text-[16px] font-[inter] font-[500] hover:text-white text-[#242424] flex md:flex-row flex-col items-center space-y-1 md:space-y-0 md:space-x-1">
+                        <i class="fa-solid fa-table-cells-large"></i>
+                        <p class="">Dashboard</p>
+                    </a>
+
+                    <a href="#"
+                        class="w-full px-4 py-2 hover:bg-[#3A57E8] text-[15px] lg:text-[16px] font-[inter] font-[500] hover:text-white text-[#242424] flex md:flex-row flex-col items-center text-center space-y-3 md:space-y-0 md:space-x-1">
+                        <i class="fa fa-check"></i>
+                        <p>Complete Jobs</p>
+                    </a>
+
+                    <a href="#"
+                        class="w-full px-4 py-2 hover:bg-[#3A57E8] text-[15px] lg:text-[16px] font-[inter] font-[500] hover:text-white text-[#242424] flex md:flex-row flex-col items-center text-center space-y-3 md:space-y-0 md:space-x-1">
+                        <i class="fa fa-chart-simple"></i>
+                        <p>My Transactions</p>
+                    </a>
+                </div>
+
+                <div class="space-y-3">
+                    <a href="#"
+                        class="w-full px-4 py-2 hover:bg-[#3A57E8] text-[15px] lg:text-[16px] font-[inter] font-[500] hover:text-white text-[#242424] flex md:flex-row flex-col items-center space-y-3 md:space-y-0 md:space-x-1">
+                        <i class="fa fa-briefcase"></i>
+                        <p>Orders</p>
+                    </a>
+
+                    <a href="#"
+                        class="w-full px-4 py-2 hover:bg-[#3A57E8] text-[15px] lg:text-[16px] font-[inter] font-[500] hover:text-white text-[#242424] flex md:flex-row flex-col items-center space-y-3 md:space-y-0 md:space-x-1">
+                        <i class="fa fa-credit-card"></i>
+                        <p>Load Wallet</p>
+                    </a>
+                </div>
+
+                <a href="#"
+                    class="w-full px-4 py-2 hover:bg-[#3A57E8] text-[15px] lg:text-[16px] font-[inter] font-[500] hover:text-white text-[#242424] flex md:flex-row flex-col items-center space-y-3 md:space-y-0 md:space-x-1">
+                    <i class="fa-solid fa-table-cells"></i>
+                    <p>Blog</p>
+                </a>
+
+                <div class="space-y-3">
+                    <a href="#"
+                        class="w-full px-4 py-2 hover:bg-[#3A57E8] text-[15px] lg:text-[16px] font-[inter] font-[500] hover:text-white text-[#242424] flex md:flex-row flex-col items-center space-y-3 md:space-y-0 md:space-x-1">
+                        <i class="fa-solid fa-user"></i>
+                        <p>My Account</p>
+                    </a>
+
+                    <a href="#"
+                        class="w-full px-4 py-2 hover:bg-[#3A57E8] text-[15px] lg:text-[16px] font-[inter] font-[500] hover:text-white text-[#242424] flex md:flex-row flex-col items-center space-y-3 md:space-y-0 md:space-x-1">
+                        <i class="fa-solid fa-users"></i>
+                        <p>My Referrals</p>
+                    </a>
+
+                    <a href="#"
+                        class="flex w-full justify-between px-4 py-2 hover:bg-[#3A57E8] text-[15px] lg:text-[16px] font-[inter] font-[500] hover:text-white text-[#242424] flex md:flex-row flex-col items-center space-y-3 md:space-y-0 md:space-x-1">
+                        <div class="flex md:flex-row flex-col items-center  md:space-y-0 md:space-x-1">
+                            <i class="fa-solid fa-gamepad"></i>
+                            <p>Gaming</p>
+                        </div>
+                        <p class="text-[13px] text-center px-2 bg-red-500 text-white rounded-[5px]">Coming Soon</p>
+                    </a>
+
+                    <a href="#"
+                        class="w-full px-4 py-2 hover:bg-[#3A57E8] text-[15px] lg:text-[16px] font-[inter] font-[500] hover:text-white text-[#242424] flex md:flex-row flex-col items-center space-y-3 md:space-y-0 md:space-x-1">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        <p>Log Out</p>
+                    </a>
+                </div>
+            </div>
+        </aside>
+
+
+        <div class="lg:float-right">
+            <!-- Navbar -->
+            <nav
+                class="w-[100vw] lg:w-[80vw] h-[10vh] md:h-[8vh] lg:h-[10vh] bg-[#ffffff] px-4 fixed lg:static">
+                <div class="flex float-right">
+                    <a href="#" class="w-[100%] h-16 md:h-[6vh] md:mt-2 lg:h-[7vh] lg:mt-2 hover:bg-gray-200 cursor-pointer px-2  md:px-4 flex items-center md:space-x-2">
+                        <img class="w-8 h-8 cursor-pointer" src="../../../ASSETS/user.svg" alt="user">
+                        <div class="flex font-[inter] text-gray-700 font-[500]">
+                            <p class="text-md ">
+                                Hi,
+                            </p>
+                            <p class="font-[600]">Uthman Dabiri</p>
+                        </div>
+                    </a>
+                    <div class="w-12 h-16 md:h-[6vh] lg:h-[7vh] md:mt-2 lg:mt-2 cursor-pointer bg-gray-200 py-[15px]" onclick="menuClick()" id="menu">
+                        <img class="w-6 h-6 mx-auto" src="../../../ASSETS/menu.png" alt="menu">
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Main content -->
+            <section class="w-[100vw] lg:w-[80vw] h-auto pb-20 bg-[#2a3f541a] z-0 px-4 lg:px-10">
+
+                <div
+                    class="content_container w-[100%] h-[30vh] md:h-[20vh] rounded-b-[20px] md:pl-20 lg:pl-6 mx-auto bg-no-repeat bg-center px-6  pt-28 md:py-48 lg:py-20">
+                    <div class="flex text-white space-x-3 text-xl md:text-2xl items-center font-medium">
+                        <i class="fa fa-user"></i>
+                        <div class="flex md:flex-row flex-col">
+                            <span class="text-md">Hello,</span>
+                            <p class="">Uthman Dabiri</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Simple Card on medium and large screen -->
+
+                <div class="hidden lg:block mt-10">
+                    <div class="flex md:flex-row flex-col space-y-4 md:space-y-0 md:space-x-8">
+
+                        <div
+                            class="w-[100vw] lg:w-[30vw] hover:shadow-2xl hover:shadow-[grey] h-[75px] bg-gradient-to-tr from-[#0ab4ff] to-[#113fda] rounded-lg text-white px-6 py-2">
+                            <p class="text-sm">Wallet Balance</p>
+                            <div class="flex items-center space-x-2 ">
+                                <i class="fa-solid text-2xl">₦</i>
+                                <p class="text-2xl mt-1">0</p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="w-[100vw] lg:w-[30vw] hover:shadow-2xl hover:shadow-[grey] h-[75px] bg-gradient-to-tr from-[#0ab4ff] to-[#113fda] rounded-lg text-white px-6 py-2">
+                            <p class="text-sm">Total Orders</p>
+                            <p class="text-2xl mt-1">0</p>
+                        </div>
+
+                        <div
+                            class="w-[100vw] lg:w-[30vw] hover:shadow-2xl hover:shadow-[grey] h-[75px] bg-gradient-to-tr from-[#0ab4ff] to-[#113fda] rounded-lg text-white px-6 py-2">
+                            <p class="text-sm">Total Referral</p>
+                            <p class="text-2xl mt-1">0</p>
+                        </div>
+                    </div>
+
+                    <!-- Dot -->
+                    <div class="flex flex-row space-x-2 mt-6 items-center justify-center">
+                        <p class="w-[5px] h-[5px] rounded-full bg-gradient-to-tr from-[#0ab4ff] to-[#113fda]"></p>
+                        <div class="lg:hidden flex flex-row space-x-2 items-center justify-center">
+                            <p class="w-[5px] h-[5px] rounded-full bg-gradient-to-tr from-[#0ab4ff] to-[#113fda]"></p>
+                            <p class="w-[5px] h-[5px] rounded-full bg-gradient-to-tr from-[#0ab4ff] to-[#113fda]"></p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Simple Card  on mobile Screen-->
+
+                <div class="lg:hidden mt-10">
+                    <div id="cardsContainer" class="flex md:flex-col  w-full">
+
+                        <!-- Card 1 -->
+                        <div
+                            class="card w-[100%] lg:w-[30vw] h-[75px] bg-gradient-to-tr from-[#0ab4ff] to-[#113fda] rounded-lg text-white px-6 py-2 hover:shadow-2xl hover:shadow-[grey]">
+                            <p class="text-sm">Wallet Balance</p>
+                            <div class="flex items-center space-x-2">
+                                <i class="fa-solid text-2xl">₦</i>
+                                <p class="text-2xl mt-1">0</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div
+                            class="card w-[100%] hidden lg:w-[30vw] h-[75px] bg-gradient-to-tr from-[#0ab4ff] to-[#113fda] rounded-lg text-white px-6 py-2 hover:shadow-2xl hover:shadow-[grey]">
+                            <p class="text-sm">Total Orders</p>
+                            <p class="text-2xl mt-1">0</p>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div
+                            class="card w-[100%] hidden lg:w-[30vw] h-[75px] bg-gradient-to-tr from-[#0ab4ff] to-[#113fda] rounded-lg text-white px-6 py-2 hover:shadow-2xl hover:shadow-[grey]">
+                            <p class="text-sm">Total Referral</p>
+                            <p class="text-2xl mt-1">0</p>
+                        </div>
+                    </div>
+
+                    <!-- Dot Indicators -->
+                    <div class="lg:hidden flex justify-center items-center mt-6">
+                        <div class="dot-pagination flex space-x-2">
+                            <span class="dot w-[8px] h-[8px] rounded-full cursor-pointer bg-gradient-to-tr from-[#0ab4ff] to-[#113fda]"
+                                data-index="0"></span>
+                            <span class="dot w-[8px] h-[8px] rounded-full cursor-pointer bg-gray-400" data-index="1"></span>
+                            <span class="dot w-[8px] h-[8px] rounded-full cursor-pointer bg-gray-400" data-index="2"></span>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="flex flex-col lg:flex-row lg:space-x-6 space-y-6 lg:space-y-0 mt-8">
+                    <div class="w-[100%] lg:w-[40vw] h-auto">
+                        <!-- Metrohyp News Section -->
+                        <div class="w-[100%] lg:w-[40vw] bg-white px-6 py-8 rounded-lg shadow-md">
+                            <div class="flex justify-between items-center mb-4">
+                                <h2 class="text-[17px] font-medium text-[#34495e] flex items-center">
+                                    <i class="fas fa-newspaper mr-2"></i>
+                                    Metrohyp News
+                                </h2>
+                                <button
+                                    class="btn hover:opacity-95 text-white text-sm py-2 px-4 rounded-sm flex items-center">
+                                    <i class="fa fa-briefcase mr-2"></i> New Order
+                                </button>
+                            </div>
+                            <div class="space-y-6">
+                                <!-- News Item 1 -->
+                                <div class="flex items-start">
+                                    <div class="flex flex-col">
+                                        <p class="w-[2px] h-4 bg-gray-300 ml-[7px]"></p>
+                                        <i class="far fa-circle text-gray-400 "></i>
+                                        <p class="w-[2px] h-28 md:h-24 bg-gray-300 ml-[7px]"></p>
+                                        <i class="far fa-circle text-gray-400 "></i>
+                                        <p class="w-[2px] h-10 md:h-6 bg-gray-300 ml-[7px]"></p>
+                                    </div>
+
+                                    <div class="flex flex-col">
+                                        <div class="ml-[10px] mt-[12px] text-[#34495e]">
+                                            <h3 class="text-md font-[500]">How to Order</h3>
+                                            <p class="text-sm">1. Click on <span
+                                                    class="font-medium text-[#630000] text-[15px]">"New Order"</span>
+                                            </p>
+                                            <p class="text-sm">2. Select <span
+                                                    class="font-medium text-[#630000] text-[15px]">"Platform"</span> and
+                                                follow the steps.
+                                            </p>
+                                            <hr class="mt-8">
+                                        </div>
+
+                                        <div class="ml-[10px] mt-[12px] text-[#34495e]">
+                                            <h3 class="text-md font-[500]">Welcome to Metrophy</h3>
+                                            <b class="text-sm text-gray-500">
+                                                Please use the ticket below if you need any assistant.
+                                            </b>
+                                            <hr class="mt-2">
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-[100%] lg:w-[40vw] h-auto">
+                        <div class="bg-white py-8 px-6 rounded-lg shadow-md">
+                            <h2 class="text-lg font-medium text-[#34495e] flex items-center mb-4">
+                                <i class="fas fa-user mr-2"></i> Account Summary
+                            </h2>
+                            <div class="space-y-4">
+                                <div class="flex items-center space-x-2 text-xl text-[#34495e]">
+                                    <p>Full Name:</p>
+                                    <p>Uthman Dabiri</p>
+                                </div>
+
+                                <div class="flex items-center space-x-2 text-md text-[#34495e]">
+                                    <p>Phone Number:</p>
+                                    <p>08142546500</p>
+                                </div>
+
+                                <div class="flex items-center space-x-2 text-md text-[#34495e]">
+                                    <p>Date Registered:</p>
+                                    <p>Saturday 28 Septemmber, 2024</p>
+                                </div>
+
+                                <!-- Referral Link Section -->
+                                <p class="text-md">
+                                <p>Referral Link:</p>
+                                </p>
+                                <a href="#" class="text-gray-600 italics">
+                                    https://metrohyp.com/link/dabirideji
+                                </a><br>
+                                <button
+                                    class="bg-[#26B99A] opacity-80 border border-[#169F85] text-white text-sm py-2 px-4 rounded-lg mt-2">Copy
+                                    Link</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+        </div>
+    </div>
+
+    <script>
+        function menuClick() {
+            let menu = document.getElementById("menu");
+            let sidebar = document.getElementById("sidebar")
+
+            if (sidebar.classList.contains("hidden")) {
+                sidebar.classList.remove("hidden");
+
+            } else {
+
+                sidebar.classList.add("hidden");
+            }
+        }
+
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const cards = document.querySelectorAll('.card');
+            const dots = document.querySelectorAll('.dot');
+            let currentIndex = 0;
+            let intervalId;
+
+            // Function to show the current card and update the dots
+            function updatePagination(index) {
+                // Hide all cards and reset dot colors
+                cards.forEach((card, i) => {
+                    card.classList.add('hidden');
+                    dots[i].classList.remove('bg-gradient-to-tr', 'from-[#0ab4ff]', 'to-[#113fda]');
+                    dots[i].classList.add('bg-gray-400');
+                });
+
+                // Show the selected card and update the corresponding dot
+                cards[index].classList.remove('hidden');
+                dots[index].classList.add('bg-gradient-to-tr', 'from-[#0ab4ff]', 'to-[#113fda]');
+                dots[index].classList.remove('bg-gray-400');
+
+                // Update the current index
+                currentIndex = index;
+            }
+
+            // Function to switch cards automatically every 3 seconds
+            function autoSwitchCards() {
+                currentIndex = (currentIndex + 1) % cards.length;
+                updatePagination(currentIndex);
+            }
+
+            // Add click event listeners to each dot for manual card switching
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', function () {
+                    updatePagination(index);  // Show the card corresponding to the clicked dot
+
+                    // Restart auto-switching after manual click
+                    clearInterval(intervalId);  // Clear the previous interval
+                    intervalId = setInterval(autoSwitchCards, 10000);  // Restart auto-switching
+                });
+            });
+
+            // Initial setup: show the first card on load
+            updatePagination(currentIndex);
+
+            // Start auto-switching on smaller screens only
+            if (window.innerWidth < 1024) {
+                intervalId = setInterval(autoSwitchCards, 10000);
+            }
+        });
+
+
+
+
+    </script>
+</body>
+
+</html>

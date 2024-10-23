@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notification Example</title>
+</head>
+
+<body>
+    <h1>Notification and Advertiser Login</h1>
+
+    <!-- Load notification script -->
+    <script src="./../../UTILITIES/FUNCTION_UTILIITIES/SHARED/NOTY/notification.js"></script>
+
+    <!-- Separate block to ensure DOM is loaded before calling showNotification -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            showNotification('Page Loaded');
+        });
+    </script>
+
+    <!-- Load module script separately -->
+    <script type="module">
+        import { LoginAdvertiser } from "./../../UTILITIES/FUNCTION_UTILIITIES/ADVERTISER/advertiserOnboardingHelper.js";
+
+        // Call AdvertiserLogin function after the page is fully loaded
+        document.addEventListener('DOMContentLoaded', async function () {
+            try {
+                const result = await LoginAdvertiser("metro@example.com", "password");
+                console.log(result);
+            } catch (error) {
+                console.error("Error creating advertiser:", error);
+            }
+        });
+
+        // Sample function to demonstrate it works
+        function goo() {
+            console.log("gooing");
+        }
+
+        goo(); // Call the sample function
+    </script>
+</body>
+
+</html>
