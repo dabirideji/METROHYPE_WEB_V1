@@ -7,84 +7,46 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script  defer src="../../../JS/SHARED/VIEW-ACCOUNT/view-account.js"></script>
-  <style>
-    .sidebar {
-      transition: transform 0.3s ease;
-    }
-    .scrollbar-hide::-webkit-scrollbar {
-    display: none;
-  }
-  .scrollbar-hide {
-    scrollbar-width: none;
-  }
-  </style>
+  <link rel="stylesheet" href="../.././../CSS/SHARED/VIEW-ACCOUNT/view-account.css">
 </head>
 <body class="bg-gray-100">
-  
   <nav class="bg-white shadow-md p-4 fixed w-full top-0 z-30 flex items-center justify-between">
-   
     <div class="flex items-center space-x-4">
       <span class="text-2xl font-bold">Metrohyp</span>
-    </div>
-
-  
-    <div class="flex items-center lg:hidden space-x-4">
-   
-      <button id="sidebarToggle" class="text-gray-600 focus:outline-none">
+   <div class="flex items-center lg:hidden space-x-4">
+   <button id="sidebarToggle" class="text-gray-600 focus:outline-none">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M412h16m-76h7"/>
         </svg>
       </button>
-      
-    
-      <div class="flex items-center space-x-2">
+     <div class="flex items-center space-x-2">
         <img src="../../../ASSETS/user.png" alt="User" class="h-8 w-8 rounded-full">
         <span class="text-gray-700">John Doe</span> 
       </div>
     </div>
-
-    
-    <div class="hidden lg:flex items-center space-x-4">
-    
-      <div class="flex items-center space-x-2">
+ <div class="hidden lg:flex items-center space-x-4">
+     <div class="flex items-center space-x-2">
         <img src="../../../ASSETS/user.png" alt="User" class="h-8 w-8 rounded-full">
         <span class="text-gray-700">John Doe</span>
       </div>
     </div>
   </nav>
-
-  
   <div id="overlay" class="fixed inset-0 hidden z-20"></div>
-
- 
   <div class="flex pt-16">
-  
-    <aside id="sidebar" class="bg-white w-full lg:w-1/5 h-screen  overflow-y-scroll scrollbar-hide fixed left-0 top-0 z-10 shadow-md sidebar lg:translate-x-0 -translate-x-full lg:block">
+ <aside id="sidebar" class="bg-white w-full lg:w-1/5 h-screen  overflow-y-scroll scrollbar-hide fixed left-0 top-0 z-10 shadow-md sidebar lg:translate-x-0 -translate-x-full lg:block">
       <ul class="space-y-4 p-4 mt-20"> 
-       
-        <li><a href="#" class="block text-gray-700 capitalize hover:bg-[#337ab7] hover:text-white p-2 rounded"><i class="fa-solid fa-light fa-chess-board"></i>   Dashboard</a></li>
-        
+       <li><a href="#" class="block text-gray-700 capitalize hover:bg-[#337ab7] hover:text-white p-2 rounded"><i class="fa-solid fa-light fa-chess-board"></i>   Dashboard</a></li>
         <li><a href="#" class="block text-gray-700 capitalize hover:bg-[#337ab7] hover:text-white p-2 rounded"><i class="fa-solid fa-check"></i> completed job</a></li>
-      
         <li><a href="#" class="block text-gray-700 capitalize hover:bg-[#337ab7] hover:text-white p-2 rounded"><i class="fa-solid fa-signal"></i> my transactions</a></li>
-      
         <li><a href="#" class="block text-gray-700 capitalize hover:bg-[#337ab7] hover:text-white p-2 rounded"> <i class="fa-sharp fa-solid fa-briefcase"></i> orders</a></li>
-
         <li><a href="#" class="block text-gray-700 capitalize hover:bg-[#337ab7] hover:text-white p-2 rounded"> <i class="fa-sharp-duotone fa-solid fa-wallet"></i> load wallet</a></li>
-        
         <li><a href="#" class="block text-gray-700 capitalize hover:bg-[#337ab7] hover:text-white p-2 rounded"><i class="fa-solid fa-speaker"></i> blog</a></li>
-       
         <li><a href="#" class="block text-gray-700 capitalize hover:bg-[#337ab7] hover:text-white p-2 rounded"> <i class="fa-solid fa-user"></i>  my account</a></li>
-        
         <li><a href="#" class="block text-gray-700 capitalize hover:bg-[#337ab7] hover:text-white p-2 rounded"> <i class="fa-solid fa-square"></i>  my referral</a></li>
-       
         <li><a href="#" class="block text-gray-700 capitalize hover:bg-[#337ab7] hover:text-white p-2 rounded"><i class="fa-sharp fa-solid fa-chess-knight"></i> gaming</a></li>
-       
         <li><a href="#" class="block text-gray-700 capitalize hover:bg-[#337ab7] hover:text-white p-2 rounded"><i class="fa-solid fa-arrow-right-from-bracket"></i> log out </a></li>
       </ul>
     </aside>
-
-   
     <main class="flex-1 lg:ml-[20%] p-6 bg-gray-50 min-h-screen">
       <h1 class="text-3xl font-semibold mb-4 capitalize"> <i class="fa-solid fa-user"></i>  my account</h1>
      <div class="flex justify-between p-[15px]">
