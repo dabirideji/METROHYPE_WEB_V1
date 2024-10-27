@@ -16,10 +16,6 @@
     scrollbar-width: none;
 }
 
-body {
-    font-family: "Helvetica Neue", "Roboto", "Arial", "Droid", "Sans", "sans-serif";
-
-}
 
 .content_container {
 
@@ -45,6 +41,3 @@ body {
 .fade-up {
     animation: fade-up 1.5s ease-in-out forwards;
 }
-
-
-

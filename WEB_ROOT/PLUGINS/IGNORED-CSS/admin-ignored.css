@@ -12,6 +12,9 @@
         }
     }
 
+    body {
+        font-family: "Helvetica Neue", "Roboto", "Arial", "Droid", "Sans", "sans-serif";
+    }
 
 
     .side-bar {
