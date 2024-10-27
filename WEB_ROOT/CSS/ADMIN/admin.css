@@ -24,12 +24,10 @@
 .side-bar {
     scrollbar-width: none;
     -ms-overflow-style: none;
-    /* Internet Explorer 10+ */
 }
 
 .side-bar::-webkit-scrollbar {
     display: none;
-    /* Chrome, Safari, Opera */
 }
 
 .fade-up {
