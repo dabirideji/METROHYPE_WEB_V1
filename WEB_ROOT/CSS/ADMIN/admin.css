@@ -1,67 +1,23 @@
-*{
-    margin:0;
-    padding:0;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-
-  
 .sidebar {
     transition: transform 0.3s ease;
-  }
-  .scrollbar-hide::-webkit-scrollbar {
-  display: none;
 }
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
 .scrollbar-hide {
-  scrollbar-width: none; 
+    scrollbar-width: none;
 }
-
-
 
 body {
     font-family: "Helvetica Neue", "Roboto", "Arial", "Droid", "Sans", "sans-serif";
-
-}
-
-@media screen and (max-width: 1023px) {
-
-    @keyframes fade-up {
-        0% {
-            opacity: 0;
-            transform: translateY(100px);
-        }
-
-        100% {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-
-
-    .side-bar {
-        animation: nav-down 1s ease-in-out forwards;
-
-    }
-
-    .side-bar {
-        overflow-y: auto;
-    }
-
-    .side-bar::-webkit-scrollbar {
-        width: 5px;
-        scroll-behavior: smooth;
-    }
-
-    .side-bar::-webkit-scrollbar-thumb {
-        border-radius: 2px;
-        background-color: #5156be;
-    }
-
-    .side-bar::-webkit-scrollbar-track {
-        border-radius: 2px;
-        background-color: #f1f1f1;
-    }
 
 }
 
@@ -86,18 +42,9 @@ body {
     /* Chrome, Safari, Opera */
 }
 
-@keyframes nav-down {
-    0% {
-        opacity: 0;
-        transform: translateX(-10px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
 .fade-up {
     animation: fade-up 1.5s ease-in-out forwards;
 }
+
+
+
