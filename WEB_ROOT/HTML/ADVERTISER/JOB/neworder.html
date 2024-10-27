@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Order</title>
+    <style src="../../../PLUGINS/TAILWIND/tailwind.min.css"></style>
+    <script src="../../../PLUGINS/TAILWIND/tailwind.js"></script>
+    <script src="../../../PLUGINS/TAILWIND/tailwind-config.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="lg:bg-gray-200 w-full h-screen" >
+  <div class="flex justify-end">
+    <img class="w-8 h-8 mt-4 mr-4 lg:hidden" src="../../../ASSETS/press-button.png" alt="" id="menu">
+  </div>
+  <div class="lg:flex">
+    <!-- sidebar begins -->
+    <div
+      class="w-[80%] lg:w-[23%]  bg-white lg:shadow-md flex flex-col pl-4 block" id="dashboard"
+    >
+     <div class="flex">
+      <img class="w-8 h-8 rounded-full mt-4" src="../../../ASSETS/metrohpy.jpeg" alt="">
+      <h1 class="text-[35px] ml-1 font-semibold" >Metrohyp</h1>
+     </div>
+     <div class="pl-2 pt-4 font-semibold" >
+     <div class="flex">
+      <img class="w-4 h-4  mt-1" src="../../../ASSETS/dashboard.png" alt="">
+      <p class=" ml-1 " >Dashboard</p>
+     </div>
+     <div class="flex mt-4 hover:bg-blue-800  w-[70%] h-[40px] items-center rounded-md hover:pl-2 ">
+      <img class="w-4 h-4  mt-1" src="../../../ASSETS/check.png" alt="">
+      <p class=" ml-1 " >Completed Jobs</p>
+     </div>
+     <div class="flex mt-4 hover:bg-blue-800  w-[70%] h-[40px] items-center rounded-md hover:pl-2">
+      <img class="w-4 h-4  mt-1" src="../../../ASSETS/signal-status.png" alt="">
+      <p class=" ml-1 " >My Transactions</p>
+     </div>
+     <div class="flex mt-7 hover:bg-blue-800  w-[70%] h-[40px] items-center rounded-md hover:pl-2">
+      <img class="w-4 h-4  mt-1" src="../../../ASSETS/briefcase.png" alt="">
+      <a class=" ml-1 " href="neworder.html">Orders</a>
+     </div>
+     <div class="flex mt-4 hover:bg-blue-800  w-[70%] h-[40px] items-center rounded-md hover:pl-2">
+      <img class="w-4 h-4  mt-1" src="../../../ASSETS/credit-card (1).png" alt="">
+      <a class=" ml-1 " href="wallet.html">Load Wallet</a>
+     </div>
+     <div class="flex mt-7 hover:bg-blue-800  w-[70%] h-[40px] items-center rounded-md hover:pl-2">
+      <img class="w-4 h-4  mt-1" src="../../../ASSETS/grid (1).png" alt="">
+      <a class=" ml-1 " href="blog.html">Blog</a>
+     </div>
+     <div class="flex mt-7 hover:bg-blue-800  w-[70%] h-[40px] items-center rounded-md hover:pl-2">
+      <img class="w-4 h-4  mt-1" src="../../../ASSETS/user.png" alt="">
+      <p class=" ml-1 " >My Account</p>
+     </div>
+     <div class="flex mt-4 hover:bg-blue-800  w-[70%] h-[40px] items-center rounded-md hover:pl-2">
+      <img class="w-4 h-4  mt-1" src="../../../ASSETS/decision-making.png" alt="">
+      <p class=" ml-1 " >My Refferals</p>
+     </div>
+     <div class=" flex   mt-4 hover:bg-blue-800  w-[98%] h-[40px] items-center rounded-md hover:pl-2">
+     <div class="flex ">
+      <img class="w-4 h-4  mt-1" src="../../../ASSETS/chess.png" alt="">
+      <p class=" ml-1 " >Gaming</p>
+     </div>
+     <div class="w-[50%] h-[30px] bg-red-500 hover:bg-white text-white hover:text-black text-center ml-10  rounded-[4px] font-semibold">Coming Soon</div>
+    </div>
+    <div class="flex mt-4 hover:bg-blue-800  w-[70%] h-[40px] items-center rounded-md hover:pl-2">
+      <img class="w-4 h-4  mt-1" src="../../../ASSETS/sign-out-option.png" alt="">
+      <p class=" ml-1 " >Log Out</p>
+     </div>
+    </div>
+    </div>
+    <!--  -->
+    <div
+    class=" w-[90%] lg:w-[77%]  mt-8 lg:mt-0  flex flex-col pl-6 lg:pl-0 hidden  lg:block" id="topnav"
+    >
+    <!-- topnav -->
+    <div class="bg-white w-[100%]  h-[80px] shadow-md flex justify-center lg:justify-end items-center">
+    <div class=" w-[55%] lg:w-[35%] flex justify-evenly ">
+    <div class="bg-blue-800 w-10 h-10 flex justify-center items-center rounded-full">
+    <img src="../../../ASSETS/people.png" alt="">
+    </div>
+    <p class="mt-1">Hi,David Iyang</p>
+     <img class="w-6 h-6 mt-1 " src="../../../ASSETS/menu-bar (1).png" alt="">
+    </div>
+   </div>
+   <div class="pl-6">
+    <div class="w-[100%] mt-6 ml-6 flex">
+      <img class="w-6 h-6 mt-3" src="../../../ASSETS/edit.png" alt="">
+      <p class="text-[30px] font-bold ml-2">New Order</p>
+     </div>
+    <p class=" pt-4 font-semibold">adsense code</p>
+    <form class="lg:w-[95%] pl-2 lg:pl-0  bg-white lg:flex  justify-center items-center mt-4 " action="">
+    <div class="w-[95%]   flex flex-col justify-center space-y-6 pt-6 " >
+    <div class="mt-1 flex justify-center ">
+    <div class="flex justify-end  lg:w-[21%]  ">
+     <p>Select Platform</p>
+     <img class="w-2 h-2" src="../../../ASSETS/asterisk.png" alt="">
+      </div>
+    <select   class=" w-[70%] lg:w-[50%]  block pl-2  lg:pl-3 pr-10 py-2 text-base ml-4 bg-transparent border-[1px] border-black
+     focus:outline-none  sm:text-sm ">
+    <option value="" disabled selected>Select Platform</option>
+    <option value="platform1">Facebook</option>
+    <option value="platform2">Twitter</option>
+    <option value="platform3">Telegram</option>
+    </select>
+    <button class=" inline-flex items-center px-4 py-2   rounded-br-md rounded-tr-md shadow-sm  bg-green-600  focus:outline-none ">
+    <div class="w-6 h-6 bg-white flex justify-center items-center rounded-full">
+    <img src="../../../ASSETS/green check.png" alt="">
+    </div>
+    </button>
+    </div>
+     <!-- select Action -->
+    <div class="mt-1 flex justify-center ">
+    <div class="flex justify-end lg:w-[21%]  ">
+   <p>Select Action</p>
+    <img class="w-2 h-2" src="../../../ASSETS/asterisk.png" alt="">
+    </div>
+    <select   class=" w-[70%] lg:w-[50%]  block pl-2  lg:pl-3 pr-10 py-2 text-base ml-4 bg-transparent border-[1px] border-black 
+    focus:outline-none  sm:text-sm ">
+    <option value="" disabled selected>Select Action</option>
+     <option value="platform1">Follow Follow</option>
+    <option value="platform2">Follow Follow</option>
+    <option value="platform3">Follow</option>
+    </select>
+    <button class=" inline-flex items-center px-4 py-2   rounded-br-md rounded-tr-md shadow-sm  bg-green-600 focus:outline-none ">
+    <div class="w-6 h-6 bg-white flex justify-center items-center rounded-full">
+    <img src="../../../ASSETS/green check.png" alt="">
+    </div>
+    </button>
+    </div>
+    <div class="mt-1 ml-4 flex justify-end lg:w-[85%]">
+    <div class=" w-[75%] lg:w-[63%] h-[200px] bg-blue-800 pl-4 pt-4 ">
+    <div class="flex">
+     <div class="bg-white w-4 lg:w-6 h-4 lg:h-6 rounded-full text-black mt-2 lg:mt-2 font-semibold flex justify-center items-center">!</div>
+    <p class="text-white ml-1 lg:ml-2 lg:text-[20px] mt-1 lg:mt-0 font-semibold">Action Description</p>
+   </div>
+    <p class="text-white font-semibold mt-2">ZaZoo Zeh</p>
+    <div class=" w-20 h-4 bg-yellow-300 flex items-start shadow-md rounded-sm mt-14  relative  ">
+    <span class="text-green-400 text-[30px] font-bold absolute  -top-7 left-0 p-1 shadow-sm ">yowa</span>
+    </div>
+    </div>
+     </div>
+     <!-- Amount Requested -->
+     <div class="mt-1 flex lg:justify-center  ">
+     <div class="flex justify-end  w-[27%] lg:w-[21%]   ">
+      <p>Amount Requested</p>
+      <img class="w-2 h-2" src="../../../ASSETS/asterisk.png" alt="">
+      </div>
+     <input type="text"   class="w-[66%] lg:w-[55%] -pl-2 block pl-2  lg:pl-3 pr-10 py-2 text-base ml-4 bg-transparent border-[1px] 
+     border-black focus:outline-none  sm:text-sm ">
+     
+    </div>
+    <!-- link -->
+   <div class="mt-1 flex justify-center  ">
+   <div class="flex justify-end w-[26%] w-[20%] lg:w-[21%]   ">
+    <p>Link</p>
+   <img class="w-2 h-2" src="../../../ASSETS/asterisk.png" alt="">
+    </div>
+   <input type="text"   class=" w-[68%] lg:w-[55%] -pl-2 block pl-2   lg:pl-3 pr-10 py-2 text-base ml-4 bg-transparent border-[1px]
+    border-black focus:outline-none  sm:text-sm ">
+    
+    </div>
+    <!-- payment method -->
+    <div class="mt-1 flex justify-center ">
+     <div class="flex justify-end w-[25%] lg:w-[21%]  ">
+    </div>
+    <select   class=" w-[50%]  block pl-2  lg:pl-3 pr-10 py-2 text-base ml-4 bg-transparent border-[1px] border-black focus:outline-none
+      sm:text-sm ">
+    <option value="" disabled selected>Payment method</option>
+    <option value="platform1">Facebook</option>
+    <option value="platform2">Twitter</option>
+    <option value="platform3">Telegram</option>
+    </select>
+    <button class=" inline-flex items-center px-4 py-2   rounded-br-md rounded-tr-md shadow-sm  bg-blue-800  focus:outline-none ">
+   <img src="../../../ASSETS/credit-card.png" alt="">
+   </button>
+   </div>
+  <hr>
+  <div class="lg:w-[74%] flex justify-center">
+   <button class="bg-blue-800 w-[40%] lg:w-[15%] h-[40px] text-white font-semibold flex rounded-md flex justify-center items-center ">
+   <img class="w-4 h-4" src="../../../ASSETS/settings (1).png" alt="">
+   <p class="ml-1">Finish</p>
+    </button>
+     </div>
+    </div>
+   </form>
+    <p class=" pt-4 font-semibold">adsense code</p>
+     </div>
+    </div>
+    </div>
+    <script src="../../../JS/ADVERTISER/CreateOrder.js"></script>
+</body>
+</html>
