@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <style src="../../../PLUGINS/TAILWIND/tailwind.min.css"></style>
+    <script src="../../../PLUGINS/TAILWIND/tailwind.js"></script>
+    <script src="../../../PLUGINS/TAILWIND/tailwind-config.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class=" w-full lg:bg-gray-200" >
+  <div class="flex justify-end">
+    <img class="w-8 h-8 mt-4 mr-4 lg:hidden" src="../../../ASSETS/press-button.png" alt="" id="menu">
+  </div>
+
+    <div class="lg:flex">
+      <!-- sidebar begins -->
+      <div
+        class="w-[80%] lg:w-[23%]  bg-white lg:shadow-md flex flex-col pl-4 block" id="dashboard"
+      >
+       <div class="flex">
+        <img class="w-8 h-8 rounded-full mt-4" src="../../../ASSETS/metrohpy.jpeg" alt="">
+        <h1 class="text-[35px] ml-1 font-semibold" >Metrohyp</h1>
+       </div>
+       <div class="pl-2 pt-4 font-semibold" >
+       <div class="flex">
+        <img class="w-4 h-4  mt-1" src="../../../ASSETS/dashboard.png" alt="">
+        <p class=" ml-1 " >Dashboard</p>
+       </div>
+       <div class="flex mt-4 hover:bg-blue-800  w-[70%] h-[40px] items-center rounded-md hover:pl-2 ">
+        <img class="w-4 h-4  mt-1" src="../../../ASSETS/check.png" alt="">
+        <p class=" ml-1 " >Completed Jobs</p>
+       </div>
+       <div class="flex mt-4 hover:bg-blue-800  w-[70%] h-[40px] items-center rounded-md hover:pl-2">
+        <img class="w-4 h-4  mt-1" src="../../../ASSETS/signal-status.png" alt="">
+        <p class=" ml-1 " >My Transactions</p>
+       </div>
+       <div class="flex mt-7 hover:bg-blue-800  w-[70%] h-[40px] items-center rounded-md hover:pl-2">
+        <img class="w-4 h-4  mt-1" src="../../../ASSETS/briefcase.png" alt="">
+        <a class=" ml-1 " href="neworder.html">Orders</a>
+       </div>
+       <div class="flex mt-4 hover:bg-blue-800  w-[70%] h-[40px] items-center rounded-md hover:pl-2">
+        <img class="w-4 h-4  mt-1" src="../../../ASSETS/credit-card (1).png" alt="">
+        <a class=" ml-1 " href="wallet.html">Load Wallet</a>
+       </div>
+       <div class="flex mt-7 hover:bg-blue-800  w-[70%] h-[40px] items-center rounded-md hover:pl-2">
+        <img class="w-4 h-4  mt-1" src="../../../ASSETS/grid (1).png" alt="">
+        <a class=" ml-1 " href="blog.html">Blog</a>
+       </div>
+       <div class="flex mt-7 hover:bg-blue-800  w-[70%] h-[40px] items-center rounded-md hover:pl-2">
+        <img class="w-4 h-4  mt-1" src="../../../ASSETS/user.png" alt="">
+        <p class=" ml-1 " >My Account</p>
+       </div>
+       <div class="flex mt-4 hover:bg-blue-800  w-[70%] h-[40px] items-center rounded-md hover:pl-2">
+        <img class="w-4 h-4  mt-1" src="../../../ASSETS/decision-making.png" alt="">
+        <p class=" ml-1 " >My Refferals</p>
+       </div>
+       <div class=" flex   mt-4 hover:bg-blue-800  w-[98%] h-[40px] items-center rounded-md hover:pl-2">
+       <div class="flex ">
+        <img class="w-4 h-4  mt-1" src="../../../ASSETS/chess.png" alt="">
+        <p class=" ml-1 " >Gaming</p>
+       </div>
+       <div class="w-[50%] h-[30px] bg-red-500 hover:bg-white text-white hover:text-black text-center ml-10  rounded-[4px] font-semibold">
+        Coming Soon</div>
+      </div>
+      <div class="flex mt-4 hover:bg-blue-800  w-[70%] h-[40px] items-center rounded-md hover:pl-2">
+        <img class="w-4 h-4  mt-1" src="../../../ASSETS/sign-out-option.png" alt="">
+        <p class=" ml-1 " >Log Out</p>
+       </div>
+      </div>
+      </div>
+      <!--  -->
+      <div
+        class=" w-[90%] lg:w-[77%] h-screen  mt-8 lg:mt-0 flex flex-col pl-6 lg:pl-0 hidden lg:block  " id="topnav" 
+ >
+       <!-- topnav -->
+        <div class="bg-white w-[100%]  h-[80px] shadow-md flex justify-center lg:justify-end items-center">
+          <div class=" w-[55%] lg:w-[35%] flex justify-evenly ">
+            <div class="bg-blue-800 w-10 h-10 flex justify-center items-center rounded-full">
+              <img src="../../../ASSETS/people.png" alt="">
+            </div>
+            <p class="mt-1">Hi,David Iyang</p>
+            <img class="w-6 h-6 mt-1 " src="../../../ASSETS/menu-bar (1).png" alt="">
+         </div>
+         </div>
+         <div class="w-[30%] mt-6 ml-6 flex">
+          <img class="w-6 h-6 mt-3" src="../../../ASSETS/grid (1).png" alt="">
+          <p class="text-[30px] font-bold ml-2">Blog</p>
+         </div>
+         
+
+         <!-- search blog -->
+         
+         <div class=" w-full pt-2 flex justify-evenly ">
+         <div class="bg-white p-6 rounded-md shadow-md w-full lg:w-[90%]">
+         <div class="mt-1 flex">
+           
+          <input type="text" placeholder="Search Blog"   class=" text-black font-bold w-[90%] lg:w-[90%] block pl-3 pr-10
+           py-2 text-base ml-4 bg-transparent border-[1px] border-black focus:outline-none  sm:text-sm "/>
+          
+          <button class=" inline-flex items-center px-4 py-2   rounded-br-md rounded-tr-md shadow-sm  bg-blue-800 focus:outline-none ">
+           <img src="../../../ASSETS/magnifying-glass.png" alt="">
+           </button>
+            </div>
+            <div class=" w-[100%] lg:w-[65%] text-blue-800 font-semibold flex flex-col lg:flex-row lg:justify-evenly mt-4 space-y-4
+             lg:space-y-0">
+              <p>Latest Post</p>
+              <p>Top Post</p>
+              <p>Feature Post</p>
+              <p>My Post</p>
+              <p>New Post</p>
+            </div>
+         </div>
+         </div>
+
+        <!--latest post -->
+         <div class=" w-full pt-2 flex justify-evenly ">
+         <div class="bg-white p-6 rounded-md shadow-md w-full lg:w-[90%] h-[120px] flex flex-col space-y-4">
+         <h2 class="font-semibold" >Latest Post</h2>
+         <hr>
+        </div>
+        </div>
+       <!--  -->
+       </div>
+     </div>
+     <script src="../../../JS/ADVERTISER/CreateOrder.js"></script>
+   </body>
+    </html>

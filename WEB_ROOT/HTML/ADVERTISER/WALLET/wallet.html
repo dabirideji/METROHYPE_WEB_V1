@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Load wallet</title>
+    <style src="../../../PLUGINS/TAILWIND/tailwind.min.css"></style>
+    <script src="../../../PLUGINS/TAILWIND/tailwind.js"></script>
+    <script src="../../../PLUGINS/TAILWIND/tailwind-config.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="lg:bg-gray-200 w-full h-screen" >
+  <div class="flex justify-end">
+    <img class="w-8 h-8 mt-4 mr-4 lg:hidden" src="../../../ASSETS/press-button.png" alt="" id="menu">
+  </div>
+    <div class="lg:flex">
+      <!-- sidebar begins -->
+      <div
+        class="w-[80%] lg:w-[23%]  bg-white lg:shadow-md flex flex-col pl-4 block" id="dashboard"
+      >
+       <div class="flex">
+        <img class="w-8 h-8 rounded-full mt-4" src="../../../ASSETS/metrohpy.jpeg" alt="">
+        <h1 class="text-[35px] ml-1 font-semibold" >Metrohyp</h1>
+       </div>
+       <div class="pl-2 pt-4 font-semibold" >
+       <div class="flex">
+        <img class="w-4 h-4  mt-1" src="../../../ASSETS/dashboard.png" alt="">
+        <p class=" ml-1 " >Dashboard</p>
+       </div>
+       <div class="flex mt-4 hover:bg-blue-800  w-[70%] h-[40px] items-center rounded-md hover:pl-2 ">
+        <img class="w-4 h-4  mt-1" src="../../../ASSETS/check.png" alt="">
+        <p class=" ml-1 " >Completed Jobs</p>
+       </div>
+       <div class="flex mt-4 hover:bg-blue-800  w-[70%] h-[40px] items-center rounded-md hover:pl-2">
+        <img class="w-4 h-4  mt-1" src="../../../ASSETS/signal-status.png" alt="">
+        <p class=" ml-1 " >My Transactions</p>
+       </div>
+       <div class="flex mt-7 hover:bg-blue-800  w-[70%] h-[40px] items-center rounded-md hover:pl-2">
+        <img class="w-4 h-4  mt-1" src="../../../ASSETS/briefcase.png" alt="">
+        <a class=" ml-1 " href="neworder.html">Orders</a>
+       </div>
+       <div class="flex mt-4 hover:bg-blue-800  w-[70%] h-[40px] items-center rounded-md hover:pl-2">
+        <img class="w-4 h-4  mt-1" src="../../../ASSETS/credit-card (1).png" alt="">
+        <a class=" ml-1 " href="wallet.html">Load Wallet</a>
+       </div>
+       <div class="flex mt-7 hover:bg-blue-800  w-[70%] h-[40px] items-center rounded-md hover:pl-2">
+        <img class="w-4 h-4  mt-1" src="../../../ASSETS/grid (1).png" alt="">
+        <a class=" ml-1 " href="blog.html">Blog</a>
+       </div>
+       <div class="flex mt-7 hover:bg-blue-800  w-[70%] h-[40px] items-center rounded-md hover:pl-2">
+        <img class="w-4 h-4  mt-1" src="../../../ASSETS/user.png" alt="">
+        <p class=" ml-1 " >My Account</p>
+       </div>
+       <div class="flex mt-4 hover:bg-blue-800  w-[70%] h-[40px] items-center rounded-md hover:pl-2">
+        <img class="w-4 h-4  mt-1" src="../../../ASSETS/decision-making.png" alt="">
+        <p class=" ml-1 " >My Refferals</p>
+       </div>
+       <div class=" flex   mt-4 hover:bg-blue-800  w-[98%] h-[40px] items-center rounded-md hover:pl-2">
+       <div class="flex ">
+        <img class="w-4 h-4  mt-1" src="../../../ASSETS/chess.png" alt="">
+        <p class=" ml-1 " >Gaming</p>
+       </div>
+       <div class="w-[50%] h-[30px] bg-red-500 hover:bg-white text-white hover:text-black text-center ml-10 
+        rounded-[4px] font-semibold">Coming Soon</div>
+      </div>
+      <div class="flex mt-4 hover:bg-blue-800  w-[70%] h-[40px] items-center rounded-md hover:pl-2">
+        <img class="w-4 h-4  mt-1" src="../../../ASSETS/sign-out-option.png" alt="">
+        <p class=" ml-1 " >Log Out</p>
+       </div>
+        
+        
+      </div>
+      </div>
+      <!--  -->
+      <div
+        class=" w-[90%] lg:w-[77%]  mt-8 lg:mt-0 flex flex-col pl-6 lg:pl-0 hidden lg:block" id="topnav"
+ >
+       <!-- topnav -->
+        <div class="bg-white w-[100%]  h-[80px] shadow-md flex justify-center lg:justify-end items-center">
+          <div class=" w-[55%] lg:w-[35%] flex justify-evenly ">
+            <div class="bg-blue-800 w-10 h-10 flex justify-center items-center rounded-full">
+              <img src="../../../ASSETS/people.png" alt="">
+            </div>
+            <p class="mt-1">Hi,David Iyang</p>
+            <img class="w-6 h-6 mt-1 " src="../../../ASSETS/menu-bar (1).png" alt="">
+         </div>
+         </div>
+         <div class="lg:w-[30%] mt-6 lg:ml-6 flex">
+          <img class=" w-4 h-4 lg:w-6 lg:h-6 mt-2 " src="../../../ASSETS/dollar-bill.png" alt="">
+          <p class="text-[20px] font-bold ml-2">Load Wallet</p>
+         </div>
+        <div class="w-[65%] pl-4 mt-8 flex flex-col ">
+            <div class="lg:w-[60%] h-[80px] text-white bg-blue-800 ml-6 rounded-md pl-4 pt-4">
+                <p>&#8358; 1000</p>
+              <p class="font-semibold">Wallet Ballance</p>
+           </div>
+        </div>
+         <p class=" lg:pl-12 pt-4 font-semibold">adsense code</p>
+         <div class=" w-full pt-2 flex justify-evenly ">
+        
+         <!--Load Wallet -->
+         <div class=" w-full pt-2 flex justify-evenly ">
+          <div class="bg-white p-6 rounded-md shadow-md w-full lg:w-[90%]  flex flex-col space-y-6">
+            <div class="w-[100%] mt-6 ml-6 flex">
+              <img class="w-6 h-6 mt-3" src="../../../ASSETS/credit-card (1).png" alt="">
+              <p class="text-[30px] font-bold ml-2">Load Wallet</p>
+             </div>
+          <div class="w-[100%]  flex justify-center">
+          <div class="mt-1 flex">
+         <input type="text" placeholder="Enter Amount"   class=" text-black font-bold w-[100%] lg:w-[40vw] block pl-3 pr-10 py-2 
+         text-base ml-4 bg-transparent border-[1px] border-black focus:outline-none  sm:text-sm "/>
+        
+        <button class=" inline-flex items-center px-4 py-2 text-white  rounded-br-md rounded-tr-md shadow-sm  bg-blue-800  
+        focus:outline-none ">
+        <p>&#8358;</p>
+         </button>
+         </div>
+        </div>
+        <div class="w-[100%]  flex justify-center">
+        <div class=" flex">
+               
+         <input type="text" placeholder="Select Payment Method"   class=" text-black font-bold w-[100%] lg:w-[40vw]
+          block pl-3 pr-10 py-2 text-base ml-4 bg-transparent border-[1px] border-black focus:outline-none  sm:text-sm "/>
+          
+          <button class=" inline-flex items-center px-4 py-2   rounded-br-md rounded-tr-md shadow-sm  bg-blue-800 focus:outline-none ">
+          <img src="../../../ASSETS/magnifying-glass.png" alt="">
+          </button>
+           </div>
+         </div>
+         <hr >
+        <div class=" w-[58%] lg:w-[33%]   flex justify-end">
+        <div class=" w-[30vw] lg:w-[10vw] h-[40px] bg-blue-800 text-white  flex justify-center items-center rounded-md ">
+        <img class="w-4 h-4  mt-1" src="../../../ASSETS/credit-card.png" alt="">
+        <p class="ml-1 font-semibold">Pay Now</p>
+        </div>
+        </div>
+        <div class=" w-[58%] lg:w-[40%] flex justify-end">
+       <img class=" w-[30vw] lg:w-[15vw] " src="../../../ASSETS/paystack.png" alt="">
+        </div>
+        </div>
+        </div>
+       <!--  -->
+       </div>
+       <p class=" lg:pl-12 pt-4 font-semibold">adsense code</p>
+       <div class="bg-white p-6 rounded-md shadow-md w-[100%] lg:w-[90%] flex justify-center ml:6 lg:ml-10">
+       <div class="mt-1 flex">
+      <input type="text" placeholder="Search Blog"   class=" text-black font-bold w-[48vw] lg:w-[38vw] block pl-3 pr-10 py-2
+       text-base ml-4 bg-transparent border-[1px] border-black focus:outline-none  sm:text-sm "/>
+     
+     <button class=" inline-flex items-center lg:px-4 py-2 text-white  rounded-br-md rounded-tr-md shadow-sm  bg-blue-800 
+      focus:outline-none ">
+     <img src="../../../ASSETS/credit-card.png" alt="">
+     <p class=" text-[10px] lg:text-[15px] ml-1 lg:ml-2 font-semibold">Load Coupon</p>
+     </button>
+      </div>
+     </div>
+    <p class="  lg:pl-12 pt-4 font-semibold">adsense code</p>
+     </div>
+     </div>
+     <script src="../../../JS/ADVERTISER/CreateOrder.js"></script>
+    </body>
+    </html>

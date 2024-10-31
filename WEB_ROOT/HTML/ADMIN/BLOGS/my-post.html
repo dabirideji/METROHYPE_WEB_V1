@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Post</title>
+    <link rel="stylesheet" href="../../../CSS/ADMIN/BLOG/blog.css">
+    <link rel="stylesheet" href="../../../PLUGINS/IGNORED-CSS/ck.style.css">
+    <link rel="stylesheet" href="../../../PLUGINS/IGNORED-CSS/responsive-blog.css">
+    <style src="../../../PLUGINS/TAILWIND/tailwind.min.css"></style>
+    <script src="../../../PLUGINS/TAILWIND/tailwind.js"></script>
+    <script src="../../../PLUGINS/TAILWIND/tailwind-config.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="bg-[#2a3f541a]">
+    <div class="">
+        <!-- Side bar -->
+        <aside
+            class="hidden side-bar lg:block w-[40vw] md:w-[35vw] lg:w-[20vw] h-[100vh] fixed bg-[#ffffff] px-4 py-4 z-50 "
+            id="sidebar">
+            <a href="admin-dashboard.html" class="flex items-center lg:ml-4 space-x-1">
+                <img class="w-10 h-10 md:w-12 md:h-12 lg:w-8 lg:h-8 mx-auto lg:mx-0"
+                    src="../../../ASSETS/metrohyp-logo.png" alt="logo">
+                <h1 class="hidden lg:block leading-2 text-3xl font-[inter] text-[#242424]">Metrohyp</h1>
+            </a>
+
+            <div class="mt-10 space-y-3 md:space-y-14 lg:pb-20 h-[100%] overflow-y-auto">
+                <div class="space-y-3">
+                    <a href="#"
+                        class="w-full px-4 py-2 hover:bg-[#3A57E8] text-[15px] lg:text-[16px] font-[inter] font-[500] hover:text-white text-[#242424] flex md:flex-row flex-col items-center space-y-1 md:space-y-0 md:space-x-1">
+                        <i class="fa-solid fa-table-cells-large"></i>
+                        <p class="">Dashboard</p>
+                    </a>
+
+                    <a href="#"
+                        class="w-full px-4 py-2 hover:bg-[#3A57E8] text-[15px] lg:text-[16px] font-[inter] font-[500] hover:text-white text-[#242424] flex md:flex-row flex-col items-center text-center space-y-3 md:space-y-0 md:space-x-1">
+                        <i class="fa fa-check"></i>
+                        <p>Complete Jobs</p>
+                    </a>
+
+                    <a href="#"
+                        class="w-full px-4 py-2 hover:bg-[#3A57E8] text-[15px] lg:text-[16px] font-[inter] font-[500] hover:text-white text-[#242424] flex md:flex-row flex-col items-center text-center space-y-3 md:space-y-0 md:space-x-1">
+                        <i class="fa fa-chart-simple"></i>
+                        <p>My Transactions</p>
+                    </a>
+                </div>
+
+                <div class="space-y-3">
+                    <a href="#"
+                        class="w-full px-4 py-2 hover:bg-[#3A57E8] text-[15px] lg:text-[16px] font-[inter] font-[500] hover:text-white text-[#242424] flex md:flex-row flex-col items-center space-y-3 md:space-y-0 md:space-x-1">
+                        <i class="fa fa-briefcase"></i>
+                        <p>Orders</p>
+                    </a>
+
+                    <a href="#"
+                        class="w-full px-4 py-2 hover:bg-[#3A57E8] text-[15px] lg:text-[16px] font-[inter] font-[500] hover:text-white text-[#242424] flex md:flex-row flex-col items-center space-y-3 md:space-y-0 md:space-x-1">
+                        <i class="fa fa-credit-card"></i>
+                        <p>Load Wallet</p>
+                    </a>
+                </div>
+
+                <a href="#"
+                    class="w-full px-4 py-2 bg-[#3A57E8] text-[15px] lg:text-[16px] font-[inter] font-[500] text-white text-[#242424] flex md:flex-row flex-col items-center space-y-3 md:space-y-0 md:space-x-1">
+                    <i class="fa-solid fa-table-cells"></i>
+                    <p>Blog</p>
+                </a>
+
+                <div class="space-y-3">
+                    <a href="#"
+                        class="w-full px-4 py-2 hover:bg-[#3A57E8] text-[15px] lg:text-[16px] font-[inter] font-[500] hover:text-white text-[#242424] flex md:flex-row flex-col items-center space-y-3 md:space-y-0 md:space-x-1">
+                        <i class="fa-solid fa-user"></i>
+                        <p>My Account</p>
+                    </a>
+
+                    <a href="#"
+                        class="w-full px-4 py-2 hover:bg-[#3A57E8] text-[15px] lg:text-[16px] font-[inter] font-[500] hover:text-white text-[#242424] flex md:flex-row flex-col items-center space-y-3 md:space-y-0 md:space-x-1">
+                        <i class="fa-solid fa-users"></i>
+                        <p>My Referrals</p>
+                    </a>
+
+                    <a href="#"
+                        class="flex w-full justify-between px-4 py-2 hover:bg-[#3A57E8] text-[15px] lg:text-[16px] font-[inter] font-[500] hover:text-white text-[#242424] flex md:flex-row flex-col items-center space-y-3 md:space-y-0 md:space-x-1">
+                        <div class="flex md:flex-row flex-col items-center  md:space-y-0 md:space-x-1">
+                            <i class="fa-solid fa-gamepad"></i>
+                            <p>Gaming</p>
+                        </div>
+                        <p class="text-[13px] text-center px-2 bg-red-500 text-white rounded-[5px]">Coming Soon</p>
+                    </a>
+
+                    <a href="#"
+                        class="w-full px-4 py-2 hover:bg-[#3A57E8] text-[15px] lg:text-[16px] font-[inter] font-[500] hover:text-white text-[#242424] flex md:flex-row flex-col items-center space-y-3 md:space-y-0 md:space-x-1">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        <p>Log Out</p>
+                    </a>
+                </div>
+            </div>
+        </aside>
+        <div class="lg:float-right">
+            <!-- Navbar -->
+            <nav class="w-[100vw] lg:w-[80vw] h-[10vh] md:h-[8vh] lg:h-[10vh] bg-[#ffffff] px-4 fixed lg:static">
+                <div class="flex float-right">
+                    <a href="#"
+                        class="w-[100%] h-16 md:h-[6vh] md:mt-2 lg:h-[7vh] lg:mt-2 hover:bg-gray-200 cursor-pointer px-2  md:px-4 flex items-center md:space-x-2">
+                        <img class="w-8 h-8 cursor-pointer" src="../../../ASSETS/user.svg" alt="user">
+                        <div class="flex font-[inter] text-gray-700 font-[500]">
+                            <p class="text-md ">
+                                Hi,
+                            </p>
+                            <p class="font-[600]">Uthman Dabiri</p>
+                        </div>
+                    </a>
+                    <div class="w-12 h-16 md:h-[6vh] lg:h-[7vh] md:mt-2 lg:mt-2 cursor-pointer bg-gray-200 py-[15px]"
+                        onclick="menuClick()" id="menu">
+                        <img class="w-6 h-6 mx-auto" src="../../../ASSETS/menu.png" alt="menu">
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Main content -->
+            <section class="w-[100vw] lg:w-[80vw] space-y-8 h-auto pb-20 font-[inter] pt-24 md:pt-8 z-0 px-4 lg:px-10">
+                <div>
+                    <a href="#" class="flex items-center space-x-1 text-2xl font-[600] text-gray-700">
+                        <i class="fa-solid fa-table-cells"></i>
+                        <p>Blog</p>
+                    </a>
+                </div>
+
+                <div class="w-full py-6 px-4 md:p-6 bg-white mt-4">
+                    <form action="">
+                        <div class="flex w-full h-[45px] border-[1px] border-gray-500 rounded-sm items-center">
+                            <input class="w-full h-[100%] outline-none px-4 text-[16px]" type="text"
+                                placeholder="Search Blog">
+                            <div class="w-12 h-[100%] bg-[#265a88] text-white py-2 px-4">
+                                <i class="fa-solid fa-magnifying-glass text-xl"></i>
+                            </div>
+                        </div>
+                    </form>
+
+                    <div
+                        class="flex items-center text-[#265a88] font-semibold text-sm md:text-[16px] space-x-4 text-center md:space-x-8 mt-6 md:px-4">
+                        <a href="blog.html">
+                            Latest Post
+                        </a>
+                        <a href="#">
+                            Top Post
+                        </a>
+                        <a href="#">
+                            Featured Post
+                        </a>
+                        <a href="#">
+                            My Posts
+                        </a>
+                        <a href="new-post.html">
+                            New Post
+                        </a>
+                    </div>
+                </div>
+
+                <div class="w-full py-10 bg-white px-4 md:px-6">
+                    <div class="space-y-2 font-[600] text-[#265a88]">
+                        <p>My Posts</p>
+                        <hr>
+                    </div>
+
+                    <div class="mt-10">
+                        <p class="text-blue-500">SCSCSC</p>
+                        <p class="text-gray-400 m-2">Read now.</p>
+                        <div class="flex space-x-6 md:space-x-10 md:ml-6 mt-6">
+                            <div class="flex items-center cursor-pointer space-x-1 md:space-x-2">
+                                <i class="fa-solid fa-heart"></i>
+                                <p class="text-xl">0</p>
+                            </div>
+                            <div class="flex items-center cursor-pointer space-x-1 md:space-x-2">
+                                <i class="fa-regular fa-eye"></i>
+                                <p class="text-xl">1</p>
+                            </div>
+                            <div class="flex items-center cursor-pointer space-x-1 md:space-x-2">
+                                <i class="fa-solid fa-comment"></i>
+                                <p class="text-xl">0</p>
+                            </div>
+                            <div class="flex items-center cursor-pointer text-blue-500 space-x-1">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                                <p class="">Edit</p>
+                            </div>
+                            <div class="flex items-center cursor-pointer text-red-500 space-x-1">
+                                <i class="fa-solid fa-trash-can"></i>
+                                <p class="">Delete Post</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+    <script src="../../../JS/ADMIN/Blogs/blog.js"></script>
+</body>
+
+</html>
