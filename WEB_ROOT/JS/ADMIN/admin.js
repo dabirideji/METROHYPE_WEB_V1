@@ -16,19 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 const sidebar = document.getElementById('sidebar');
 const overlay = document.getElementById('overlay');
 const sidebarToggle = document.getElementById('sidebarToggle');

@@ -15,7 +15,6 @@
     font-family: "Helvetica Neue", "Roboto", "Arial", "Droid", "Sans",
       "sans-serif";
   }
-
   .side-bar {
     animation: nav-down 1s ease-in-out forwards;
   }

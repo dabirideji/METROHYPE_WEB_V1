@@ -36,23 +36,23 @@ document.addEventListener('DOMContentLoaded', () => {
             const row = document.createElement("tr");
             row.classList.add("h-16", "border-b", "border-b-slate-500", "odd:bg-zinc-100", "even:bg-white");
             row.innerHTML = `
-                <td class="lg:w-52 text-center whitespace-nowrap px-4">${data[i].orderReff}</td>
-                <td class="lg:w-52 text-center whitespace-nowrap px-4">${data[i].jobAction}</td>
-                <td class="lg:w-52 text-center whitespace-nowrap mx-auto flex justify-center pt-3 px-4">
-                    <div class="bg-blue-600 w-24 h-7 rounded-md">
-                        <p class="text-white font-medium"><a href="${data[i].link}" >${data[i].link}</a></p>
+                <td class=" text-center py-4 px-4">${data[i].orderReff}</td>
+                <td class=" text-center py-4 px-4">${data[i].jobAction}</td>
+                <td class=" text-center mx-auto flex justify-center py-4 px-4">
+                    <div class="bg-blue-600 hover:bg-opacity-90 rounded-md">
+                        <p class="text-white px-6 md:px-2 py-1 cursor-pointer font-medium"><a href="${data[i].link}" >${data[i].link}</a></p>
                     </div>
                 </td>
-                <td class="lg:w-52 text-center whitespace-nowrap px-4">${data[i].username}</td>
-                <td class="lg:w-52 flex justify-center mx-auto whitespace-nowrap px-4">
-                    <div class="bg-red-600 h-7 rounded-md">
-                        <p class="text-center text-white font-medium px-3">${data[i].status}</p>
+                <td class=" text-center py-4 px-4">${data[i].username}</td>
+                <td class=" flex justify-center mx-auto py-4 px-4">
+                    <div class="bg-red-600 rounded-md">
+                        <p class="text-center text-white cursor-pointer font-medium py-1 px-3">${data[i].status}</p>
                     </div>
                 </td>
-                <td class="lg:w-52 text-center whitespace-nowrap px-4">${data[i].date}</td>
-                <td class="lg:w-52 flex justify-center mx-auto whitespace-nowrap px-4">
-                    <div class="bg-green-500 w-24 h-7 rounded-md">
-                        <p class="text-center text-white font-medium"><i class="fa-solid fas fa-check-circle font-light text-xs p-1"></i>${data[i].action}</p>
+                <td class=" text-center py-4 mx-4 md:mx-0 px-4">${data[i].date}</td>
+                <td class=" flex justify-center mx-auto">
+                    <div class="bg-green-500 rounded-md mx-4">
+                        <p class="text-center px-2 py-1 cursor-pointer text-white font-medium"><i class="fa-solid fas fa-check-circle font-light text-xs p-1"></i>${data[i].action}</p>
                     </div>
                 </td>
             `;
@@ -81,3 +81,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     renderTable(currentPage);
 });
+
+function menuClick() {
+  let menu = document.getElementById('menu');
+  let sidebar = document.getElementById('sidebar');
+
+  if (sidebar.classList.contains('hidden')) {
+    sidebar.classList.remove('hidden');
+  } else {
+    sidebar.classList.add('hidden');
+  }
+}
