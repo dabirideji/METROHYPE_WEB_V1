@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>view jobs</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="../../../JS/SHARED/VIEW-ACCOUNT/view-account.js"></script>
+  <link rel="stylesheet" href="../../../CSS/SHARED/EDIT-PROFILE/edit-profile.css">
+</head>
+<body class="bg-gray-100">
+  <nav class="bg-white shadow-md p-4 fixed w-full top-0 z-30 flex items-center justify-between">
+    <div class="flex items-center space-x-4">
+      <span class="text-2xl font-bold">Metrohyp</span>
+    </div>
+    <div class="flex items-center lg:hidden space-x-4">
+      <button id="sidebarToggle" class="text-gray-600 focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </button>
+      <div class="flex items-center space-x-2">
+        <img src="../../../ASSETS/user.png" alt="User" class="h-8 w-8 rounded-full">
+        <span class="text-gray-700">John Doe</span> 
+      </div>
+    </div>
+    <div class="hidden lg:flex items-center space-x-4">
+      <div class="flex items-center space-x-2">
+        <img src="../../../ASSETS/user.png" alt="User" class="h-8 w-8 rounded-full">
+        <span class="text-gray-700">John Doe</span>
+      </div>
+    </div>
+  </nav>
+  <div id="overlay" class="fixed inset-0 hidden z-20"></div>
+  <div class="flex pt-16">
+    <aside id="sidebar" class="bg-white w-full lg:w-1/5 h-screen overflow-y-scroll scrollbar-hide fixed left-0 top-0 z-10 shadow-md sidebar lg:translate-x-0 -translate-x-full lg:block">
+      <ul class="space-y-4 p-4 mt-20">
+        <li><a href="#" class="block text-gray-700 capitalize hover:bg-[#337ab7] hover:text-white p-2 rounded"><i class="fa-solid fa-light fa-chess-board"></i> Dashboard</a></li>
+        <li><a href="#" class="block text-gray-700 capitalize hover:bg-[#337ab7] hover:text-white p-2 rounded"><i class="fa-solid fa-check"></i> completed job</a></li>
+        <li><a href="#" class="block text-gray-700 capitalize hover:bg-[#337ab7] hover:text-white p-2 rounded"><i class="fa-solid fa-signal"></i> my transactions</a></li>
+        <li><a href="#" class="block text-gray-700 capitalize hover:bg-[#337ab7] hover:text-white p-2 rounded"><i class="fa-sharp fa-solid fa-briefcase"></i> orders</a></li>
+        <li><a href="#" class="block text-gray-700 capitalize hover:bg-[#337ab7] hover:text-white p-2 rounded"><i class="fa-sharp-duotone fa-solid fa-wallet"></i> load wallet</a></li>
+        <li><a href="#" class="block text-gray-700 capitalize hover:bg-[#337ab7] hover:text-white p-2 rounded"><i class="fa-solid fa-speaker"></i> blog</a></li>
+        <li><a href="#" class="block text-gray-700 capitalize hover:bg-[#337ab7] hover:text-white p-2 rounded"><i class="fa-solid fa-user"></i> my account</a></li>
+        <li><a href="#" class="block text-gray-700 capitalize hover:bg-[#337ab7] hover:text-white p-2 rounded"><i class="fa-solid fa-square"></i> my referral</a></li>
+        <li><a href="#" class="block text-gray-700 capitalize hover:bg-[#337ab7] hover:text-white p-2 rounded"><i class="fa-sharp fa-solid fa-chess-knight"></i> gaming</a></li>
+        <li><a href="#" class="block text-gray-700 capitalize hover:bg-[#337ab7] hover:text-white p-2 rounded"><i class="fa-solid fa-arrow-right-from-bracket"></i> log out</a></li>
+      </ul>
+    </aside>
+    <main class="flex-1 lg:ml-[20%] p-6 bg-gray-50 min-h-screen">
+      <h1 class="text-3xl font-semibold mb-4 capitalize">
+        <i class="fa-solid fa-user"></i> my account
+      </h1>
+      <div class="flex justify-between p-[15px]">
+        <p class="">adsense code</p>
+        <p class="">adsense code</p>
+      </div>
+      <div class="mt-[30px] bg-white p-[20px]">
+        <div class="flex justify-between border-b border-black">
+          <a href="#" class="block text-gray-700 capitalize p-[10px] m-[10px]"><i class="fa-solid fa-user"></i> my profile</a>
+          <a href="#" class="block text-gray-700 capitalize border rounded-md p-[10px] m-[10px]"><i class="fa-solid fa-sliders"></i> edit profile</a>
+          <a href="#" class="block text-gray-700 capitalize p-[10px] m-[10px]"><i class="fa-solid fa-bank"></i> edit bank details</a>
+          <a href="#" class="block text-gray-700 capitalize p-[10px] m-[10px]"><i class="fa-solid fa-lock"></i> change password</a>
+        </div>
+        <div class="border-b border-black-[2px] border-t border-black mt-[50px]">
+          <h3 class="block text-gray-700 capitalize p-2">edit profile</h3>
+          <div class="border-b border-black border-t border-black mt-12">
+            <h3 class="block text-gray-700 capitalize p-2">edit profile</h3>
+            <div>
+              <form action="" class="ml-6 sm:ml-10 lg:ml-16">
+                <div class="flex flex-col sm:flex-row sm:items-center sm:space-x-4 mb-4">
+                  <label for="me" class="w-full sm:w-1/4 text-gray-700 font-medium">Full Name</label>
+                  <input type="text" class="border border-black capitalize w-full sm:w-3/4 p-2 rounded-md" placeholder="David Inyang">
+                </div>
+                <div class="flex flex-col sm:flex-row sm:items-center sm:space-x-4 mb-4">
+                  <label for="me" class="w-full sm:w-1/4 text-gray-700 font-medium">Phone</label>
+                  <input type="text" class="border border-black rounded-md w-full sm:w-3/4 p-2" placeholder="0804635687">
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

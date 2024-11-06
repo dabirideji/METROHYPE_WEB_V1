@@ -3,21 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>view jobs</title>
+  <title>View Job</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    
-    .sidebar {
-      transition: transform 0.3s ease;
-    }
-    .scrollbar-hide::-webkit-scrollbar {
-    display: none;
-  }
-  .scrollbar-hide {
-    scrollbar-width: none;
-  }
-  </style>
+  <script src="./../../../PLUGINS/TAILWIND/tailwind-v2.js"></script>
+  <script src="./../../../PLUGINS/TAILWIND/tailwind.js"></script>
+  <script src="./../../../PLUGINS/TAILWIND/tailwind.min.css"></script>
+  <link rel="stylesheet" href="./../../../CSS/ADMIN/admin.css">
+  <link rel="stylesheet" href="./../../../PLUGINS/IGNORED-CSS/admin-ignored.css">
 </head>
 <body class="bg-gray-100">
   
@@ -102,7 +94,7 @@
                   <p class="text-3xl lowercase text-[#00ff00] bg-[#ffff00] w-[70px] h-[30px] font-bold p-0 ">yowa </p>
                 </div>
                 <p class="capitalize p-[20px]"> <i class="fa-solid fa-arrow-up-right-from-square"></i>  link:</p>
-                <p class="p-[20px]"> https://dabiridejialx.great-site.net</p>
+                <p class="p-[20px]">https://dabiridejialx.great-site.net</p>
             </div>
         
             <div class=" w-full sm:w-[250px] sm:ml-4 p-2">
@@ -121,27 +113,8 @@
     </main>
   </div>
 
-  <script>
-    const sidebar = document.getElementById('sidebar');
-    const overlay = document.getElementById('overlay');
-    const sidebarToggle = document.getElementById('sidebarToggle');
+  <script src="./../../../JS/ADMIN/admin.js">
 
-   
-    sidebarToggle.addEventListener('click', () => {
-      if (sidebar.classList.contains('-translate-x-full')) {
-        sidebar.classList.remove('-translate-x-full');
-        overlay.classList.remove('hidden');
-      } else {
-        sidebar.classList.add('-translate-x-full');
-        overlay.classList.add('hidden');
-      }
-    });
-
-    
-    overlay.addEventListener('click', () => {
-      sidebar.classList.add('-translate-x-full');
-      overlay.classList.add('hidden');
-    });
   </script>
 </body>
 </html>

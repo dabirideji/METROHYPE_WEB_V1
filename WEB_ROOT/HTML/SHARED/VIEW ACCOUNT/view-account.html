@@ -1,11 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>View Account</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../.././../CSS/SHARED/VIEW-ACCOUNT/view-account.css">
+  <script defer src="../../../JS/SHARED/VIEW-ACCOUNT/view-account.js"></script>
 </head>
-<body>
-    
+<body class="bg-gray-100">
+  <nav class="bg-white shadow-md p-4 fixed w-full top-0 z-30 flex items-center justify-between">
+    <div class="flex items-center space-x-4">
+      <span class="text-2xl font-bold">Metrohype</span>
+    </div>
+    <div class="flex items-center lg:hidden space-x-4">
+      <button id="sidebarToggle" class="text-gray-600 focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
+        </svg>
+      </button>
+      <div class="flex items-center space-x-2">
+        <img src="../../../ASSETS/user.png" alt="User" class="h-8 w-8 rounded-full">
+        <span class="text-gray-700">John Doe</span> 
+      </div>
+    </div>
+    <div class="hidden lg:flex items-center space-x-4">
+      <div class="flex items-center space-x-2">
+        <img src="../../../ASSETS/user.png" alt="User" class="h-8 w-8 rounded-full">
+        <span class="text-gray-700">John Doe</span>
+      </div>
+    </div>
+  </nav>
+
+  <div id="overlay" class="fixed inset-0 hidden z-20"></div>
+  
+  <div class="flex pt-16">
+    <aside id="sidebar" class="bg-white w-full lg:w-1/5 h-screen overflow-y-scroll scrollbar-hide fixed left-0 top-0 z-10 shadow-md sidebar lg:translate-x-0 -translate-x-full lg:block">
+      <ul class="space-y-4 p-4 mt-20"> 
+        <li><a href="#" class="block text-gray-700 capitalize hover:bg-[#337ab7] hover:text-white p-2 rounded"><i class="fa-solid fa-chess-board"></i> Dashboard</a></li>
+        <li><a href="#" class="block text-gray-700 capitalize hover:bg-[#337ab7] hover:text-white p-2 rounded"><i class="fa-solid fa-check"></i> Completed Job</a></li>
+        <li><a href="#" class="block text-gray-700 capitalize hover:bg-[#337ab7] hover:text-white p-2 rounded"><i class="fa-solid fa-signal"></i> My Transactions</a></li>
+        <li><a href="#" class="block text-gray-700 capitalize hover:bg-[#337ab7] hover:text-white p-2 rounded"><i class="fa-solid fa-briefcase"></i> Orders</a></li>
+        <li><a href="#" class="block text-gray-700 capitalize hover:bg-[#337ab7] hover:text-white p-2 rounded"><i class="fa-solid fa-wallet"></i> Load Wallet</a></li>
+        <li><a href="#" class="block text-gray-700 capitalize hover:bg-[#337ab7] hover:text-white p-2 rounded"><i class="fa-solid fa-speaker"></i> Blog</a></li>
+        <li><a href="#" class="block text-gray-700 capitalize hover:bg-[#337ab7] hover:text-white p-2 rounded"><i class="fa-solid fa-user"></i> My Account</a></li>
+        <li><a href="#" class="block text-gray-700 capitalize hover:bg-[#337ab7] hover:text-white p-2 rounded"><i class="fa-solid fa-square"></i> My Referral</a></li>
+        <li><a href="#" class="block text-gray-700 capitalize hover:bg-[#337ab7] hover:text-white p-2 rounded"><i class="fa-solid fa-chess-knight"></i> Gaming</a></li>
+        <li><a href="#" class="block text-gray-700 capitalize hover:bg-[#337ab7] hover:text-white p-2 rounded"><i class="fa-solid fa-arrow-right-from-bracket"></i> Log Out</a></li>
+      </ul>
+    </aside>
+
+    <main class="flex-1 lg:ml-[20%] p-6 bg-gray-50 min-h-screen">
+      <h1 class="text-3xl font-semibold mb-4 capitalize"><i class="fa-solid fa-user"></i> My Account</h1>
+      <div class="flex justify-between p-[15px]">
+        <p>adsense code</p>
+        <p>adsense code</p>
+      </div>
+      <div class="mt-[30px] bg-white p-[20px]">
+        <div class="flex justify-between border-b border-black">
+          <a href="#" class="block text-gray-700 capitalize border rounded-md p-[10px]"><i class="fa-solid fa-user"></i> My Profile</a>
+          <a href="#" class="block text-gray-700 capitalize"><i class="fa-solid fa-sliders"></i> Edit Profile</a>
+          <a href="#" class="block text-gray-700 capitalize"><i class="fa-solid fa-bank"></i> Edit Bank Details</a>
+          <a href="#" class="block text-gray-700 capitalize"><i class="fa-solid fa-lock"></i> Change Password</a>
+        </div>
+        <div class="border-b border-t border-black mt-[50px]">
+          <h3 class="block text-gray-700 capitalize p-2">My Profile</h3>
+        </div>
+        <div>
+          <p class="block text-gray-700 capitalize font-bold p-2">MetroID: 300029106610</p>
+          <p class="block text-gray-700 capitalize font-bold p-2">Full Name: David Inyang</p>
+          <p class="block text-gray-700 capitalize font-bold p-2">Email: dabirideji@gmail.com</p>
+          <p class="block text-gray-700 capitalize font-bold p-2">Username: darex1s</p>
+          <p class="block text-gray-700 capitalize font-bold p-2">Phone Number: 08045272789</p>
+        </div>
+      </div>
+      <p class="mt-[10px]">adsense code</p>
+      <p class="mt-[10px]">adsense code</p>
+      <p class="mt-[10px]">adsense code</p>
+      <p class="mt-[10px]">adsense code</p>
+    </main>
+  </div>
 </body>
 </html>
