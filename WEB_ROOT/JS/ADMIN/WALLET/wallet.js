@@ -8,3 +8,8 @@ function menuClick() {
     sidebar.classList.add('hidden');
   }
 }
+
+// Initialize CKEditor
+ClassicEditor.create(document.querySelector('#post-content')).catch((error) => {
+  console.error(error);
+});

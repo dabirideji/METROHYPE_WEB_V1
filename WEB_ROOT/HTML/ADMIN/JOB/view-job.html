@@ -11,110 +11,176 @@
   <link rel="stylesheet" href="./../../../CSS/ADMIN/admin.css">
   <link rel="stylesheet" href="./../../../PLUGINS/IGNORED-CSS/admin-ignored.css">
 </head>
-<body class="bg-gray-100">
-  
-  <nav class="bg-white shadow-md p-4 fixed w-full top-0 z-30 flex items-center justify-between">
-   
-    <div class="flex items-center space-x-4">
-      <span class="text-2xl font-bold">Metrohyp</span>
-    </div>
+<body class="bg-[#2a3f541a]">
+  <div class="">
+    <!-- Side bar -->
+    <aside
+      class="hidden side-bar lg:block w-[40vw] md:w-[35vw] lg:w-[20vw] h-[100vh] fixed bg-[#ffffff] px-4 py-4 z-50 "
+      id="sidebar">
+      <a href="../../ADMIN/DASHBOARD/admin-dashboard.html" class="flex items-center lg:ml-4 space-x-1">
+        <img class="w-10 h-10 md:w-12 md:h-12 lg:w-8 lg:h-8 mx-auto lg:mx-0" src="../../../ASSETS/metrohyp-logo.png"
+          alt="logo">
+        <h1 class="hidden lg:block leading-2 text-3xl font-[inter] text-[#242424]">Metrohyp</h1>
+      </a>
 
-  
-    <div class="flex items-center lg:hidden space-x-4">
-   
-      <button id="sidebarToggle" class="text-gray-600 focus:outline-none">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-        </svg>
-      </button>
-      
-    
-      <div class="flex items-center space-x-2">
-        <img src="../../../ASSETS/user.png" alt="User" class="h-8 w-8 rounded-full">
-        <span class="text-gray-700">John Doe</span> 
+      <div class="mt-10 space-y-3 md:space-y-14 lg:pb-20 h-[100%] overflow-y-auto">
+        <div class="space-y-3">
+          <a href="../../ADMIN/DASHBOARD/admin-dashboard.html"
+            class="w-full px-4 py-2 hover:bg-[#3A57E8] text-[15px] lg:text-[16px] font-[inter] font-[500] hover:text-white text-[#242424] flex md:flex-row flex-col items-center space-y-1 md:space-y-0 md:space-x-1">
+            <i class="fa-solid fa-table-cells-large"></i>
+            <p class="">Dashboard</p>
+          </a>
+
+          <a href="../../ADMIN/JOB/CompletedJobs.html"
+            class="w-full px-4 py-2 hover:bg-[#3A57E8] text-[15px] lg:text-[16px] font-[inter] font-[500] hover:text-white text-[#242424] flex md:flex-row flex-col items-center text-center space-y-3 md:space-y-0 md:space-x-1">
+            <i class="fa fa-check"></i>
+            <p>Complete Jobs</p>
+          </a>
+
+          <a href="../../ADVERTISER/TRANSACTIONS/view-user-transaction.html"
+            class="w-full px-4 py-2 hover:bg-[#3A57E8] text-[15px] lg:text-[16px] font-[inter] font-[500] hover:text-white text-[#242424] flex md:flex-row flex-col items-center text-center space-y-3 md:space-y-0 md:space-x-1">
+            <i class="fa fa-chart-simple"></i>
+            <p>My Transactions</p>
+          </a>
+        </div>
+
+        <div class="space-y-3">
+          <a href="../../ADMIN/ORDER/order.html"
+            class="w-full px-4 py-2 bg-[#3A57E8] text-[15px] lg:text-[16px] font-[inter] font-[500] text-white text-[#242424] flex md:flex-row flex-col items-center space-y-3 md:space-y-0 md:space-x-1">
+            <i class="fa fa-briefcase"></i>
+            <p>Orders</p>
+          </a>
+
+          <a href="../../ADMIN/WALLET/load-wallet.html"
+            class="w-full px-4 py-2 hover:bg-[#3A57E8] text-[15px] lg:text-[16px] font-[inter] font-[500] hover:text-white text-[#242424] flex md:flex-row flex-col items-center space-y-3 md:space-y-0 md:space-x-1">
+            <i class="fa fa-credit-card"></i>
+            <p>Load Wallet</p>
+          </a>
+        </div>
+
+        <a href="../../ADMIN/BLOGS/blog.html"
+          class="w-full px-4 py-2 hover:bg-[#3A57E8] text-[15px] lg:text-[16px] font-[inter] font-[500] hover:text-white text-[#242424] flex md:flex-row flex-col items-center space-y-3 md:space-y-0 md:space-x-1">
+          <i class="fa-solid fa-table-cells"></i>
+          <p>Blog</p>
+        </a>
+
+        <div class="space-y-3">
+          <a href="../../SHARED/VIEW ACCOUNT/view-account.html"
+            class="w-full px-4 py-2 hover:bg-[#3A57E8] text-[15px] lg:text-[16px] font-[inter] font-[500] hover:text-white text-[#242424] flex md:flex-row flex-col items-center space-y-3 md:space-y-0 md:space-x-1">
+            <i class="fa-solid fa-user"></i>
+            <p>My Account</p>
+          </a>
+
+          <a href="#"
+            class="w-full px-4 py-2 hover:bg-[#3A57E8] text-[15px] lg:text-[16px] font-[inter] font-[500] hover:text-white text-[#242424] flex md:flex-row flex-col items-center space-y-3 md:space-y-0 md:space-x-1">
+            <i class="fa-solid fa-users"></i>
+            <p>My Referrals</p>
+          </a>
+
+          <a href="#"
+            class="flex w-full justify-between px-4 py-2 hover:bg-[#3A57E8] text-[15px] lg:text-[16px] font-[inter] font-[500] hover:text-white text-[#242424] flex md:flex-row flex-col items-center space-y-3 md:space-y-0 md:space-x-1">
+            <div class="flex md:flex-row flex-col items-center  md:space-y-0 md:space-x-1">
+              <i class="fa-solid fa-gamepad"></i>
+              <p>Gaming</p>
+            </div>
+            <p class="text-[13px] text-center px-2 bg-red-500 text-white rounded-[5px]">Coming Soon</p>
+          </a>
+
+          <a href="#"
+            class="w-full px-4 py-2 hover:bg-[#3A57E8] text-[15px] lg:text-[16px] font-[inter] font-[500] hover:text-white text-[#242424] flex md:flex-row flex-col items-center space-y-3 md:space-y-0 md:space-x-1">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <p>Log Out</p>
+          </a>
+        </div>
       </div>
-    </div>
-
-    
-    <div class="hidden lg:flex items-center space-x-4">
-    
-      <div class="flex items-center space-x-2">
-        <img src="../../../ASSETS/user.png" alt="User" class="h-8 w-8 rounded-full">
-        <span class="text-gray-700">John Doe</span>
-      </div>
-    </div>
-  </nav>
-
-  
-  <div id="overlay" class="fixed inset-0 hidden z-20"></div>
-
- 
-  <div class="flex pt-16">
-  
-    <aside id="sidebar" class="bg-white w-full lg:w-1/5 h-screen  overflow-y-scroll scrollbar-hide fixed left-0 top-0 z-10 shadow-md sidebar lg:translate-x-0 -translate-x-full lg:block">
-      <ul class="space-y-4 p-4 mt-20"> 
-       
-        <li><a href="#" class="block text-gray-700 capitalize hover:bg-[#337ab7] hover:text-white p-2 rounded"><i class="fa-solid fa-light fa-chess-board"></i>   Dashboard</a></li>
-        
-        <li><a href="#" class="block text-gray-700 capitalize hover:bg-[#337ab7] hover:text-white p-2 rounded"><i class="fa-solid fa-check"></i> completed job</a></li>
-      
-        <li><a href="#" class="block text-gray-700 capitalize hover:bg-[#337ab7] hover:text-white p-2 rounded"><i class="fa-solid fa-signal"></i> my transactions</a></li>
-      
-        <li><a href="#" class="block text-gray-700 capitalize hover:bg-[#337ab7] hover:text-white p-2 rounded"> <i class="fa-sharp fa-solid fa-briefcase"></i> orders</a></li>
-
-        <li><a href="#" class="block text-gray-700 capitalize hover:bg-[#337ab7] hover:text-white p-2 rounded"> <i class="fa-sharp-duotone fa-solid fa-wallet"></i> load wallet</a></li>
-        
-        <li><a href="#" class="block text-gray-700 capitalize hover:bg-[#337ab7] hover:text-white p-2 rounded"><i class="fa-solid fa-speaker"></i> blog</a></li>
-       
-        <li><a href="#" class="block text-gray-700 capitalize hover:bg-[#337ab7] hover:text-white p-2 rounded"> <i class="fa-solid fa-user"></i>  my account</a></li>
-        
-        <li><a href="#" class="block text-gray-700 capitalize hover:bg-[#337ab7] hover:text-white p-2 rounded"> <i class="fa-solid fa-square"></i>  my referral</a></li>
-       
-        <li><a href="#" class="block text-gray-700 capitalize hover:bg-[#337ab7] hover:text-white p-2 rounded"><i class="fa-sharp fa-solid fa-chess-knight"></i> gaming</a></li>
-       
-        <li><a href="#" class="block text-gray-700 capitalize hover:bg-[#337ab7] hover:text-white p-2 rounded"><i class="fa-solid fa-arrow-right-from-bracket"></i> log out </a></li>
-      </ul>
     </aside>
 
-   
-    <main class="flex-1 lg:ml-[20%] p-6 bg-gray-50 min-h-screen">
-      <h1 class="text-3xl font-semibold mb-4 capitalize">  <i class="fa-sharp fa-solid fa-briefcase"></i> view job 
-</h1>
-     <p class="">adsense code</p>
-      <div class=" mt-[30px] bg-white p-[20px]">
-      
-        <div class="">
-          <button class="p-[9px] bg-[#337ab7] text-white rounded"> <i class="fa-sharp fa-solid fa-briefcase"></i> job details </button>
-          <div class="flex flex-col sm:flex-row justify-between mt-2">
-            <div class="border border-black w-full sm:w-[70%] mb-2 sm:mb-0">
-                <h3 class="font-bold text-[16px] text-black capitalize p-[10px]">description:</h3>
-                <p class="capitalize font-bold  p-[10px]">zazoo zehhhhh</p>
 
-                <div class="border-b border-black m-[20px]">
-                  <p class="text-3xl lowercase text-[#00ff00] bg-[#ffff00] w-[70px] h-[30px] font-bold p-0 ">yowa </p>
+    <div class="lg:float-right">
+      <!-- Navbar -->
+      <nav class="w-[100vw] lg:w-[80vw] h-[10vh] md:h-[8vh] lg:h-[10vh] bg-[#ffffff] px-4 fixed lg:static z-50">
+        <div class="flex float-right">
+          <a href="../../SHARED/VIEW ACCOUNT/view-account.html"
+            class="w-[100%] h-16 md:h-[6vh] md:mt-2 lg:h-[7vh] lg:mt-2 hover:bg-gray-200 cursor-pointer px-2  md:px-4 flex items-center md:space-x-2">
+            <img class="w-8 h-8 cursor-pointer" src="../../../ASSETS/user.svg" alt="user">
+            <div class="flex font-[inter] text-gray-700 font-[500]">
+              <p class="text-md ">
+                Hi,
+              </p>
+              <p class="font-[600]">Uthman Dabiri</p>
+            </div>
+          </a>
+          <div class="w-12 h-16 md:h-[6vh] lg:h-[7vh] md:mt-2 lg:mt-2 cursor-pointer bg-gray-200 py-[15px]"
+            onclick="menuClick()" id="menu">
+            <img class="w-6 h-6 mx-auto" src="../../../ASSETS/menu.png" alt="menu">
+          </div>
+        </div>
+      </nav>
+
+      <!-- Main content -->
+      <section class="w-[100vw] lg:w-[80vw] space-y-8 h-auto pb-20 font-[inter] pt-24 md:pt-8 z-0 px-4 lg:px-10">
+        <div>
+          <a href="#" class="flex items-center space-x-1 text-2xl font-[600] text-gray-700">
+            <i class="fa fa-briefcase"></i>
+            <p>View Jobs</p>
+          </a>
+        </div>
+
+        <div class="w-full py-6 px-4 md:p-6 bg-white mt-4">
+          <form action="">
+            <div class="flex space-x-1 items-center justify-end my-6">
+              <label class="text-lg" for="Search">Search:</label>
+              <input class="border border-gray-500 outline-none pl-4 rounded-md w-[250px] h-[35px]" type="search"
+                name="" id="">
+            </div>
+          </form>
+          <div>
+            <p class="">adsense code</p>
+            <div class=" mt- bg-white p-[20px]">
+            
+              <div class="">
+                <button class="btn hover:opacity-95 text-white text-sm py-2 px-4 rounded-sm flex items-center">
+                  <i class="fa fa-briefcase mr-2"></i> Job Details
+                </button>
+                <div class="flex flex-col sm:flex-row justify-between mt-2">
+                  <div class="border border-black w-full sm:w-[70%] mb-2 sm:mb-0">
+                    <div class="px-4">
+                      <h3 class="font-bold text-[16px] text-black capitalize">description:</h3>
+                      <p class="capitalize font-bold">zazoo zehhhhh</p>
+                    </div>
+                    <div class="bg-[#ffff00] w-20 text-center text-2xl lowercase rounded-md text-[#00ff00] px-2 py-1 mt-2 mx-4 font-bold ">
+                      <p>Yowa</p>
+                    </div>
+                    <hr class="border border-black mt-4">
+                    <div class="mx-4 my-4 space-y-4">
+                      <p class="capitalize "> <i class="fa-solid fa-arrow-up-right-from-square"></i> link:</p>
+                      <p class="">https://dabiridejialx.great-site.net</p>
+                    </div>
+                  </div>
+            
+                  <div class="w-full sm:w-[250px] mt-6 md:mt-0 sm:ml-4">
+                    <div class="bg-[#3072AC] p-4 rounded-md">
+                      <p class="items-center text-white">
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                        info
+                      </p>
+                      <p class="capitalize font-bold text-white">fee : ₦ 5.00</p>
+                    </div>
+                  </div>
                 </div>
-                <p class="capitalize p-[20px]"> <i class="fa-solid fa-arrow-up-right-from-square"></i>  link:</p>
-                <p class="p-[20px]">https://dabiridejialx.great-site.net</p>
-            </div>
-        
-            <div class=" w-full sm:w-[250px] sm:ml-4 p-2">
-              <div class="bg-[#3072AC] rounded-md">
-                <p class="p-[10px] text-white">
-                  <span><i class="fa-solid fa-exclamation bg-white text-blue-500 p-[10px] rounded-full"></i> </span>
-                  info
-                </p>
-                <p class="capitalize font-bold ml-[20px] text-white">fee :  N5</p>
               </div>
+              <p class="">adsense code</p>
             </div>
+          </div>
         </div>
-        </div>
-        <p class="">adsense code</p>
-      </div>
-    </main>
+
+
+      </section>
+
+    </div>
   </div>
 
-  <script src="./../../../JS/ADMIN/admin.js">
-
-  </script>
+  <script src="../../../JS/ADMIN/ORDER/order.js"></script>
 </body>
+
 </html>

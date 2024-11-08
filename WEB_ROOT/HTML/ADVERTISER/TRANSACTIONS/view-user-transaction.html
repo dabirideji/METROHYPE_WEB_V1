@@ -1,143 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>View User Transactions</title>
-    <style src="../../../PLUGINS/TAILWIND/tailwind.min.css"></style>
-    <script src="../../../PLUGINS/TAILWIND/tailwind.js"></script>
-    <script src="../../../PLUGINS/TAILWIND/tailwind-config.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>View User Transactions</title>
+  <style src="../../../PLUGINS/TAILWIND/tailwind.min.css"></style>
+  <link rel="stylesheet" href="../../../CSS/SHARED/VIEW-ACCOUNT/view-account.css">
+  <link rel="stylesheet" href="../../../PLUGINS/IGNORED-CSS/view-transaction.css">
+  <script src="../../../PLUGINS/TAILWIND/tailwind.js"></script>
+  <script src="../../../PLUGINS/TAILWIND/tailwind-config.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
 </head>
-<body class="lg:bg-gray-200 w-full h-screen" >
-  <div class="flex justify-end">
-    <img class="w-8 h-8 mt-4 mr-4 lg:hidden" src="../../../ASSETS/press-button.png" alt="" id="menu">
-  </div>
-    <div class="lg:flex">
-      <!-- sidebar begins -->
-      <div
-        class="w-[80%] lg:w-[23%]  bg-white lg:shadow-md flex flex-col pl-4 block" id="dashboard"
-      >
-       <div class="flex">
-        <img class="w-8 h-8 rounded-full mt-4" src="../../../ASSETS/metrohpy.jpeg" alt="">
-        <h1 class="text-[35px] ml-1 font-semibold" >Metrohyp</h1>
-       </div>
-       <div class="pl-2 pt-4 font-semibold" >
-       <div class="flex">
-        <img class="w-4 h-4  mt-1" src="../../../ASSETS/dashboard.png" alt="">
-        <p class=" ml-1 " >Dashboard</p>
-       </div>
-       <div class="flex mt-5 hover:bg-blue-800  w-[70%] h-[40px] items-center rounded-md hover:pl-2 ">
-        <img class="w-4 h-4  mt-1" src="../../../ASSETS/check.png" alt="">
-        <p class=" ml-1 " >Completed Jobs</p>
-       </div>
-       <div class="flex mt-5 hover:bg-blue-800  w-[70%] h-[40px] items-center rounded-md hover:pl-2">
-        <img class="w-4 h-4  mt-1" src="../../../ASSETS/signal-status.png" alt="">
-        <a href="transactions.html">My Transactions</a>
-       </div>
-       <div class="flex mt-10 hover:bg-blue-800  w-[70%] h-[40px] items-center rounded-md hover:pl-2">
-        <img class="w-4 h-4  mt-1" src="../../../ASSETS/briefcase.png" alt="">
-        <a class=" ml-1 " href="neworder.html">Orders</a>
-       </div>
-       <div class="flex mt-5 hover:bg-blue-800  w-[70%] h-[40px] items-center rounded-md hover:pl-2">
-        <img class="w-4 h-4  mt-1" src="../../../ASSETS/credit-card (1).png" alt="">
-        <a class=" ml-1 " href="loadwallet.html">Load Wallet</a>
-       </div>
-       <div class="flex mt-10 hover:bg-blue-800  w-[70%] h-[40px] items-center rounded-md hover:pl-2">
-        <img class="w-4 h-4  mt-1" src="../../../ASSETS/grid (1).png" alt="">
-        <a class=" ml-1 " href="blog.html">Blog</a>
-       </div>
-       <div class="flex mt-10 hover:bg-blue-800  w-[70%] h-[40px] items-center rounded-md hover:pl-2">
-        <img class="w-4 h-4  mt-1" src="../../../ASSETS/user.png" alt="">
-        <p class=" ml-1 " >My Account</p>
-       </div>
-       <div class="flex mt-5 hover:bg-blue-800  w-[70%] h-[40px] items-center rounded-md hover:pl-2">
-        <img class="w-4 h-4  mt-1" src="../../../ASSETS/decision-making.png" alt="">
-        <p class=" ml-1 " >My Refferals</p>
-       </div>
-       <div class=" flex   mt-5 hover:bg-blue-800  w-[98%] h-[40px] items-center rounded-md hover:pl-2">
-       <div class="flex ">
-        <img class="w-4 h-4  mt-1" src="../../../ASSETS/chess.png" alt="">
-        <p class=" ml-1 " >Gaming</p>
-       </div>
-       <div class="w-[50%] h-[30px] bg-red-500 hover:bg-white text-white hover:text-black text-center ml-10 
-        rounded-[4px] font-semibold">Coming Soon</div>
-      </div>
-      <div class="flex mt-5 hover:bg-blue-800  w-[70%] h-[40px] items-center rounded-md hover:pl-2">
-        <img class="w-4 h-4  mt-1" src="../../../ASSETS/sign-out-option.png" alt="">
-        <p class=" ml-1 " >Log Out</p>
-       </div>
-      </div>
-      </div>
-      <!--  -->
-      <div
-        class=" w-[100%] lg:w-[77%]  mt-8 lg:mt-0 flex flex-col hidden  lg:block" id="topnav"
- >
-       <!-- topnav -->
-        <div class="bg-white w-[100%]  h-[80px] shadow-md flex justify-center lg:justify-end items-center">
-        <div class=" w-[55%] lg:w-[35%] flex justify-evenly ">
-         <div class="bg-blue-800 w-10 h-10 flex justify-center items-center rounded-full">
-         <img src="../../../ASSETS/people.png" alt="">
-         </div>
-         <p class="mt-1">Hi,David Iyang</p>
-         <img class="w-6 h-6 mt-1 " src="../../../ASSETS/menu-bar (1).png" alt="">
-         </div>
-         </div>
-         <!-- my transactions -->
-         <div class="container flex flex-col mt-6 lg:ml-6  ">
-        <div class="lg:w-[30%]  flex">
-         <img class=" w-4 h-4 lg:w-6 lg:h-6 mt-1 " src="../../../ASSETS/dollar-bill.png" alt="">
-         <p class="text-[20px] font-bold ml-2"> My Transactions</p>
-         </div>
-         <!--Table  -->
-         <div class="container  lg:p-6 mt-6 max-w-full lg:w-[95%] bg-white shadow-md rounded-lg">
-        <div class="flex justify-between ">
-        <div class="mb-4">
-         <label for="entries" class="font-semibold">Show</label>
-        <select id="entries" class="w-20 h-8 focus:outline-none border-2 border-gray-300 rounded-sm ml-1" onchange="changeItemsPerPage()">
-           <option value="1">1</option>
-           <option value="2">2</option>
-           <option value="3">3</option>
-           <option value="4">4</option>
-           <option value="5">5</option>
-           <option value="6">6</option>
-           <option value="7">7</option>
-           <option value="8">8</option>
-           <option value="9">9</option>
-           <option value="10">10</option>
-           </select>
-           <span class="font-semibold">entries</span>
+
+<body class="bg-[#2a3f541a]">
+  <div class="">
+    <!-- Side bar -->
+    <aside
+      class="hidden side-bar lg:block w-[40vw] md:w-[35vw] lg:w-[20vw] h-[100vh] fixed bg-[#ffffff] px-4 py-4 z-50 "
+      id="sidebar">
+      <a href="../../ADMIN/DASHBOARD/admin-dashboard.html" class="flex items-center lg:ml-4 space-x-1">
+        <img class="w-10 h-10 md:w-12 md:h-12 lg:w-8 lg:h-8 mx-auto lg:mx-0" src="../../../ASSETS/metrohyp-logo.png"
+          alt="logo">
+        <h1 class="hidden lg:block leading-2 text-3xl font-[inter] text-[#242424]">Metrohyp</h1>
+      </a>
+
+      <div class="mt-10 space-y-3 md:space-y-14 lg:pb-20 h-[100%] overflow-y-auto">
+        <div class="space-y-3">
+          <a href="../../ADMIN/DASHBOARD/admin-dashboard.html"
+            class="w-full px-4 py-2 hover:bg-[#3A57E8] text-[15px] lg:text-[16px] font-[inter] font-[500] hover:text-white text-[#242424] flex md:flex-row flex-col items-center space-y-1 md:space-y-0 md:space-x-1">
+            <i class="fa-solid fa-table-cells-large"></i>
+            <p class="">Dashboard</p>
+          </a>
+
+          <a href="../../ADMIN/JOB/CompletedJobs.html"
+            class="w-full px-4 py-2 hover:bg-[#3A57E8] text-[15px] lg:text-[16px] font-[inter] font-[500] hover:text-white text-[#242424] flex md:flex-row flex-col items-center text-center space-y-3 md:space-y-0 md:space-x-1">
+            <i class="fa fa-check"></i>
+            <p>Complete Jobs</p>
+          </a>
+
+          <a href="../../ADVERTISER/TRANSACTIONS/view-user-transaction.html"
+            class="w-full px-4 py-2 bg-[#3A57E8] text-[15px] lg:text-[16px] font-[inter] font-[500] text-white text-[#242424] flex md:flex-row flex-col items-center text-center space-y-3 md:space-y-0 md:space-x-1">
+            <i class="fa fa-chart-simple"></i>
+            <p>My Transactions</p>
+          </a>
+        </div>
+
+        <div class="space-y-3">
+          <a href="../../ADMIN/ORDER/order.html"
+            class="w-full px-4 py-2 hover:bg-[#3A57E8] text-[15px] lg:text-[16px] font-[inter] font-[500] hover:text-white text-[#242424] flex md:flex-row flex-col items-center space-y-3 md:space-y-0 md:space-x-1">
+            <i class="fa fa-briefcase"></i>
+            <p>Orders</p>
+          </a>
+
+          <a href="../../ADMIN/WALLET/load-wallet.html"
+            class="w-full px-4 py-2 hover:bg-[#3A57E8] text-[15px] lg:text-[16px] font-[inter] font-[500] hover:text-white text-[#242424] flex md:flex-row flex-col items-center space-y-3 md:space-y-0 md:space-x-1">
+            <i class="fa fa-credit-card"></i>
+            <p>Load Wallet</p>
+          </a>
+        </div>
+
+        <a href="../../ADMIN/BLOGS/blog.html"
+          class="w-full px-4 py-2 hover:bg-[#3A57E8] text-[15px] lg:text-[16px] font-[inter] font-[500] hover:text-white text-[#242424] flex md:flex-row flex-col items-center space-y-3 md:space-y-0 md:space-x-1">
+          <i class="fa-solid fa-table-cells"></i>
+          <p>Blog</p>
+        </a>
+
+        <div class="space-y-3">
+          <a href="../../SHARED/VIEW ACCOUNT/view-account.html"
+            class="w-full px-4 py-2 hover:bg-[#3A57E8] text-[15px] lg:text-[16px] font-[inter] font-[500] hover:text-white text-[#242424] flex md:flex-row flex-col items-center space-y-3 md:space-y-0 md:space-x-1">
+            <i class="fa-solid fa-user"></i>
+            <p>My Account</p>
+          </a>
+
+          <a href="#"
+            class="w-full px-4 py-2 hover:bg-[#3A57E8] text-[15px] lg:text-[16px] font-[inter] font-[500] hover:text-white text-[#242424] flex md:flex-row flex-col items-center space-y-3 md:space-y-0 md:space-x-1">
+            <i class="fa-solid fa-users"></i>
+            <p>My Referrals</p>
+          </a>
+
+          <a href="#"
+            class="flex w-full justify-between px-4 py-2 hover:bg-[#3A57E8] text-[15px] lg:text-[16px] font-[inter] font-[500] hover:text-white text-[#242424] flex md:flex-row flex-col items-center space-y-3 md:space-y-0 md:space-x-1">
+            <div class="flex md:flex-row flex-col items-center  md:space-y-0 md:space-x-1">
+              <i class="fa-solid fa-gamepad"></i>
+              <p>Gaming</p>
             </div>
-            <div>
-          <label for="Search" class="font-semibold">Search:</label>
-           <input  class="w-36 h-8 focus:outline-none border-2 border-gray-300 rounded-sm ml-1" onchange="changeItemsPerPage()"/>
-           </div>
+            <p class="text-[13px] text-center px-2 bg-red-500 text-white rounded-[5px]">Coming Soon</p>
+          </a>
+
+          <a href="#"
+            class="w-full px-4 py-2 hover:bg-[#3A57E8] text-[15px] lg:text-[16px] font-[inter] font-[500] hover:text-white text-[#242424] flex md:flex-row flex-col items-center space-y-3 md:space-y-0 md:space-x-1">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <p>Log Out</p>
+          </a>
+        </div>
+      </div>
+    </aside>
+
+
+    <div class="lg:float-right">
+      <!-- Navbar -->
+      <nav class="w-[100vw] lg:w-[80vw] h-[10vh] md:h-[8vh] lg:h-[10vh] bg-[#ffffff] px-4 fixed lg:static">
+        <div class="flex float-right">
+          <a href="../../SHARED/VIEW ACCOUNT/view-account.html"
+            class="w-[100%] h-14 md:h-[6vh] md:mt-2 lg:h-[7vh] lg:mt-2 hover:bg-gray-200 cursor-pointer px-2  md:px-4 flex items-center md:space-x-2">
+            <img class="w-8 h-8 cursor-pointer" src="../../../ASSETS/user.svg" alt="user">
+            <div class="flex font-[inter] text-gray-700 font-[500]">
+              <p class="text-md ">
+                Hi,
+              </p>
+              <p class="font-[600]">Uthman Dabiri</p>
+            </div>
+          </a>
+          <div class="w-12 h-14 md:h-[6vh] lg:h-[7vh] md:mt-2 lg:mt-2 cursor-pointer bg-gray-200 py-[15px]"
+            onclick="menuClick()" id="menu">
+            <img class="w-6 h-6 mx-auto" src="../../../ASSETS/menu.png" alt="menu">
+          </div>
+        </div>
+      </nav>
+
+      <!-- Main content -->
+      <section class="w-[100vw] lg:w-[80vw] space-y-8 h-auto pb-20 font-[inter] pt-24 md:pt-8 z-0 lg:px-10">
+        <div>
+          <a href="#" class="flex px-4 lg:px-0 items-center space-x-1 text-2xl font-[600] text-gray-700">
+            <i class="fa fa-chart-simple"></i>
+            <p>My Transactions</p>
+          </a>
+        </div>
+
+        <div class="w-full py-6 px-4 md:p-6 bg-white mt-4">
+          <!--Table  -->
+          <div class="container  lg:p-6 mt-6 max-w-full">
+            <div class="flex flex-col md:flex-row my-6 md:my-0 justify-between ">
+              <div class="mb-4">
+                <label for="entries" class="font-semibold">Show</label>
+                <select id="entries" class="w-20 h-8 focus:outline-none border-2 border-gray-300 rounded-sm ml-1"
+                  onchange="changeItemsPerPage()">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+                <span class="font-semibold">entries</span>
+              </div>
+
+              <div>
+                <label for="Search" class="font-semibold">Search:</label>
+                <input class="w-full lg:w-[200px] pl-2 h-8 focus:outline-none border-2 border-gray-300 rounded-sm ml-1"
+                  onchange="changeItemsPerPage()" />
+              </div>
             </div>
             <table class=" max-w-full lg:w-full  overflow-hidden" id="table">
-            <thead class="bg-gray-800 text-white ">
-            <tr >
-            <th class="py-2 px-4 text-left">Date</th>
-             <th class="py-2 px-4 text-left "><div class="flex"><img class="w-5 h-5 mt-1 hidden lg:block" src="../../../ASSETS/up-and-down-arrow (1).png" alt=""> <p>Trans. Id</p></div></th>
-             <th class="py-2 px-4  text-left"><div class="flex"><img class="w-5 h-5 mt-1 hidden lg:block" src="../../../ASSETS/up-and-down-arrow (1).png" alt=""> <p>Description</p></div></th>
-             <th class="py-2 px-4  text-left"> <div class="flex"><img class="w-5 h-5 mt-1 hidden lg:block" src="../../../ASSETS/up-and-down-arrow (1).png" alt=""> <p>Amount</p></div></th>
-             </tr>
-             </thead>
-            <tbody id="table-body" >
-             </tbody>
+              <thead class="bg-gray-500 text-white ">
+                <tr>
+                  <th class="py-2 px-4 text-left">Date</th>
+                  <th class="py-2 px-4 text-left ">
+                    <div class="flex"><img class="w-5 h-5 mt-1 hidden lg:block" src="../../../ASSETS/up-and-down-arrow (1).png" alt="">
+                      <p>Trans. Id</p>
+                    </div>
+                  </th>
+                  <th class="py-2 md:px-4  text-left">
+                    <div class="flex"><img class="w-5 h-5 mt-1 hidden lg:block" src="../../../ASSETS/up-and-down-arrow (1).png"
+                        alt="">
+                      <p>Description</p>
+                    </div>
+                  </th>
+                  <th class="py-2 px-4  text-left">
+                    <div class="flex"><img class="w-5 h-5 mt-1 hidden lg:block" src="../../../ASSETS/up-and-down-arrow (1).png" alt="">
+                      <p>Amount</p>
+                    </div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody id="table-body">
+              </tbody>
             </table>
             <div id="button-controller" class="mt-4 flex flex-col lg:flex-row justify-between items-center"></div>
-            </div>
-             <p class="mt-4">adsense code</p>
-             <p >adsense code</p>
-             <p >adsense code</p>
-            </div>
-           <!--  -->
-           </div>
-            </div>
-            <div class="w-full h-10 bg-white"></div>
-            
-            <script src="../../../JS/ADVERTISER/viewusertransaction.js"></script>
-     
-    </body>
-    </html>
+          </div>
+          <p class="mt-4">adsense code</p>
+          <p>adsense code</p>
+          <p>adsense code</p>
+        </div>
+
+        <div class="w-full h-10 bg-white"></div>
+      </section>
+
+    </div>
+  </div>
+  <script src="../../../JS/ADVERTISER/viewusertransaction.js"></script>
+</body>
+
+</html>
