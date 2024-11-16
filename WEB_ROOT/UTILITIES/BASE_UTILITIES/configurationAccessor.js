@@ -1,5 +1,5 @@
 async function loadConfig() {
-    const response = await fetch("./../../../../CONFIGURATION/config.json"); //todo  - adjust base url - scalable
+    const response = await fetch("/WEB_ROOT/CONFIGURATION/config.json"); //todo  - adjust base url - scalable
     console.log(response);
     if (!response.ok) {
         throw new Error(`Failed to load config file: ${response.statusText}`);

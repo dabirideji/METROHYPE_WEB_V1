@@ -11,3 +11,29 @@ export async function AdvertiserLogin(email = "", password = "") {
         throw e;
     }
 }
+
+export async function CreateAdvertiser (advertiserFirstName, advertiserLastName,advertiserUserName,advertiserPhoneNumber,advertiserEmailAddress,advertiserStatus,advertiserPassword,advertiserConfirmPassword) {
+    try {
+        //get  route 
+        const route = API_ROUTES.ADVERTISER.REGISTER;
+       
+        //create payload
+        const payload = API_PAYLOAD_FACTORY.ADVERTISER.REGISTER (advertiserFirstName, advertiserLastName,advertiserUserName,advertiserPhoneNumber,advertiserEmailAddress,advertiserStatus,advertiserPassword,advertiserConfirmPassword);
+       
+        return await ConsumeApi(route, API_METHOD.POST, payload);
+    } catch (e) {
+        console.error("Failed to create advertiser:", e);
+        throw e;
+    }
+}
+
+export async function GetAllAdvertisers () {
+    try {
+        //get  route 
+        const route = API_ROUTES.ADVERTISER.GET_ALL;
+        return await ConsumeApi(route);
+    } catch (e) {
+        console.error("Failed to get Advertisers:", e);
+        throw e;
+    }
+}
