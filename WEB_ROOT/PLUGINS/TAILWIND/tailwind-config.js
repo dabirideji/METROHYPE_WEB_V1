@@ -5,5 +5,6 @@ tailwind.config = {
                 clifford: '#da373d',
             }
         }
-    }
+    },
+    plugins: [require('daisyui')]
 };
