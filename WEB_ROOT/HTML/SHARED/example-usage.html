@@ -11,36 +11,56 @@
     <h1>Notification and Advertiser Login</h1>
 
     <!-- Load notification script -->
-    <script src="./../../UTILITIES/FUNCTION_UTILIITIES/SHARED/NOTY/notification.js"></script>
+    <script src="/WEB_ROOT/UTILITIES/FUNCTION_UTILIITIES/SHARED/NOTY/notification.js"></script>
 
-    <!-- Separate block to ensure DOM is loaded before calling showNotification -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            showNotification('Page Loaded');
-        });
-    </script>
 
-    <!-- Load module script separately -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <script type="module">
-        import { LoginAdvertiser } from "./../../UTILITIES/FUNCTION_UTILIITIES/ADVERTISER/advertiserOnboardingHelper.js";
+        import { LoginAdvertiser,RegisterAdvertiser,GetAll } from "/WEB_ROOT/UTILITIES/FUNCTION_UTILIITIES/API/apiHelper.js";
 
         // Call AdvertiserLogin function after the page is fully loaded
         document.addEventListener('DOMContentLoaded', async function () {
             try {
-                const result = await LoginAdvertiser("metro@example.com", "password");
-                console.log(result);
+                // const res = await RegisterAdvertiser("deji","dabiri","dabirideji","08142546500","dabirideji@gmail.com","Active","deji","deji");
+                var res=await GetAll();
+                console.log(res);
+                // const result = await LoginAdvertiser("dabirideji@gmail.com", "deji");
+                // console.log(result);
             } catch (error) {
                 console.error("Error creating advertiser:", error);
             }
         });
-
-        // Sample function to demonstrate it works
-        function goo() {
-            console.log("gooing");
-        }
-
-        goo(); // Call the sample function
     </script>
-</body>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
 </html>
