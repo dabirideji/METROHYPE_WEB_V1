@@ -175,41 +175,11 @@
                 <!-- Simple Card  on mobile Screen-->
 
                 <div class="lg:hidden mt-10">
-                    <div id="cardsContainer" class="flex md:flex-col  w-full">
-
-                        <!-- Card 1 -->
-                        <div
-                            class="card w-[100%] lg:w-[30vw] h-[75px] bg-gradient-to-tr from-[#0ab4ff] to-[#113fda] rounded-lg text-white px-6 py-2 hover:shadow-2xl hover:shadow-[grey]">
-                            <p class="text-sm">Wallet Balance</p>
-                            <div class="flex items-center space-x-2">
-                                <i class="fa-solid text-2xl">₦</i>
-                                <p class="text-2xl mt-1">0</p>
-                            </div>
-                        </div>
-
-                        <!-- Card 2 -->
-                        <div
-                            class="card w-[100%] hidden lg:w-[30vw] h-[75px] bg-gradient-to-tr from-[#0ab4ff] to-[#113fda] rounded-lg text-white px-6 py-2 hover:shadow-2xl hover:shadow-[grey]">
-                            <p class="text-sm">Total Orders</p>
-                            <p class="text-2xl mt-1">0</p>
-                        </div>
-
-                        <!-- Card 3 -->
-                        <div
-                            class="card w-[100%] hidden lg:w-[30vw] h-[75px] bg-gradient-to-tr from-[#0ab4ff] to-[#113fda] rounded-lg text-white px-6 py-2 hover:shadow-2xl hover:shadow-[grey]">
-                            <p class="text-sm">Total Referral</p>
-                            <p class="text-2xl mt-1">0</p>
-                        </div>
-                    </div>
+                    <div id="cardsContainer" class="flex md:flex-col w-full carousel"></div>
 
                     <!-- Dot Indicators -->
-                    <div class="lg:hidden flex justify-center items-center mt-6">
-                        <div class="dot-pagination flex space-x-2">
-                            <span class="dot w-[8px] h-[8px] rounded-full cursor-pointer bg-gradient-to-tr from-[#0ab4ff] to-[#113fda]"
-                                data-index="0"></span>
-                            <span class="dot w-[8px] h-[8px] rounded-full cursor-pointer bg-gray-400" data-index="1"></span>
-                            <span class="dot w-[8px] h-[8px] rounded-full cursor-pointer bg-gray-400" data-index="2"></span>
-                        </div>
+                    <div class="lg:hidden flex justify-center items-center mt-6 dots">
+                        <div class="dot-pagination flex space-x-2 dots"></div>
                     </div>
                 </div>
 
@@ -309,75 +279,7 @@
         </div>
     </div>
 
-    <script>
-        function menuClick() {
-            let menu = document.getElementById("menu");
-            let sidebar = document.getElementById("sidebar")
-
-            if (sidebar.classList.contains("hidden")) {
-                sidebar.classList.remove("hidden");
-
-            } else {
-
-                sidebar.classList.add("hidden");
-            }
-        }
-
-
-        document.addEventListener('DOMContentLoaded', function () {
-            const cards = document.querySelectorAll('.card');
-            const dots = document.querySelectorAll('.dot');
-            let currentIndex = 0;
-            let intervalId;
-
-            // Function to show the current card and update the dots
-            function updatePagination(index) {
-                // Hide all cards and reset dot colors
-                cards.forEach((card, i) => {
-                    card.classList.add('hidden');
-                    dots[i].classList.remove('bg-gradient-to-tr', 'from-[#0ab4ff]', 'to-[#113fda]');
-                    dots[i].classList.add('bg-gray-400');
-                });
-
-                // Show the selected card and update the corresponding dot
-                cards[index].classList.remove('hidden');
-                dots[index].classList.add('bg-gradient-to-tr', 'from-[#0ab4ff]', 'to-[#113fda]');
-                dots[index].classList.remove('bg-gray-400');
-
-                // Update the current index
-                currentIndex = index;
-            }
-
-            // Function to switch cards automatically every 3 seconds
-            function autoSwitchCards() {
-                currentIndex = (currentIndex + 1) % cards.length;
-                updatePagination(currentIndex);
-            }
-
-            // Add click event listeners to each dot for manual card switching
-            dots.forEach((dot, index) => {
-                dot.addEventListener('click', function () {
-                    updatePagination(index);  // Show the card corresponding to the clicked dot
-
-                    // Restart auto-switching after manual click
-                    clearInterval(intervalId);  // Clear the previous interval
-                    intervalId = setInterval(autoSwitchCards, 10000);  // Restart auto-switching
-                });
-            });
-
-            // Initial setup: show the first card on load
-            updatePagination(currentIndex);
-
-            // Start auto-switching on smaller screens only
-            if (window.innerWidth < 1024) {
-                intervalId = setInterval(autoSwitchCards, 10000);
-            }
-        });
-
-
-
-
-    </script>
+    <script src="../../../JS/ADMIN/DASHBOARD/admin-dahboard.js"></script>
 </body>
 
 </html>
