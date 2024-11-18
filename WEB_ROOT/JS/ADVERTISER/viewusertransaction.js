@@ -42,10 +42,10 @@
             const bgColor = index % 2 === 0 ? 'bg-transparent' : 'bg-gray-50';
             tableBody.innerHTML += `
                 <tr class="${bgColor} border-b">
-                    <td class="px-1 lg:px-4 py-2">${item.date}</td>
-                    <td class="px-1 lg:px-4 py-2">${item.transId}</td>
-                    <td class="px-1 lg:px-4 py-2">${item.description}</td>
-                    <td class="px-1 lg:px-4 py-2">${item.amount}</td>
+                    <td class="px-2 lg:px-4 py-2">${item.date}</td>
+                    <td class="px-2 lg:px-4 py-2">${item.transId}</td>
+                    <td class="px-2 lg:px-4 py-2">${item.description}</td>
+                    <td class="px-2 lg:px-4 py-2">${item.amount}</td>
                 </tr>
             `;
         });
@@ -68,8 +68,8 @@
             <div>
                 Showing ${startEntry} to ${endEntry} of ${data.length} entries
             </div>
-             <div class=' w-[35vw] lg:w-[10vw] h-[30px] bg-gray-500  flex justify-center items-center rounded-md' >
-                <button  onclick="prevPage()" ${currentPage === 1 ? 'disabled' : ''}>Previous</button>
+             <div class=' w-[35vw] lg:w-[10vw] h-[30px] bg-gray-500 text-white cursor-pointer flex justify-center items-center rounded-md' >
+                <button class=" onclick="prevPage()" ${currentPage === 1 ? 'disabled' : ''}>Previous</button>
                 <div class="w-[1px] h-4 bg-white ml-1 lg:ml-2"></div>
                 <button class=' ml-1 lg:ml-2' onclick="nextPage()" ${currentPage === totalPages ? 'disabled' : ''}>Next</button>
             </div>
@@ -103,12 +103,14 @@
     document.addEventListener('DOMContentLoaded', renderTable);
 
     // mobile Responsiveness
-const menu = document.getElementById('menu');
-const dashboard = document.getElementById('dashboard');
+function menuClick() {
+  let menu = document.getElementById('menu');
+  let sidebar = document.getElementById('sidebar');
 
-const topnav= document.getElementById('topnav');
-menu.addEventListener('click', ()=>{
-  dashboard.classList.toggle('hidden');
-  topnav.classList.toggle('hidden')
-});
+  if (sidebar.classList.contains('hidden')) {
+    sidebar.classList.remove('hidden');
+  } else {
+    sidebar.classList.add('hidden');
+  }
+}
     
