@@ -15,12 +15,12 @@ export async function AdvertiserLogin(email = "", password = "") {
 export async function CreateAdvertiser (advertiserFirstName, advertiserLastName,advertiserUserName,advertiserPhoneNumber,advertiserEmailAddress,advertiserStatus,advertiserPassword,advertiserConfirmPassword) {
     try {
         //get  route 
-        const route = API_ROUTES.ADVERTISER.REGISTER;
+        const route = API_ROUTES.ADVERTISER.CREATE;
        
         //create payload
-        const payload = API_PAYLOAD_FACTORY.ADVERTISER.REGISTER (advertiserFirstName, advertiserLastName,advertiserUserName,advertiserPhoneNumber,advertiserEmailAddress,advertiserStatus,advertiserPassword,advertiserConfirmPassword);
+        const payload = API_PAYLOAD_FACTORY.ADVERTISER.CREATE (advertiserFirstName, advertiserLastName,advertiserUserName,advertiserPhoneNumber,advertiserEmailAddress,advertiserStatus,advertiserPassword,advertiserConfirmPassword);
        
-        return await ConsumeApi(route, API_METHOD.POST, payload);
+        return await ConsumeApi(route, API_METHOD.POST, payload,{userType:"Advertiser"});
     } catch (e) {
         console.error("Failed to create advertiser:", e);
         throw e;

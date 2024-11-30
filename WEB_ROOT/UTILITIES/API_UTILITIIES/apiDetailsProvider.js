@@ -11,8 +11,8 @@ export const API_ROUTES = {
 
     },
     ADVERTISER: {
-        REGISTER: "/API/ADVERTISERS/CREATE",
-        LOGIN: "/API/ADVERTISERS/LOGIN",
+        CREATE: "/API/USERS/:userType/CREATE",
+        LOGIN: "/API/v1/AUTH/LOGIN",
         GET_ALL: "/API/ADVERTISERS/GETALL",
         GET_BY_ID: "/API/ADVERTISERS/GETBYID/{ID}",
         UPDATE: "/API/ADVERTISERS/UPDATE/{ID}",
@@ -58,19 +58,18 @@ export const API_PAYLOAD_FACTORY = {
     },
     ADVERTISER: {
         LOGIN: (email, password) => ({
-            email:email,
+            usernameOrEmail:email,
             password:password
         }),
 
-        REGISTER: (advertiserFirstName, advertiserLastName,advertiserUserName,advertiserPhoneNumber,advertiserEmailAddress,advertiserStatus,advertiserPassword,advertiserConfirmPassword) => ({
-            advertiserFirstName:advertiserFirstName,
-            advertiserLastName:advertiserLastName,
-            advertiserUserName:advertiserUserName,
-            advertiserPhoneNumber:advertiserPhoneNumber,
-            advertiserEmailAddress:advertiserEmailAddress,
-            advertiserStatus:advertiserStatus,
-            advertiserPassword:advertiserPassword,
-            advertiserConfirmPassword:advertiserConfirmPassword,
+        CREATE: (FirstName, LastName,UserName,PhoneNumber,EmailAddress,Password,ConfirmPassword) => ({
+            firstName:FirstName,
+            lastName:LastName,
+            email:EmailAddress,
+            username:UserName,
+            phoneNumber:PhoneNumber,
+            password:Password,
+            confirmPassword:ConfirmPassword,
         }),
     },
     FREELANCER: {

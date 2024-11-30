@@ -66,14 +66,14 @@
 
                 <div class="gap-x-14 lg:flex items-center hidden text-text-color font-normal">
                     <a href="/" class=" hover:text-blue-300">Home</a>
-                    <a href="/" class=" hover:text-blue-300">Blog</a>
-                    <a href="/" class=" hover:text-blue-300">API</a>
-                    <a href="/" class=" hover:text-blue-300">Login</a>
-                    <button
-                        class="border-[1px] border-gray-700 rounded-3xl px-3 py-1  hover:border-blue-300  hover:text-blue-300">Freelance</button>
-                    <button
+                    <a href="#" class=" hover:text-blue-300">Blog</a>
+                    <a href="#" class=" hover:text-blue-300">API</a>
+                    <a href="#" class=" hover:text-blue-300">Login</a>
+                    <a href="./../../FREELANCER/ONBOARDING/register.html"
+                        class="border-[1px] border-gray-700 rounded-3xl px-3 py-1  hover:border-blue-300  hover:text-blue-300">Freelancer</a>
+                    <a href="./../../ADVERTISER/ONBOARDING/register.html"
                         class="border-[1px] border-gray-700 rounded-3xl px-2 py-1  hover:border-blue-300  hover:text-blue-300">Advertise
-                        on Metrohyp</button>
+                        on Metrohyp</a>
                 </div>
                 <button class=" block lg:hidden border-[0.5px] border-stone-300 px-3 py-1" id="menu"
                     aria-label="Toggle menu">
@@ -149,10 +149,15 @@
     <script type="module">
         import { LoginAdvertiser, RegisterAdvertiser, GetAll } from "/WEB_ROOT/UTILITIES/FUNCTION_UTILIITIES/API/apiHelper.js";
 
+
+
         // Register Click function when page fully loaded 
         const loginForm = document.getElementById('loginForm');
         loginForm.addEventListener('submit', async function (event) {
             event.preventDefault();
+
+
+
             const email = document.getElementById('email').value;
             const password = document.getElementById('password').value;
             //  validate email, phonenumber or username
