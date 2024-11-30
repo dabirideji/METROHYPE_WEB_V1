@@ -1,139 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Advertiser Registration form</title>
-    <style src="../../../PLUGINS/TAILWIND/tailwind.min.css"></style>
-    <script src="../../../PLUGINS/TAILWIND/tailwind.js"></script>
-    <script src="../../../PLUGINS/TAILWIND/tailwind-config.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-      @keyframes fade-up {
-     0% {
-       opacity: 0;
-       transform: translateY(100px); 
-     }
-     100% {
-       opacity: 1;
-       transform: translateY(0);
-     }
-   }
-   @keyframes nav-down {
-     0% {
-       opacity: 0;
-       transform: translateY(-20px);
-     }
-     100% {
-       opacity: 1;
-       transform: translateY(0);
-     }
-   }
 
-   .nav-down {
-     animation: button-down 1.5s ease forwards;
-   }
-   .fade-up {
-     animation: fade-up 1.5s ease-in-out forwards;
-   }
-   .picture {
-     animation: fade-up 1.9s ease-in-out forwards;
-   }
-   </style>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advertiser Registration form</title>
+  <style src="../../../PLUGINS/TAILWIND/tailwind.min.css"></style>
+  <script src="../../../PLUGINS/TAILWIND/tailwind.js"></script>
+  <script src="../../../PLUGINS/TAILWIND/tailwind-config.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    @keyframes fade-up {
+      0% {
+        opacity: 0;
+        transform: translateY(100px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes nav-down {
+      0% {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .nav-down {
+      animation: button-down 1.5s ease forwards;
+    }
+
+    .fade-up {
+      animation: fade-up 1.5s ease-in-out forwards;
+    }
+
+    .picture {
+      animation: fade-up 1.9s ease-in-out forwards;
+    }
+  </style>
 </head>
 
-<body class="white" >
+<body class="white">
   <header>
-    <nav id="big" class="w-screen bg-white z-50 lg:bg-white h-20 shadow-md shadow-neutral-50 fixed flex flex-row items-center justify-between px-5 lg:justify-around">
+    <nav id="big"
+      class="w-screen bg-white z-50 lg:bg-white h-20 shadow-md shadow-neutral-50 fixed flex flex-row items-center justify-between px-5 lg:justify-around">
       <div class="flex items-center space-x-2">
         <i class="fa fa-earth text-gray-500"></i>
         <a href="/" class="text-gray-700 text-[21px] font-semibold font-[inter]">Metrohyp</a>
       </div>
-  
+
       <div class="gap-x-14 lg:flex items-center hidden text-text-color font-medium">
-          <a href="../../SHARED/LANDING-PAGE/landing-page.html" class=" hover:text-blue-300">Home</a>
-          <a href="/" class=" hover:text-blue-300">Blog</a>
-          <a href="/" class=" hover:text-blue-300">API</a>
-          <a href="../../ADMIN/ONBOARDING/admin-login.html" class=" hover:text-blue-300">Login</a>
-          <a href="../../FREELANCER/ONBOARDING/freelancer-login.html">
-            <button class="border-[1px] border-gray-700 rounded-3xl px-3 py-1  hover:border-blue-300  hover:text-blue-300">Freelance</button>
-          </a>
-          <a href="../../ADVERTISER/ONBOARDING/register.html">
-            <button class="border-[1px] border-gray-700 rounded-3xl px-2 py-1  hover:border-blue-300  hover:text-blue-300">Advertise on Metrohyp</button>
-          </a>
+        <a href="../../SHARED/LANDING-PAGE/landing-page.html" class=" hover:text-blue-300">Home</a>
+        <a href="/" class=" hover:text-blue-300">Blog</a>
+        <a href="/" class=" hover:text-blue-300">API</a>
+        <a href="./../../SHARED/LOGIN/login.html" class=" hover:text-blue-300">Login</a>
+        <a href="../../FREELANCER/ONBOARDING/register.html">
+          <button
+            class="border-[1px] border-gray-700 rounded-3xl px-3 py-1  hover:border-blue-300  hover:text-blue-300">Freelancer</button>
+        </a>
+        <a href="../../ADVERTISER/ONBOARDING/register.html">
+          <button
+            class="border-[1px] border-gray-700 rounded-3xl px-2 py-1  hover:border-blue-300  hover:text-blue-300">Advertise
+            on Metrohyp</button>
+        </a>
       </div>
       <button class=" block lg:hidden border-[0.5px] border-stone-300 px-3 py-1" id="menu" aria-label="Toggle menu">
-          <i class="fas fa-bars text-2xl"></i>
+        <i class="fas fa-bars text-2xl"></i>
       </button>
-     
-  </nav>
-  
-  <!-- mobile view -->
-  <div class="menu nav-down hidden fixed z-20 w-full shadow-md" id="mobile-nav">
+
+    </nav>
+
+    <!-- mobile view -->
+    <div class="menu nav-down hidden fixed z-20 w-full shadow-md" id="mobile-nav">
       <div class="relative bg-white h-80 flex flex-col flex-grow mt-20 gap-y-6 p-4">
-          <a href="/">Home</a>
-          <a href="/">Blog</a>
-          <a href="/">API</a>
-          <a href="/">Login</a>
-          <a href="../../FREELANCER/ONBOARDING/freelancer-login.html">
-            <button class="border-[1px] border-gray-700 rounded-3xl px-3 py-1 w-72">Freelance</button>
-          </a>
-          <a href="../../ADVERTISER/ONBOARDING/register.html">
-            <button class="border-[1px] border-gray-700 rounded-3xl px-2 py-1 w-72">Advertise on Metrohyp</button>
-          </a>
+        <a href="/">Home</a>
+        <a href="/">Blog</a>
+        <a href="/">API</a>
+        <a href="/">Login</a>
+        <a href="../../FREELANCER/ONBOARDING/freelancer-login.html">
+          <button class="border-[1px] border-gray-700 rounded-3xl px-3 py-1 w-72">Freelance</button>
+        </a>
+        <a href="../../ADVERTISER/ONBOARDING/register.html">
+          <button class="border-[1px] border-gray-700 rounded-3xl px-2 py-1 w-72">Advertise on Metrohyp</button>
+        </a>
       </div>
-  </div>
+    </div>
   </header>
-  
-    <!-- Overall div -->
-    <div class="w-full h-[100%] lg:flex justify-center ml-6 lg:ml-0  pt-32 ">
-        <!-- img div -->
-   <div class="w-[90%] lg:w-[40%] flex justify-center items-center  ">
-    <img  src="../../../ASSETS/metro1.webp" alt="">
-   </div>
-   <!-- form div -->
+
+  <!-- Overall div -->
+  <div class="w-full h-[100%] lg:flex justify-center ml-6 lg:ml-0  pt-32 ">
+    <!-- img div -->
+    <div class="w-[90%] lg:w-[40%] flex justify-center items-center  ">
+      <img src="../../../ASSETS/metro1.webp" alt="">
+    </div>
+    <!-- form div -->
     <div class=" w-[90%] lg:w-[50%]  flex flex-col  ml-6 ">
       <h1 class="text-center font-semibold text-[30px] "> Advertiser on Metrohyp</h1>
       <div class="flex flex-col justify-center items-center mt-2 w-[80%] lg:w-[100%] ml-6 lg:ml-0 ">
-        <p >Join the smart people using Metrohyp to grow their brand and business.</p>
-        <div  class="flex justify-center w-12  h-[2px] bg-blue-400 mt-2  "></div>
+        <p>Join the smart people using Metrohyp to grow their brand and business.</p>
+        <div class="flex justify-center w-12  h-[2px] bg-blue-400 mt-2  "></div>
       </div>
-     
+
       <form action="" class=" flex flex-col justify-center mt-2 lg:pl-4 pt-6">
-        <div  >
-            <input class="border-[1px] border-gray-300 bg-transparent w-[95%] lg:w-[46%] h-[40px] rounded-[4px] outline-blue-400 pl-4" type="text" placeholder="Full Name">
-            <input class="border-[1px] border-gray-300 bg-transparent w-[95%] lg:w-[46%] h-[40px] rounded-[4px] outline-blue-400 mt-4 lg:mt-0 lg:ml-4 pl-4" type="email" placeholder="Email" >
+        <div>
+          <input
+            class="border-[1px] border-gray-300 bg-transparent w-[95%] lg:w-[46%] h-[40px] rounded-[4px] outline-blue-400 pl-4"
+            type="text" id="fullname" placeholder="Full Name">
+          <input
+            class="border-[1px] border-gray-300 bg-transparent w-[95%] lg:w-[46%] h-[40px] rounded-[4px] outline-blue-400 mt-4 lg:mt-0 lg:ml-4 pl-4"
+            type="email" id="email" placeholder="Email">
         </div>
         <div class="pt-4">
-            <input class="border-[1px] border-gray-300 bg-transparent w-[95%] lg:w-[46%] h-[40px] rounded-[4px] outline-blue-400 pl-4" type="tel" placeholder="Phone Number">
-            <input class="border-[1px] border-gray-300 bg-transparent w-[95%] lg:w-[46%] h-[40px] rounded-[4px] outline-blue-400 mt-4 lg:mt-0 lg:ml-4 pl-4" type="text" placeholder="Username" >
+          <input
+            class="border-[1px] border-gray-300 bg-transparent w-[95%] lg:w-[46%] h-[40px] rounded-[4px] outline-blue-400 pl-4"
+            type="tel" id="phoneNumber" placeholder="Phone Number">
+          <input
+            class="border-[1px] border-gray-300 bg-transparent w-[95%] lg:w-[46%] h-[40px] rounded-[4px] outline-blue-400 mt-4 lg:mt-0 lg:ml-4 pl-4"
+            id="username" type="text" placeholder="Username">
         </div>
         <div class="pt-4">
-            <input class="border-[1px] border-gray-300 bg-transparent w-[95%] lg:w-[46%] h-[40px] rounded-[4px] outline-blue-400 pl-4" type="password" placeholder="Password" >
-            <input class="border-[1px] border-gray-300 bg-transparent w-[95%] lg:w-[46%] h-[40px] rounded-[4px] outline-blue-400 mt-4 lg:mt-0 lg:ml-4 pl-4" type="password" placeholder="Retype Password" >
-         </div>
+          <input
+            class="border-[1px] border-gray-300 bg-transparent w-[95%] lg:w-[46%] h-[40px] rounded-[4px] outline-blue-400 pl-4"
+            type="password" id="password" placeholder="Password">
+          <input
+            class="border-[1px] border-gray-300 bg-transparent w-[95%] lg:w-[46%] h-[40px] rounded-[4px] outline-blue-400 mt-4 lg:mt-0 lg:ml-4 pl-4"
+            id="confirmPassworod" type="password" placeholder="Retype Password">
+        </div>
         <div class="flex justify-center items-center">
-          <button class=" bg-gray-200 w-[60%] h-[40px] rounded-[4px] text-center  mt-6 " >Submit</button>
+          <button type="button" onclick="ValidateAndRegisterAdvertiser()"
+            class=" bg-gray-200 w-[60%] h-[40px] rounded-[4px] text-center  mt-6 ">Submit</button>
         </div>
       </form>
     </div>
 
-    </div>
-    <!-- Footer -->
-    <div class="bg-slate-800 text-white w-screen h-40 mt-6 flex items-center justify-center">
-      <p>© 2020 Metrohyp. All rights reserved.</p>
-    </div>
+  </div>
+  <!-- Footer -->
+  <div class="bg-slate-800 text-white w-screen h-40 mt-6 flex items-center justify-center">
+    <p>© 2020 Metrohyp. All rights reserved.</p>
+  </div>
 
 
-    <script>
-      const menuBtn = document.getElementById('menu');
-      const mobileMenu = document.getElementById('mobile-nav');
-    
-      menuBtn.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-        big.classList.toggle('shadow-md');
+  <script>
+    const menuBtn = document.getElementById('menu');
+    const mobileMenu = document.getElementById('mobile-nav');
 
-      });
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      big.classList.toggle('shadow-md');
+
+    });
   </script>
+
+
+  <script src="/WEB_ROOT/UTILITIES/FUNCTION_UTILIITIES/SHARED/NOTY/notification.js"></script>
+
+  <script type="module">
+    import { LoginAdvertiser, RegisterAdvertiser, GetAll } from "/WEB_ROOT/UTILITIES/FUNCTION_UTILIITIES/API/apiHelper.js";
+  
+    async function ValidateAndRegisterAdvertiser() {
+      // Collect inputs
+      var fullname = document.getElementById("fullname").value;
+      var email = document.getElementById("email").value;
+      var username = document.getElementById("username").value;
+      var phoneNumber = document.getElementById("phoneNumber").value;
+      var password = document.getElementById("password").value;
+      var confirmPassword = document.getElementById("confirmPassworod").value; // Fixed the ID typo
+  
+      // Validate inputs
+      if (CheckIfEmptyOrNull(fullname, email, username, phoneNumber, password, confirmPassword)) {
+        showNotification("All fields are required.", "error");
+        return;
+      }
+  
+      if (password !== confirmPassword) {
+        alert("Passwords do not match.");
+        return;
+      }
+  
+      // If validation passes, call RegisterAdvertiser
+      try {
+         var res= await RegisterAdvertiser(
+          fullname.split(" ")[0], // First name (assumes first word is the first name)
+          fullname.split(" ")[1] || "", // Last name (rest of the name)
+          username,
+          phoneNumber,
+          email,
+          password,
+          confirmPassword
+        );
+        if(res==null || res==undefined)
+      {
+        throw new Error("Error! \nTry again Later");
+      }
+        console.log(res);
+        showNotification("Advertiser registered successfully!");
+      } catch (e) {
+        console.error("Error registering advertiser:", e);
+        showNotification("Failed to register advertiser. Please try again." , "error");
+      }
+    }
+  
+    function CheckIfEmptyOrNull(...params) {
+      for (let param of params) {
+        if (param.trim() === "" || param === null || param === undefined) {
+          return true; // Return true if any field is empty or null
+        }
+      }
+      return false; // Return false if all fields are valid
+    }
+  
+    // Attach the function to the global window object
+    window.ValidateAndRegisterAdvertiser = ValidateAndRegisterAdvertiser;
+  </script>
+  
+
+
+
+
+
+
+
 </body>
+
 </html>
