@@ -1,4 +1,4 @@
-import { AdvertiserLogin,CreateAdvertiser,GetAllAdvertisers } from "../../API_UTILITIIES/apiFunctions.js";
+import { AdvertiserLogin,CreateAdvertiser,GetAllAdvertisers,CreateJob,GetJobs } from "../../API_UTILITIIES/apiFunctions.js";
 
 
 export async function LoginAdvertiser(email, password) {
@@ -17,6 +17,7 @@ export async function RegisterAdvertiser (advertiserFirstName, advertiserLastNam
         
         const result = await CreateAdvertiser (advertiserFirstName, advertiserLastName,advertiserUserName,advertiserPhoneNumber,advertiserEmailAddress,advertiserStatus,advertiserPassword,advertiserConfirmPassword) ;
         console.log(result);
+        return result;
     } catch (error) {
         console.error("Error creating advertiser:", error);
     }
@@ -29,5 +30,32 @@ export async function GetAll() {
                 console.log(result);
     } catch (error) {
         console.error("Error creating advertiser:", error);
+    }
+}
+
+
+
+
+
+
+
+//===============  CREATE JOB ===================
+export async function CreateOrder(jobType, jobAction,jobDescription,jobLink,jobUserId,jobQuantityRequested) {
+    try {
+        const result = await CreateJob(jobType, jobAction,jobDescription,jobLink,jobUserId,jobQuantityRequested) ;
+        console.log(result);
+        return result;
+    } catch (error) {
+        console.error("Error creating job:", error);
+    }
+}
+
+
+export async function GetAllJobs() {
+    try {
+        const result = await GetJobs() ;
+        return result;
+    } catch (error) {
+        console.error("Error fetching jobs:", error);
     }
 }

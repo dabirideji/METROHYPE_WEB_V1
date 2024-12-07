@@ -21,6 +21,10 @@ export const API_ROUTES = {
     FREELANCER: {
 
     },
+    JOB: {
+        CREATE: "/API/JOBS/CREATE",
+        GET_ALL: "/API/JOBS/GETALL",
+    },
     PARTNER: {
 
     },
@@ -42,6 +46,9 @@ export const API_PAYLOAD = {
     },
     FREELANCER: {
 
+    },
+    JOB: {
+        jobType:""
     },
     PARTNER: {
 
@@ -74,6 +81,16 @@ export const API_PAYLOAD_FACTORY = {
     },
     FREELANCER: {
 
+    },
+    JOB: {
+        CREATE: (jobType, jobAction,jobDescription,jobLink,jobUserId,jobQuantityRequested) => ({
+            jobType:jobType,
+            jobAction:jobAction,
+            jobActionDescription:jobDescription,
+            jobLink:jobLink,
+            jobUserId:jobUserId,
+            jobQuantityRequested:jobQuantityRequested
+        }),
     },
     PARTNER: {
 

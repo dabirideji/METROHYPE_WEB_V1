@@ -85,7 +85,7 @@
         <a href="/">Blog</a>
         <a href="/">API</a>
         <a href="/">Login</a>
-        <a href="../../FREELANCER/ONBOARDING/freelancer-login.html">
+        <a href="./../../SHARED/LOGIN/login.html">
           <button class="border-[1px] border-gray-700 rounded-3xl px-3 py-1 w-72">Freelance</button>
         </a>
         <a href="../../ADVERTISER/ONBOARDING/register.html">
@@ -164,7 +164,7 @@
 
   <script type="module">
     import { LoginAdvertiser, RegisterAdvertiser, GetAll } from "/WEB_ROOT/UTILITIES/FUNCTION_UTILIITIES/API/apiHelper.js";
-  
+
     async function ValidateAndRegisterAdvertiser() {
       // Collect inputs
       var fullname = document.getElementById("fullname").value;
@@ -173,21 +173,36 @@
       var phoneNumber = document.getElementById("phoneNumber").value;
       var password = document.getElementById("password").value;
       var confirmPassword = document.getElementById("confirmPassworod").value; // Fixed the ID typo
-  
+
       // Validate inputs
       if (CheckIfEmptyOrNull(fullname, email, username, phoneNumber, password, confirmPassword)) {
         showNotification("All fields are required.", "error");
         return;
       }
-  
+      const fullnamePattern = /^[A-Za-z]+ [A-Za-z]+$/;
+
+if (!fullnamePattern.test(fullname)) {
+  showNotification(
+    "Invalid Fullname",
+    "error",
+    "1000"
+  );
+  return;
+}
       if (password !== confirmPassword) {
-        alert("Passwords do not match.");
+        showNotification("Passwords do not match.", "error", "1000");
         return;
       }
-  
+      const passwordPattern = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+
+      if (!passwordPattern.test(password)) {
+        showNotification("Password must be at least 8 characters long, include an uppercase letter, lowercase letter, number, and a special character.", "error", "1000");
+        return;
+      }
+
       // If validation passes, call RegisterAdvertiser
       try {
-         var res= await RegisterAdvertiser(
+        var res = await RegisterAdvertiser(
           fullname.split(" ")[0], // First name (assumes first word is the first name)
           fullname.split(" ")[1] || "", // Last name (rest of the name)
           username,
@@ -196,18 +211,21 @@
           password,
           confirmPassword
         );
-        if(res==null || res==undefined)
-      {
-        throw new Error("Error! \nTry again Later");
-      }
+        if (res == null || res == undefined) {
+          throw new Error("Error! \nTry again Later");
+        }
         console.log(res);
         showNotification("Advertiser registered successfully!");
+        setTimeout(()=>{
+          window.location.href="./../../SHARED/LOGIN/login.html";
+
+        },1000);
       } catch (e) {
         console.error("Error registering advertiser:", e);
-        showNotification("Failed to register advertiser. Please try again." , "error");
+        showNotification("Failed to register advertiser. Please try again.", "error");
       }
     }
-  
+
     function CheckIfEmptyOrNull(...params) {
       for (let param of params) {
         if (param.trim() === "" || param === null || param === undefined) {
@@ -216,11 +234,11 @@
       }
       return false; // Return false if all fields are valid
     }
-  
+
     // Attach the function to the global window object
     window.ValidateAndRegisterAdvertiser = ValidateAndRegisterAdvertiser;
   </script>
-  
+
 
 
 
