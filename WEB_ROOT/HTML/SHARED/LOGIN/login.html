@@ -110,7 +110,7 @@
                     <input type="password" placeholder="Password" id="password" name="password"
                         class="w-[100%] h-10 rounded-md border-[1px] p-3 border border-stone-300 outline-blue-700">
                     <div class="flex justify-center">
-                        <button
+                        <button id="loginBtn"
                             class=" fade-up w-full md:w-[70%] h-10 rounded-md p-2 bg-stone-200 mt-4 text-center col-span-2"><i
                                 class="fa-solid fa-lock mr-2"></i>Login</button>
                     </div>
@@ -146,17 +146,31 @@
     </script>
     <script src="/WEB_ROOT/UTILITIES/FUNCTION_UTILIITIES/SHARED/NOTY/notification.js"></script>
 
+
+
     <script type="module">
         import { LoginAdvertiser, RegisterAdvertiser, GetAll } from "/WEB_ROOT/UTILITIES/FUNCTION_UTILIITIES/API/apiHelper.js";
+        
 
+        function loadSpinner(elementId,message="loading...")
+        {
+            if(element.trim()=="")
+        {
+            return;
+        }
+            var element = document.getElementById(elementId);
+element.innerHTML = `<i class="fa fa-spinner fa-spin mr-2"></i> Loading...`;
+element.disabled = true;
+        }
 
 
         // Register Click function when page fully loaded 
         const loginForm = document.getElementById('loginForm');
         loginForm.addEventListener('submit', async function (event) {
             event.preventDefault();
-
-
+            var loginBtn = document.getElementById("loginBtn");
+loginBtn.innerHTML = `<i class="fa fa-spinner fa-spin mr-2"></i> Loading...`;
+loginBtn.disabled = true;
 
             const email = document.getElementById('email').value;
             const password = document.getElementById('password').value;
@@ -183,8 +197,15 @@
                 if (response) {
 
                     showNotification("Login Successfully");
-                    window.location =
-                        "https://metrohype-web-v1.onrender.com/WEB_ROOT/HTML/ADMIN/DASHBOARD/admin-dashboard.html";
+                    loginBtn.innerHTML = `<i
+                                class="fa-solid fa-lock mr-2"></i>Login`;
+loginBtn.disabled = false;
+
+setTimeout(()=>{
+    window.location =
+    "/WEB_ROOT/HTML/ADMIN/DASHBOARD/admin-dashboard.html";
+},1000);
+                    
                 } else {
                     showNotification("Login Failed", "error");
                 }

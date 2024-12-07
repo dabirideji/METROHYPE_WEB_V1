@@ -37,3 +37,38 @@ export async function GetAllAdvertisers () {
         throw e;
     }
 }
+
+
+
+
+//================ JOBS ========================
+
+// ## CREATE JOB
+export async function CreateJob(jobType, jobAction,jobDescription,jobLink,jobUserId,jobQuantityRequested) {
+    try {
+        //get  route 
+        const route = API_ROUTES.JOB.CREATE;
+       
+        //create payload
+        const payload = API_PAYLOAD_FACTORY.JOB.CREATE(jobType, jobAction,jobDescription,jobLink,jobUserId,jobQuantityRequested);
+       
+        return await ConsumeApi(route, API_METHOD.POST, payload);
+    } catch (e) {
+        console.error("Failed to create job:", e);
+        throw e;
+    }
+}
+
+// ## CREATE JOB
+export async function GetJobs() {
+    try {
+        //get  route 
+        const route = API_ROUTES.JOB.GET_ALL;
+       
+        return await ConsumeApi(route);
+    } catch (e) {
+        console.error("Failed to get jobS : ", e);
+        throw e;
+    }
+}
+
