@@ -195,7 +195,7 @@ loginBtn.disabled = true;
                 const response = await LoginAdvertiser(email, password);
                 console.log("Response :", response);
                 if (response) {
-
+                    window.sessionStorage.setItem("userId",response.id)
                     showNotification("Login Successfully");
                     loginBtn.innerHTML = `<i
                                 class="fa-solid fa-lock mr-2"></i>Login`;
