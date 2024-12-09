@@ -46,7 +46,7 @@ console.log("all",window.allJobs);
         </span>
       </td>
       <td class="px-2 py-2 md:px-12 md:py-5 border-b border-gray-200 bg-white text-xs md:text-sm">${
-        order.jobActionDescription
+        order.jobCreatedAt
       }</td>
       <td class="px-2 py-2 md:px-12 md:py-5 border-b border-gray-200 bg-white text-xs md:text-sm">
         <a href="../../../HTML/ADMIN/JOB/view-job.html">
