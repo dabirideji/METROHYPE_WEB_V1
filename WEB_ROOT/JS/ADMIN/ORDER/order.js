@@ -8,8 +8,16 @@ function menuClick() {
   sidebar.classList.toggle('hidden');
 }
 
+function formatDate(timestamp) {
+  console.log("stst")
+  const date = new Date(timestamp);
 
+  const day = String(date.getDate()).padStart(2, '0');
+  const month = String(date.getMonth() + 1).padStart(2, '0'); // Months are 0-based
+  const year = date.getFullYear();
 
+  return `${day}-${month}-${year}`;
+}
 // DOM Elements
 const orderTable = document.getElementById('orderTable');
 const paginationInfo = document.getElementById('paginationInfo');
@@ -45,8 +53,8 @@ console.log("all",window.allJobs);
           <span class="relative">${order.jobStatus}</span>
         </span>
       </td>
-      <td class="px-2 py-2 md:px-12 md:py-5 border-b border-gray-200 bg-white text-xs md:text-sm">${
-        order.jobCreatedAt
+      <td class="px-2 py-2 md:px-8 md:py-5 border-b border-gray-200 bg-white text-xs md:text-sm">${
+        formatDate(order.createdAt)
       }</td>
       <td class="px-2 py-2 md:px-12 md:py-5 border-b border-gray-200 bg-white text-xs md:text-sm">
         <a href="../../../HTML/ADMIN/JOB/view-job.html">
