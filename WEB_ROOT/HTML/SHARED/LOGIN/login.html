@@ -150,17 +150,15 @@
 
     <script type="module">
         import { LoginAdvertiser, RegisterAdvertiser, GetAll } from "/WEB_ROOT/UTILITIES/FUNCTION_UTILIITIES/API/apiHelper.js";
-        
 
-        function loadSpinner(elementId,message="loading...")
-        {
-            if(element.trim()=="")
-        {
-            return;
-        }
+
+        function loadSpinner(elementId, message = "loading...") {
+            if (element.trim() == "") {
+                return;
+            }
             var element = document.getElementById(elementId);
-element.innerHTML = `<i class="fa fa-spinner fa-spin mr-2"></i> Loading...`;
-element.disabled = true;
+            element.innerHTML = `<i class="fa fa-spinner fa-spin mr-2"></i> Loading...`;
+            element.disabled = true;
         }
 
 
@@ -169,8 +167,8 @@ element.disabled = true;
         loginForm.addEventListener('submit', async function (event) {
             event.preventDefault();
             var loginBtn = document.getElementById("loginBtn");
-loginBtn.innerHTML = `<i class="fa fa-spinner fa-spin mr-2"></i> Loading...`;
-loginBtn.disabled = true;
+            loginBtn.innerHTML = `<i class="fa fa-spinner fa-spin mr-2"></i> Loading...`;
+            loginBtn.disabled = true;
 
             const email = document.getElementById('email').value;
             const password = document.getElementById('password').value;
@@ -199,13 +197,13 @@ loginBtn.disabled = true;
                     showNotification("Login Successfully");
                     loginBtn.innerHTML = `<i
                                 class="fa-solid fa-lock mr-2"></i>Login`;
-loginBtn.disabled = false;
+                    loginBtn.disabled = false;
 
-setTimeout(()=>{
-    window.location =
-    "/WEB_ROOT/HTML/ADMIN/DASHBOARD/admin-dashboard.html";
-},1000);
-                    
+                    setTimeout(() => {
+                        window.location =
+                            "/WEB_ROOT/HTML/ADMIN/DASHBOARD/admin-dashboard.html";
+                    }, 1000);
+
                 } else {
                     showNotification("Login Failed", "error");
                 }

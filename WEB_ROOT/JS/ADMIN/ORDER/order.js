@@ -8,8 +8,6 @@ function menuClick() {
   sidebar.classList.toggle('hidden');
 }
 
-
-
 // DOM Elements
 const orderTable = document.getElementById('orderTable');
 const paginationInfo = document.getElementById('paginationInfo');
@@ -19,10 +17,9 @@ const nextPageBtn = document.getElementById('nextPage');
 // Display orders for the current page
 async function displayOrders() {
   await window.getOrders();
-  console.log("afteer fethc")
+  console.log('afteer fethc');
 
-
-console.log("all",window.allJobs);
+  console.log('all', window.allJobs);
   const start = (currentPage - 1) * rowsPerPage;
   const end = start + rowsPerPage;
   const currentOrders = window.allJobs.slice(start, end);
@@ -49,11 +46,9 @@ console.log("all",window.allJobs);
         order.jobActionDescription
       }</td>
       <td class="px-2 py-2 md:px-12 md:py-5 border-b border-gray-200 bg-white text-xs md:text-sm">
-        <a href="../../../HTML/ADMIN/JOB/view-job.html">
-          <button class="bg-[#3A57E8] text-white px-2 py-1 md:px-4 md:py-2 rounded-md hover:bg-blue-600">
+          <button type="button" onclick="processJobDetail('${ order.jobId}')" class="bg-[#3A57E8] text-white px-2 py-1 md:px-4 md:py-2 rounded-md hover:bg-blue-600">
              Job Details
           </button>
-        </a>
       </td>
     `;
     orderTable.appendChild(row);
@@ -85,5 +80,12 @@ nextPageBtn.addEventListener('click', () => {
   }
 });
 
-// Initial display after DOM is fully loaded
+function processJobDetail(jobId) {
+  console.log("Function Started", jobId);
+  var job = allJobs.filter((job) => job.jobId == jobId);
+  console.log("Job", job);
+  window.sessionStorage.setItem('job', JSON.stringify(job));
+  window.location.href = `../../../HTML/ADMIN/JOB/view-job.html?jobId=${jobId}`;
+}
 
+// Initial display after DOM is fully loaded
