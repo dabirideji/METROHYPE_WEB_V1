@@ -42,8 +42,8 @@ async function displayOrders() {
           <span class="relative">${order.jobStatus}</span>
         </span>
       </td>
-      <td class="px-2 py-2 md:px-12 md:py-5 border-b border-gray-200 bg-white text-xs md:text-sm">${
-        order.jobActionDescription
+      <td class="px-2 py-2 md:px-8 md:py-5 border-b border-gray-200 bg-white text-xs md:text-sm">${
+        formatDate(order.createdAt)
       }</td>
       <td class="px-2 py-2 md:px-12 md:py-5 border-b border-gray-200 bg-white text-xs md:text-sm">
           <button type="button" onclick="processJobDetail('${ order.jobId}')" class="bg-[#3A57E8] text-white px-2 py-1 md:px-4 md:py-2 rounded-md hover:bg-blue-600">
