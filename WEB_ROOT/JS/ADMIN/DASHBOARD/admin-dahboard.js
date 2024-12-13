@@ -90,3 +90,9 @@ document.addEventListener('DOMContentLoaded', function () {
         intervalId = setInterval(autoSwitchCards, 10000);
     }
 });
+
+
+
+// clipboard functionality
+
+const clipboard = new ClipboardJS('.copy-btn');
