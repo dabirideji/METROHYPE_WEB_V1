@@ -207,7 +207,7 @@
 
     <script type="module">
         import { GetAllJobs } from "/WEB_ROOT/UTILITIES/FUNCTION_UTILIITIES/API/apiHelper.js";
-  window.allJobs={};
+        window.allJobs = {};
         async function getOrders() {
             var response = await GetAllJobs();
             if (response != null) {

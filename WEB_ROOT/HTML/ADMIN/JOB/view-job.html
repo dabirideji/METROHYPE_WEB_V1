@@ -147,11 +147,11 @@
                 <button class="btn hover:opacity-95 text-white text-sm py-2 px-4 rounded-sm flex items-center">
                   <i class="fa fa-briefcase mr-2"></i> Job Details
                 </button>
-                <div class="flex flex-col sm:flex-row justify-between mt-2">
-                  <div class="border border-black w-full sm:w-[70%] mb-2 sm:mb-0">
+                <div  id="jobDetails">
+                  <!-- <div class="border border-black w-full sm:w-[70%] mb-2 sm:mb-0">
                     <div class="px-4">
                       <h3 class="font-bold text-[16px] text-black capitalize">description:</h3>
-                      <p class="capitalize font-bold">zazoo zehhhhh</p>
+                      <p class="capitalize font-bold" id="jobActionDescription">zahhh zozehh</p>
                     </div>
                     <div class="bg-[#ffff00] w-20 text-center text-2xl lowercase rounded-md text-[#00ff00] px-2 py-1 mt-2 mx-4 font-bold ">
                       <p>Yowa</p>
@@ -171,7 +171,7 @@
                       </p>
                       <p class="capitalize font-bold text-white">fee : ₦ 5.00</p>
                     </div>
-                  </div>
+                  </div> -->
                 </div>
               </div>
               <p class="">adsense code</p>
@@ -185,7 +185,21 @@
     </div>
   </div>
 
-  <script src="../../../JS/ADMIN/ORDER/order.js"></script>
+  <script src="../../../JS/ADMIN/JOBS/view-jobs.js"></script>
+  <script src="/WEB_ROOT/UTILITIES/FUNCTION_UTILIITIES/SHARED/NOTY/notification.js"></script>
+  
+  <script type="module">
+    import { GetAllJobs } from "/WEB_ROOT/UTILITIES/FUNCTION_UTILIITIES/API/apiHelper.js";
+    window.allJobs = {};
+    async function getOrders() {
+      var response = await GetAllJobs();
+      if (response != null) {
+        allJobs = response;
+      }
+    }
+    window.getOrders = getOrders;
+    document.addEventListener('DOMContentLoaded', displayOrders);
+  </script>
 </body>
 
 </html>
