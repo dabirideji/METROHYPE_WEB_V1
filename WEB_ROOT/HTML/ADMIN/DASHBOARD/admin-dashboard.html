@@ -14,6 +14,8 @@
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="/node_modules/clipboard/dist/clipboard.min.js"></script>
+    
 </head>
 
 <body>
@@ -263,12 +265,8 @@
                                 <p class="text-md">
                                 <p>Referral Link:</p>
                                 </p>
-                                <a href="#" class="text-gray-600 italics">
-                                    https://metrohyp.com/link/dabirideji
-                                </a><br>
-                                <button
-                                    class="bg-[#26B99A] opacity-80 border border-[#169F85] text-white text-sm py-2 px-4 rounded-lg mt-2">Copy
-                                    Link</button>
+                                <a href="#" id="text-to-copy" class="text-gray-600 italics"> https://metrohyp.com/link/dabirideji</a><br>
+                                <button  data-clipboard-target="#text-to-copy" class="bg-[#26B99A] opacity-80 border border-[#169F85] text-white text-sm py-2 px-4 rounded-lg mt-2 copy-btn">Copy Link</button>
                             </div>
                         </div>
                     </div>
