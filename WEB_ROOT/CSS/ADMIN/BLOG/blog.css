@@ -3,8 +3,9 @@ body {
 }
 
 .content-container {
-  background: radial-gradient(#4fb459ba, #0d68a5fa),
-    url("../../../ASSETS/big_circles.svg");
+  background:
+    radial-gradient(#4fb459ba, #0d68a5fa),
+    url('../../../ASSETS/big_circles.svg');
 }
 
 .btn {
@@ -14,12 +15,10 @@ body {
 .side-bar {
   scrollbar-width: none;
   -ms-overflow-style: none;
-
 }
 
 .side-bar::-webkit-scrollbar {
   display: none;
-
 }
 
 @keyframes nav-down {
