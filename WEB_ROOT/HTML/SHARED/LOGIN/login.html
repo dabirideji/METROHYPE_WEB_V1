@@ -201,10 +201,13 @@
       } from '/WEB_ROOT/UTILITIES/FUNCTION_UTILIITIES/API/apiHelper.js';
 
       function loadSpinner(elementId, message = 'loading...') {
-        if (element.trim() == '') {
+        if (!elementId || elementId.trim() == '') {
           return;
         }
-        var element = document.getElementById(elementId);
+        const element = document.getElementById(elementId);
+        if (!element) {
+          return;
+        }
         element.innerHTML = `<i class="fa fa-spinner fa-spin mr-2"></i> Loading...`;
         element.disabled = true;
       }
@@ -258,7 +261,7 @@
           }
         } catch (error) {
           console.error('Error creating advertiser:', error);
-          alert('Login failed.please try again.');
+          showNotification('Login failed. Please try again.', 'error');
         }
       });
     </script>

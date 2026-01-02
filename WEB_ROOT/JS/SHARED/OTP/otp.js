@@ -14,7 +14,7 @@ otpForm.addEventListener('submit', function (e) {
     errorMsg.classList.remove('hidden');
   } else {
     errorMsg.classList.add('hidden');
-    console.warn('OTP verified successfully!');
+    // OTP verified successfully - in production, this would trigger server validation
   }
 });
 
