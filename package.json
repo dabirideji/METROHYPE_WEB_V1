@@ -103,7 +103,12 @@
     "tailwindcss": "^3.4.13"
   },
   "scripts": {
-    "build": "tailwindcss -i input.css -o ./src/style.css --watch"
+    "build": "tailwindcss -i input.css -o ./src/style.css --watch",
+    "format": "prettier --write \"**/*.{js,html,css,json}\" --ignore-path .prettierignore",
+    "format:check": "prettier --check \"**/*.{js,html,css,json}\" --ignore-path .prettierignore",
+    "lint:js": "eslint \"WEB_ROOT/JS/**/*.js\" \"*.js\"",
+    "lint:css": "stylelint \"WEB_ROOT/CSS/**/*.css\"",
+    "lint": "npm run lint:js && npm run lint:css"
   },
   "keywords": [],
   "author": "",
