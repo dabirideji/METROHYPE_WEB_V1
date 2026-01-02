@@ -1,218 +1,266 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
     <style src="../../../PLUGINS/TAILWIND/tailwind.min.css"></style>
     <script src="../../../PLUGINS/TAILWIND/tailwind.js"></script>
     <script src="../../../PLUGINS/TAILWIND/tailwind-config.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
     <style>
-        @keyframes fade-up {
-            0% {
-                opacity: 0;
-                transform: translateY(100px);
-            }
-
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
+      @keyframes fade-up {
+        0% {
+          opacity: 0;
+          transform: translateY(100px);
         }
 
-        @keyframes nav-down {
-            0% {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
 
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
+      @keyframes nav-down {
+        0% {
+          opacity: 0;
+          transform: translateY(-20px);
         }
 
-        .nav-down {
-            animation: button-down 1.5s ease forwards;
+        100% {
+          opacity: 1;
+          transform: translateY(0);
         }
+      }
 
-        .fade-up {
-            animation: fade-up 1.5s ease-in-out forwards;
-        }
+      .nav-down {
+        animation: button-down 1.5s ease forwards;
+      }
 
-        .picture {
-            animation: fade-up 1.9s ease-in-out forwards;
-        }
+      .fade-up {
+        animation: fade-up 1.5s ease-in-out forwards;
+      }
+
+      .picture {
+        animation: fade-up 1.9s ease-in-out forwards;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="flex flex-col h-[100%] overflow-x-hidden">
-        <header>
-            <nav id="big"
-                class="w-screen bg-white z-50 lg:bg-white h-[10vh] shadow-md shadow-neutral-50 fixed flex flex-row items-center justify-between px-5 lg:justify-around border">
-                <div class="flex items-center space-x-2">
-                    <i class="fa fa-earth text-gray-500"></i>
-                    <a href="/" class="text-gray-700 text-[21px] font-semibold font-[inter]">Metrohyp</a>
-                </div>
+      <header>
+        <nav
+          id="big"
+          class="w-screen bg-white z-50 lg:bg-white h-[10vh] shadow-md shadow-neutral-50 fixed flex flex-row items-center justify-between px-5 lg:justify-around border"
+        >
+          <div class="flex items-center space-x-2">
+            <i class="fa fa-earth text-gray-500"></i>
+            <a
+              href="/"
+              class="text-gray-700 text-[21px] font-semibold font-[inter]"
+              >Metrohyp</a
+            >
+          </div>
 
+          <div
+            class="gap-x-14 lg:flex items-center hidden text-text-color font-normal"
+          >
+            <a href="/" class="hover:text-blue-300">Home</a>
+            <a href="#" class="hover:text-blue-300">Blog</a>
+            <a href="#" class="hover:text-blue-300">API</a>
+            <a href="#" class="hover:text-blue-300">Login</a>
+            <a
+              href="./../../FREELANCER/ONBOARDING/register.html"
+              class="border-[1px] border-gray-700 rounded-3xl px-3 py-1 hover:border-blue-300 hover:text-blue-300"
+              >Freelancer</a
+            >
+            <a
+              href="./../../ADVERTISER/ONBOARDING/register.html"
+              class="border-[1px] border-gray-700 rounded-3xl px-2 py-1 hover:border-blue-300 hover:text-blue-300"
+              >Advertise on Metrohyp</a
+            >
+          </div>
+          <button
+            class="block lg:hidden border-[0.5px] border-stone-300 px-3 py-1"
+            id="menu"
+            aria-label="Toggle menu"
+          >
+            <i class="fas fa-bars text-2xl"></i>
+          </button>
+        </nav>
 
-                <div class="gap-x-14 lg:flex items-center hidden text-text-color font-normal">
-                    <a href="/" class=" hover:text-blue-300">Home</a>
-                    <a href="#" class=" hover:text-blue-300">Blog</a>
-                    <a href="#" class=" hover:text-blue-300">API</a>
-                    <a href="#" class=" hover:text-blue-300">Login</a>
-                    <a href="./../../FREELANCER/ONBOARDING/register.html"
-                        class="border-[1px] border-gray-700 rounded-3xl px-3 py-1  hover:border-blue-300  hover:text-blue-300">Freelancer</a>
-                    <a href="./../../ADVERTISER/ONBOARDING/register.html"
-                        class="border-[1px] border-gray-700 rounded-3xl px-2 py-1  hover:border-blue-300  hover:text-blue-300">Advertise
-                        on Metrohyp</a>
-                </div>
-                <button class=" block lg:hidden border-[0.5px] border-stone-300 px-3 py-1" id="menu"
-                    aria-label="Toggle menu">
-                    <i class="fas fa-bars text-2xl"></i>
-                </button>
-            </nav>
+        <!-- mobile view -->
+        <div
+          class="menu nav-down hidden fixed z-20 w-full shadow-md"
+          id="mobile-nav"
+        >
+          <div
+            class="relative bg-white h-80 flex flex-col flex-grow mt-14 gap-y-6 px-4 py-6"
+          >
+            <a href="/" class="hover:text-blue-300">Home</a>
+            <a href="/" class="hover:text-blue-300">Blog</a>
+            <a href="/" class="hover:text-blue-300">API</a>
+            <a href="/" class="hover:text-blue-300">Login</a>
+            <button
+              class="hover:text-blue-300 border-[1px] border-gray-700 rounded-3xl px-3 py-1 w-72"
+            >
+              Freelance
+            </button>
+            <button
+              class="hover:text-blue-300 border-[1px] border-gray-700 rounded-3xl px-2 py-1 w-72"
+            >
+              Advertise on Metrohyp
+            </button>
+          </div>
+        </div>
+      </header>
 
-            <!-- mobile view -->
-            <div class="menu nav-down hidden fixed z-20 w-full shadow-md" id="mobile-nav">
-                <div class="relative bg-white h-80 flex flex-col flex-grow mt-14 gap-y-6 px-4 py-6">
-                    <a href="/" class=" hover:text-blue-300">Home</a>
-                    <a href="/" class=" hover:text-blue-300">Blog</a>
-                    <a href="/" class=" hover:text-blue-300">API</a>
-                    <a href="/" class=" hover:text-blue-300">Login</a>
-                    <button
-                        class="hover:text-blue-300 border-[1px] border-gray-700 rounded-3xl px-3 py-1 w-72">Freelance</button>
-                    <button
-                        class="hover:text-blue-300 border-[1px] border-gray-700 rounded-3xl px-2 py-1 w-72">Advertise on
-                        Metrohyp</button>
-                </div>
+      <main
+        class="flex flex-col h-[70vh] mt-28 md:mt-32 px-4 md:flex-row sm:px-9 container mx-[auto] max-w-[1200px]"
+      >
+        <div class="flex flex-col sm:container sm:mx-auto items-center fade-up">
+          <h1 class="text-3xl leading-4 font-inter text-center mb-10">
+            Welcome back!
+          </h1>
+          <p
+            class="w-12 h-[2 px] mx-auto bg-gradient-to-r from-blue-100 to-blue-500"
+          ></p>
+
+          <form class="fade-up space-y-4 mt-6" id="loginForm">
+            <input
+              type="text"
+              placeholder="Email/Username/Phone number"
+              id="email"
+              name="email"
+              class="w-[100%] h-10 rounded-md border-[1px] p-3 text-stone-600 border-stone-300 outline-blue-700"
+            />
+
+            <input
+              type="password"
+              placeholder="Password"
+              id="password"
+              name="password"
+              class="w-[100%] h-10 rounded-md border-[1px] p-3 border border-stone-300 outline-blue-700"
+            />
+            <div class="flex justify-center">
+              <button
+                id="loginBtn"
+                class="fade-up w-full md:w-[70%] h-10 rounded-md p-2 bg-stone-200 mt-4 text-center col-span-2"
+              >
+                <i class="fa-solid fa-lock mr-2"></i>Login
+              </button>
             </div>
-        </header>
-
-        <main
-            class="flex flex-col h-[70vh] mt-28 md:mt-32 px-4 md:flex-row sm:px-9  container mx-[auto] max-w-[1200px]">
-            <div class="flex flex-col sm:container sm:mx-auto items-center  fade-up">
-                <h1 class="text-3xl leading-4 font-inter text-center mb-10">Welcome back!</h1>
-                <p class="w-12 h-[2 px] mx-auto bg-gradient-to-r from-blue-100 to-blue-500"></p>
-
-                <form class="fade-up space-y-4 mt-6" id="loginForm">
-                    <input type="text" placeholder="Email/Username/Phone number" id="email" name="email" class="w-[100%] h-10 rounded-md border-[1px] p-3 
-                         text-stone-600 border-stone-300 outline-blue-700">
-
-                    <input type="password" placeholder="Password" id="password" name="password"
-                        class="w-[100%] h-10 rounded-md border-[1px] p-3 border border-stone-300 outline-blue-700">
-                    <div class="flex justify-center">
-                        <button id="loginBtn"
-                            class=" fade-up w-full md:w-[70%] h-10 rounded-md p-2 bg-stone-200 mt-4 text-center col-span-2"><i
-                                class="fa-solid fa-lock mr-2"></i>Login</button>
-                    </div>
-                    <hr>
-                    <div class="flex flex-col space-y-5 text-[15px] text-blue-500 font-[inter] text-center">
-                        <a href="#">Forgot password? Click here to reset your password</a>
-                        <hr>
-                        <a href="#">Don't have an account? Register Here</a>
-                        <hr>
-                        <a href="#">Or will you like to make money on Metrohyp? Click Here</a>
-                    </div>
-                </form>
-
+            <hr />
+            <div
+              class="flex flex-col space-y-5 text-[15px] text-blue-500 font-[inter] text-center"
+            >
+              <a href="#">Forgot password? Click here to reset your password</a>
+              <hr />
+              <a href="#">Don't have an account? Register Here</a>
+              <hr />
+              <a href="#"
+                >Or will you like to make money on Metrohyp? Click Here</a
+              >
             </div>
-        </main>
+          </form>
+        </div>
+      </main>
 
-        <footer class="bg-slate-800 text-white w-screen h-[20vh] mt-[8%] md:mt-[3%] flex items-center justify-center">
-            <p class="text-[16px]">© 2020 Metrohyp. All rights reserved.</p>
-        </footer>
+      <footer
+        class="bg-slate-800 text-white w-screen h-[20vh] mt-[8%] md:mt-[3%] flex items-center justify-center"
+      >
+        <p class="text-[16px]">© 2020 Metrohyp. All rights reserved.</p>
+      </footer>
     </div>
-
 
     <!-- JavaScript for Mobile Menu -->
     <script>
-        const menuBtn = document.getElementById('menu');
-        const mobileMenu = document.getElementById('mobile-nav');
+      const menuBtn = document.getElementById('menu');
+      const mobileMenu = document.getElementById('mobile-nav');
 
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-            big.classList.toggle('shadow-md');
-
-        });
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+        big.classList.toggle('shadow-md');
+      });
     </script>
     <script src="/WEB_ROOT/UTILITIES/FUNCTION_UTILIITIES/SHARED/NOTY/notification.js"></script>
 
-
-
     <script type="module">
-        import { LoginAdvertiser, RegisterAdvertiser, GetAll } from "/WEB_ROOT/UTILITIES/FUNCTION_UTILIITIES/API/apiHelper.js";
+      import {
+        LoginAdvertiser,
+        RegisterAdvertiser,
+        GetAll,
+      } from '/WEB_ROOT/UTILITIES/FUNCTION_UTILIITIES/API/apiHelper.js';
 
-
-        function loadSpinner(elementId, message = "loading...") {
-            if (element.trim() == "") {
-                return;
-            }
-            var element = document.getElementById(elementId);
-            element.innerHTML = `<i class="fa fa-spinner fa-spin mr-2"></i> Loading...`;
-            element.disabled = true;
+      function loadSpinner(elementId, message = 'loading...') {
+        if (element.trim() == '') {
+          return;
         }
+        var element = document.getElementById(elementId);
+        element.innerHTML = `<i class="fa fa-spinner fa-spin mr-2"></i> Loading...`;
+        element.disabled = true;
+      }
 
+      // Register Click function when page fully loaded
+      const loginForm = document.getElementById('loginForm');
+      loginForm.addEventListener('submit', async function (event) {
+        event.preventDefault();
+        var loginBtn = document.getElementById('loginBtn');
+        loginBtn.innerHTML = `<i class="fa fa-spinner fa-spin mr-2"></i> Loading...`;
+        loginBtn.disabled = true;
 
-        // Register Click function when page fully loaded 
-        const loginForm = document.getElementById('loginForm');
-        loginForm.addEventListener('submit', async function (event) {
-            event.preventDefault();
-            var loginBtn = document.getElementById("loginBtn");
-            loginBtn.innerHTML = `<i class="fa fa-spinner fa-spin mr-2"></i> Loading...`;
-            loginBtn.disabled = true;
-
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('password').value;
-            //  validate email, phonenumber or username
-            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            const phonePattern = /^\+?[1-9]\d{1,14}$/;
-            const usenamePattern = /^[a-zA-Z0-9_]{3,}$/;
-            if (!emailPattern.test(email) && !phonePattern.test(email)
-                && !usenamePattern.test(email)) {
-                showNotification("Invalid Email or Phone Number", "error");
-                return;
-            }
-            // PASSWORD VALIDATION NOT NECCESSARY IN THIS CONTEXT
-            // //  validate password
-            //   const passwordPattern =
-            //    /^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*(),.?":{}|<>]).{6,}$/
-            // if(!passwordPattern.test(password)){
-            //     showNotification("password must be at least 6 characters long and contain at least one uppercase letter,one number and one special character","error");
-            //     return;
-            // }
-            try {
-                const response = await LoginAdvertiser(email, password);
-                console.log("Response :", response);
-                if (response) {
-                    window.sessionStorage.setItem("userId",response.id)
-                    showNotification("Login Successfully");
-                    loginBtn.innerHTML = `<i
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+        //  validate email, phonenumber or username
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const phonePattern = /^\+?[1-9]\d{1,14}$/;
+        const usenamePattern = /^[a-zA-Z0-9_]{3,}$/;
+        if (
+          !emailPattern.test(email) &&
+          !phonePattern.test(email) &&
+          !usenamePattern.test(email)
+        ) {
+          showNotification('Invalid Email or Phone Number', 'error');
+          return;
+        }
+        // PASSWORD VALIDATION NOT NECCESSARY IN THIS CONTEXT
+        // //  validate password
+        //   const passwordPattern =
+        //    /^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*(),.?":{}|<>]).{6,}$/
+        // if(!passwordPattern.test(password)){
+        //     showNotification("password must be at least 6 characters long and contain at least one uppercase letter,one number and one special character","error");
+        //     return;
+        // }
+        try {
+          const response = await LoginAdvertiser(email, password);
+          console.log('Response :', response);
+          if (response) {
+            window.sessionStorage.setItem('userId', response.id);
+            showNotification('Login Successfully');
+            loginBtn.innerHTML = `<i
                                 class="fa-solid fa-lock mr-2"></i>Login`;
-                    loginBtn.disabled = false;
+            loginBtn.disabled = false;
 
-                    setTimeout(() => {
-                        window.location =
-                            "/WEB_ROOT/HTML/ADMIN/DASHBOARD/admin-dashboard.html";
-                    }, 1000);
-
-                } else {
-                    showNotification("Login Failed", "error");
-                }
-            } catch (error) {
-                console.error("Error creating advertiser:", error);
-                alert('Login failed.please try again.');
-            }
-        });
+            setTimeout(() => {
+              window.location =
+                '/WEB_ROOT/HTML/ADMIN/DASHBOARD/admin-dashboard.html';
+            }, 1000);
+          } else {
+            showNotification('Login Failed', 'error');
+          }
+        } catch (error) {
+          console.error('Error creating advertiser:', error);
+          alert('Login failed.please try again.');
+        }
+      });
     </script>
-</body>
-
+  </body>
 </html>

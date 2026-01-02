@@ -6,12 +6,12 @@ async function displayOrders() {
 
   var currentJob = window.sessionStorage.getItem('job');
   currentJob = JSON.parse(currentJob);
-    
+
   particularJob = currentJob;
-  
+
   particularJob.forEach((job) => {
-      const jobDiv = document.createElement('div');
-      jobDiv.innerHTML = `
+    const jobDiv = document.createElement('div');
+    jobDiv.innerHTML = `
         <div class="flex flex-col sm:flex-row justify-between mt-2">
             <div class="border border-black w-full sm:w-[70%] mb-2 sm:mb-0">
             <div class="px-4">
@@ -38,6 +38,5 @@ async function displayOrders() {
         </div>
     `;
     jobDetails.appendChild(jobDiv);
-  })
-    
+  });
 }

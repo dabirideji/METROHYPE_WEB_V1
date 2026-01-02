@@ -2,7 +2,6 @@ const sidebar = document.getElementById('sidebar');
 const overlay = document.getElementById('overlay');
 const sidebarToggle = document.getElementById('sidebarToggle');
 
-
 sidebarToggle.addEventListener('click', () => {
   if (sidebar.classList.contains('-translate-x-full')) {
     sidebar.classList.remove('-translate-x-full');
@@ -12,4 +11,3 @@ sidebarToggle.addEventListener('click', () => {
     overlay.classList.add('hidden');
   }
 });
-

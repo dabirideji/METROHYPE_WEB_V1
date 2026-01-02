@@ -1,10 +1,11 @@
 body {
-  font-family: Helvetica, Arial,sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
 }
 
 .content-container {
-  background: radial-gradient(#4fb459ba, #0d68a5fa),
-    url("../../../ASSETS/big_circles.svg");
+  background:
+    radial-gradient(#4fb459ba, #0d68a5fa),
+    url('../../../ASSETS/big_circles.svg');
 }
 
 .btn {
@@ -14,12 +15,10 @@ body {
 .side-bar {
   scrollbar-width: none;
   -ms-overflow-style: none;
-  
 }
 
 .side-bar::-webkit-scrollbar {
   display: none;
-  
 }
 
 @keyframes nav-down {
@@ -33,7 +32,6 @@ body {
     transform: translateX(0);
   }
 }
-
 
 .fade-up {
   animation: fade-up 1.5s ease-in-out forwards;

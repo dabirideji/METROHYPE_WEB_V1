@@ -1,154 +1,219 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>View Job</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <script src="./../../../PLUGINS/TAILWIND/tailwind-v2.js"></script>
-  <script src="./../../../PLUGINS/TAILWIND/tailwind.js"></script>
-  <script src="./../../../PLUGINS/TAILWIND/tailwind.min.css"></script>
-  <link rel="stylesheet" href="./../../../CSS/ADMIN/admin.css">
-  <link rel="stylesheet" href="./../../../PLUGINS/IGNORED-CSS/admin-ignored.css">
-</head>
-<body class="bg-[#2a3f541a]">
-  <div class="">
-    <!-- Side bar -->
-    <aside
-      class="hidden side-bar lg:block w-[40vw] md:w-[35vw] lg:w-[20vw] h-[100vh] fixed bg-[#ffffff] px-4 py-4 z-50 "
-      id="sidebar">
-      <a href="../../ADMIN/DASHBOARD/admin-dashboard.html" class="flex items-center lg:ml-4 space-x-1">
-        <img class="w-10 h-10 md:w-12 md:h-12 lg:w-8 lg:h-8 mx-auto lg:mx-0" src="../../../ASSETS/metrohyp-logo.png"
-          alt="logo">
-        <h1 class="hidden lg:block leading-2 text-3xl font-[inter] text-[#242424]">Metrohyp</h1>
-      </a>
-
-      <div class="mt-10 space-y-3 md:space-y-14 lg:pb-20 h-[100%] overflow-y-auto">
-        <div class="space-y-3">
-          <a href="../../ADMIN/DASHBOARD/admin-dashboard.html"
-            class="w-full px-4 py-2 hover:bg-[#3A57E8] text-[15px] lg:text-[16px] font-[inter] font-[500] hover:text-white text-[#242424] flex md:flex-row flex-col items-center space-y-1 md:space-y-0 md:space-x-1">
-            <i class="fa-solid fa-table-cells-large"></i>
-            <p class="">Dashboard</p>
-          </a>
-
-          <a href="../../ADMIN/JOB/CompletedJobs.html"
-            class="w-full px-4 py-2 hover:bg-[#3A57E8] text-[15px] lg:text-[16px] font-[inter] font-[500] hover:text-white text-[#242424] flex md:flex-row flex-col items-center text-center space-y-3 md:space-y-0 md:space-x-1">
-            <i class="fa fa-check"></i>
-            <p>Complete Jobs</p>
-          </a>
-
-           <a href="../../ADVERTISER/TRANSACTIONS/view-user-transaction.html"
-
-            class="w-full px-4 py-2 hover:bg-[#3A57E8] text-[15px] lg:text-[16px] font-[inter] font-[500] hover:text-white text-[#242424] flex md:flex-row flex-col items-center text-center space-y-3 md:space-y-0 md:space-x-1">
-            <i class="fa fa-chart-simple"></i>
-            <p>My Transactions</p>
-          </a>
-        </div>
-
-        <div class="space-y-3">
-          <a href="../../ADMIN/ORDER/order.html"
-            class="w-full px-4 py-2 bg-[#3A57E8] text-[15px] lg:text-[16px] font-[inter] font-[500] text-white text-[#242424] flex md:flex-row flex-col items-center space-y-3 md:space-y-0 md:space-x-1">
-            <i class="fa fa-briefcase"></i>
-            <p>Orders</p>
-          </a>
-
-          <a href="../../ADMIN/WALLET/load-wallet.html"
-            class="w-full px-4 py-2 hover:bg-[#3A57E8] text-[15px] lg:text-[16px] font-[inter] font-[500] hover:text-white text-[#242424] flex md:flex-row flex-col items-center space-y-3 md:space-y-0 md:space-x-1">
-            <i class="fa fa-credit-card"></i>
-            <p>Load Wallet</p>
-          </a>
-        </div>
-
-        <a href="../../ADMIN/BLOGS/blog.html"
-          class="w-full px-4 py-2 hover:bg-[#3A57E8] text-[15px] lg:text-[16px] font-[inter] font-[500] hover:text-white text-[#242424] flex md:flex-row flex-col items-center space-y-3 md:space-y-0 md:space-x-1">
-          <i class="fa-solid fa-table-cells"></i>
-          <p>Blog</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>View Job</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="./../../../PLUGINS/TAILWIND/tailwind-v2.js"></script>
+    <script src="./../../../PLUGINS/TAILWIND/tailwind.js"></script>
+    <script src="./../../../PLUGINS/TAILWIND/tailwind.min.css"></script>
+    <link rel="stylesheet" href="./../../../CSS/ADMIN/admin.css" />
+    <link
+      rel="stylesheet"
+      href="./../../../PLUGINS/IGNORED-CSS/admin-ignored.css"
+    />
+  </head>
+  <body class="bg-[#2a3f541a]">
+    <div class="">
+      <!-- Side bar -->
+      <aside
+        class="hidden side-bar lg:block w-[40vw] md:w-[35vw] lg:w-[20vw] h-[100vh] fixed bg-[#ffffff] px-4 py-4 z-50"
+        id="sidebar"
+      >
+        <a
+          href="../../ADMIN/DASHBOARD/admin-dashboard.html"
+          class="flex items-center lg:ml-4 space-x-1"
+        >
+          <img
+            class="w-10 h-10 md:w-12 md:h-12 lg:w-8 lg:h-8 mx-auto lg:mx-0"
+            src="../../../ASSETS/metrohyp-logo.png"
+            alt="logo"
+          />
+          <h1
+            class="hidden lg:block leading-2 text-3xl font-[inter] text-[#242424]"
+          >
+            Metrohyp
+          </h1>
         </a>
 
-        <div class="space-y-3">
+        <div
+          class="mt-10 space-y-3 md:space-y-14 lg:pb-20 h-[100%] overflow-y-auto"
+        >
+          <div class="space-y-3">
+            <a
+              href="../../ADMIN/DASHBOARD/admin-dashboard.html"
+              class="w-full px-4 py-2 hover:bg-[#3A57E8] text-[15px] lg:text-[16px] font-[inter] font-[500] hover:text-white text-[#242424] flex md:flex-row flex-col items-center space-y-1 md:space-y-0 md:space-x-1"
+            >
+              <i class="fa-solid fa-table-cells-large"></i>
+              <p class="">Dashboard</p>
+            </a>
 
-          <a href="../../SHARED/VIEW ACCOUNT/view-account.html"
+            <a
+              href="../../ADMIN/JOB/CompletedJobs.html"
+              class="w-full px-4 py-2 hover:bg-[#3A57E8] text-[15px] lg:text-[16px] font-[inter] font-[500] hover:text-white text-[#242424] flex md:flex-row flex-col items-center text-center space-y-3 md:space-y-0 md:space-x-1"
+            >
+              <i class="fa fa-check"></i>
+              <p>Complete Jobs</p>
+            </a>
 
-            class="w-full px-4 py-2 hover:bg-[#3A57E8] text-[15px] lg:text-[16px] font-[inter] font-[500] hover:text-white text-[#242424] flex md:flex-row flex-col items-center space-y-3 md:space-y-0 md:space-x-1">
-            <i class="fa-solid fa-user"></i>
-            <p>My Account</p>
+            <a
+              href="../../ADVERTISER/TRANSACTIONS/view-user-transaction.html"
+              class="w-full px-4 py-2 hover:bg-[#3A57E8] text-[15px] lg:text-[16px] font-[inter] font-[500] hover:text-white text-[#242424] flex md:flex-row flex-col items-center text-center space-y-3 md:space-y-0 md:space-x-1"
+            >
+              <i class="fa fa-chart-simple"></i>
+              <p>My Transactions</p>
+            </a>
+          </div>
+
+          <div class="space-y-3">
+            <a
+              href="../../ADMIN/ORDER/order.html"
+              class="w-full px-4 py-2 bg-[#3A57E8] text-[15px] lg:text-[16px] font-[inter] font-[500] text-white text-[#242424] flex md:flex-row flex-col items-center space-y-3 md:space-y-0 md:space-x-1"
+            >
+              <i class="fa fa-briefcase"></i>
+              <p>Orders</p>
+            </a>
+
+            <a
+              href="../../ADMIN/WALLET/load-wallet.html"
+              class="w-full px-4 py-2 hover:bg-[#3A57E8] text-[15px] lg:text-[16px] font-[inter] font-[500] hover:text-white text-[#242424] flex md:flex-row flex-col items-center space-y-3 md:space-y-0 md:space-x-1"
+            >
+              <i class="fa fa-credit-card"></i>
+              <p>Load Wallet</p>
+            </a>
+          </div>
+
+          <a
+            href="../../ADMIN/BLOGS/blog.html"
+            class="w-full px-4 py-2 hover:bg-[#3A57E8] text-[15px] lg:text-[16px] font-[inter] font-[500] hover:text-white text-[#242424] flex md:flex-row flex-col items-center space-y-3 md:space-y-0 md:space-x-1"
+          >
+            <i class="fa-solid fa-table-cells"></i>
+            <p>Blog</p>
           </a>
 
-          <a href="#"
-            class="w-full px-4 py-2 hover:bg-[#3A57E8] text-[15px] lg:text-[16px] font-[inter] font-[500] hover:text-white text-[#242424] flex md:flex-row flex-col items-center space-y-3 md:space-y-0 md:space-x-1">
-            <i class="fa-solid fa-users"></i>
-            <p>My Referrals</p>
-          </a>
+          <div class="space-y-3">
+            <a
+              href="../../SHARED/VIEW ACCOUNT/view-account.html"
+              class="w-full px-4 py-2 hover:bg-[#3A57E8] text-[15px] lg:text-[16px] font-[inter] font-[500] hover:text-white text-[#242424] flex md:flex-row flex-col items-center space-y-3 md:space-y-0 md:space-x-1"
+            >
+              <i class="fa-solid fa-user"></i>
+              <p>My Account</p>
+            </a>
 
-          <a href="#"
-            class="flex w-full justify-between px-4 py-2 hover:bg-[#3A57E8] text-[15px] lg:text-[16px] font-[inter] font-[500] hover:text-white text-[#242424] flex md:flex-row flex-col items-center space-y-3 md:space-y-0 md:space-x-1">
-            <div class="flex md:flex-row flex-col items-center  md:space-y-0 md:space-x-1">
-              <i class="fa-solid fa-gamepad"></i>
-              <p>Gaming</p>
-            </div>
-            <p class="text-[13px] text-center px-2 bg-red-500 text-white rounded-[5px]">Coming Soon</p>
-          </a>
+            <a
+              href="#"
+              class="w-full px-4 py-2 hover:bg-[#3A57E8] text-[15px] lg:text-[16px] font-[inter] font-[500] hover:text-white text-[#242424] flex md:flex-row flex-col items-center space-y-3 md:space-y-0 md:space-x-1"
+            >
+              <i class="fa-solid fa-users"></i>
+              <p>My Referrals</p>
+            </a>
 
-          <a href="#"
-            class="w-full px-4 py-2 hover:bg-[#3A57E8] text-[15px] lg:text-[16px] font-[inter] font-[500] hover:text-white text-[#242424] flex md:flex-row flex-col items-center space-y-3 md:space-y-0 md:space-x-1">
-            <i class="fa-solid fa-right-from-bracket"></i>
-            <p>Log Out</p>
-          </a>
-        </div>
-      </div>
-    </aside>
-
-
-    <div class="lg:float-right">
-      <!-- Navbar -->
-      <nav class="w-[100vw] lg:w-[80vw] h-[10vh] md:h-[8vh] lg:h-[10vh] bg-[#ffffff] px-4 fixed lg:static z-50">
-        <div class="flex float-right">
-
-           <a href="../../SHARED/VIEW ACCOUNT/view-account.html"
-
-            class="w-[100%] h-16 md:h-[6vh] md:mt-2 lg:h-[7vh] lg:mt-2 hover:bg-gray-200 cursor-pointer px-2  md:px-4 flex items-center md:space-x-2">
-            <img class="w-8 h-8 cursor-pointer" src="../../../ASSETS/user.svg" alt="user">
-            <div class="flex font-[inter] text-gray-700 font-[500]">
-              <p class="text-md ">
-                Hi,
+            <a
+              href="#"
+              class="flex w-full justify-between px-4 py-2 hover:bg-[#3A57E8] text-[15px] lg:text-[16px] font-[inter] font-[500] hover:text-white text-[#242424] flex md:flex-row flex-col items-center space-y-3 md:space-y-0 md:space-x-1"
+            >
+              <div
+                class="flex md:flex-row flex-col items-center md:space-y-0 md:space-x-1"
+              >
+                <i class="fa-solid fa-gamepad"></i>
+                <p>Gaming</p>
+              </div>
+              <p
+                class="text-[13px] text-center px-2 bg-red-500 text-white rounded-[5px]"
+              >
+                Coming Soon
               </p>
-              <p class="font-[600]">Uthman Dabiri</p>
-            </div>
-          </a>
-          <div class="w-12 h-16 md:h-[6vh] lg:h-[7vh] md:mt-2 lg:mt-2 cursor-pointer bg-gray-200 py-[15px]"
-            onclick="menuClick()" id="menu">
-            <img class="w-6 h-6 mx-auto" src="../../../ASSETS/menu.png" alt="menu">
+            </a>
+
+            <a
+              href="#"
+              class="w-full px-4 py-2 hover:bg-[#3A57E8] text-[15px] lg:text-[16px] font-[inter] font-[500] hover:text-white text-[#242424] flex md:flex-row flex-col items-center space-y-3 md:space-y-0 md:space-x-1"
+            >
+              <i class="fa-solid fa-right-from-bracket"></i>
+              <p>Log Out</p>
+            </a>
           </div>
         </div>
-      </nav>
+      </aside>
 
-      <!-- Main content -->
-      <section class="w-[100vw] lg:w-[80vw] space-y-8 h-auto pb-20 font-[inter] pt-24 md:pt-8 z-0 px-4 lg:px-10">
-        <div>
-          <a href="#" class="flex items-center space-x-1 text-2xl font-[600] text-gray-700">
-            <i class="fa fa-briefcase"></i>
-            <p>View Jobs</p>
-          </a>
-        </div>
-
-        <div class="w-full py-6 px-4 md:p-6 bg-white mt-4">
-          <form action="">
-            <div class="flex space-x-1 items-center justify-end my-6">
-              <label class="text-lg" for="Search">Search:</label>
-              <input class="border border-gray-500 outline-none pl-4 rounded-md w-[250px] h-[35px]" type="search"
-                name="" id="">
+      <div class="lg:float-right">
+        <!-- Navbar -->
+        <nav
+          class="w-[100vw] lg:w-[80vw] h-[10vh] md:h-[8vh] lg:h-[10vh] bg-[#ffffff] px-4 fixed lg:static z-50"
+        >
+          <div class="flex float-right">
+            <a
+              href="../../SHARED/VIEW ACCOUNT/view-account.html"
+              class="w-[100%] h-16 md:h-[6vh] md:mt-2 lg:h-[7vh] lg:mt-2 hover:bg-gray-200 cursor-pointer px-2 md:px-4 flex items-center md:space-x-2"
+            >
+              <img
+                class="w-8 h-8 cursor-pointer"
+                src="../../../ASSETS/user.svg"
+                alt="user"
+              />
+              <div class="flex font-[inter] text-gray-700 font-[500]">
+                <p class="text-md">Hi,</p>
+                <p class="font-[600]">Uthman Dabiri</p>
+              </div>
+            </a>
+            <div
+              class="w-12 h-16 md:h-[6vh] lg:h-[7vh] md:mt-2 lg:mt-2 cursor-pointer bg-gray-200 py-[15px]"
+              onclick="menuClick()"
+              id="menu"
+            >
+              <img
+                class="w-6 h-6 mx-auto"
+                src="../../../ASSETS/menu.png"
+                alt="menu"
+              />
             </div>
-          </form>
+          </div>
+        </nav>
+
+        <!-- Main content -->
+        <section
+          class="w-[100vw] lg:w-[80vw] space-y-8 h-auto pb-20 font-[inter] pt-24 md:pt-8 z-0 px-4 lg:px-10"
+        >
           <div>
-            <p class="">adsense code</p>
-            <div class=" mt- bg-white p-[20px]">
-            
-              <div class="">
-                <button class="btn hover:opacity-95 text-white text-sm py-2 px-4 rounded-sm flex items-center">
-                  <i class="fa fa-briefcase mr-2"></i> Job Details
-                </button>
-                <div  id="jobDetails">
-                  <!-- <div class="border border-black w-full sm:w-[70%] mb-2 sm:mb-0">
+            <a
+              href="#"
+              class="flex items-center space-x-1 text-2xl font-[600] text-gray-700"
+            >
+              <i class="fa fa-briefcase"></i>
+              <p>View Jobs</p>
+            </a>
+          </div>
+
+          <div class="w-full py-6 px-4 md:p-6 bg-white mt-4">
+            <form action="">
+              <div class="flex space-x-1 items-center justify-end my-6">
+                <label class="text-lg" for="Search">Search:</label>
+                <input
+                  class="border border-gray-500 outline-none pl-4 rounded-md w-[250px] h-[35px]"
+                  type="search"
+                  name=""
+                  id=""
+                />
+              </div>
+            </form>
+            <div>
+              <p class="">adsense code</p>
+              <div class="mt- bg-white p-[20px]">
+                <div class="">
+                  <button
+                    class="btn hover:opacity-95 text-white text-sm py-2 px-4 rounded-sm flex items-center"
+                  >
+                    <i class="fa fa-briefcase mr-2"></i> Job Details
+                  </button>
+                  <div id="jobDetails">
+                    <!-- <div class="border border-black w-full sm:w-[70%] mb-2 sm:mb-0">
                     <div class="px-4">
                       <h3 class="font-bold text-[16px] text-black capitalize">description:</h3>
                       <p class="capitalize font-bold" id="jobActionDescription">zahhh zozehh</p>
@@ -172,34 +237,30 @@
                       <p class="capitalize font-bold text-white">fee : ₦ 5.00</p>
                     </div>
                   </div> -->
+                  </div>
                 </div>
+                <p class="">adsense code</p>
               </div>
-              <p class="">adsense code</p>
             </div>
           </div>
-        </div>
-
-
-      </section>
-
+        </section>
+      </div>
     </div>
-  </div>
 
-  <script src="../../../JS/ADMIN/JOBS/view-jobs.js"></script>
-  <script src="/WEB_ROOT/UTILITIES/FUNCTION_UTILIITIES/SHARED/NOTY/notification.js"></script>
-  
-  <script type="module">
-    import { GetAllJobs } from "/WEB_ROOT/UTILITIES/FUNCTION_UTILIITIES/API/apiHelper.js";
-    window.allJobs = {};
-    async function getOrders() {
-      var response = await GetAllJobs();
-      if (response != null) {
-        allJobs = response;
+    <script src="../../../JS/ADMIN/JOBS/view-jobs.js"></script>
+    <script src="/WEB_ROOT/UTILITIES/FUNCTION_UTILIITIES/SHARED/NOTY/notification.js"></script>
+
+    <script type="module">
+      import { GetAllJobs } from '/WEB_ROOT/UTILITIES/FUNCTION_UTILIITIES/API/apiHelper.js';
+      window.allJobs = {};
+      async function getOrders() {
+        var response = await GetAllJobs();
+        if (response != null) {
+          allJobs = response;
+        }
       }
-    }
-    window.getOrders = getOrders;
-    document.addEventListener('DOMContentLoaded', displayOrders);
-  </script>
-</body>
-
+      window.getOrders = getOrders;
+      document.addEventListener('DOMContentLoaded', displayOrders);
+    </script>
+  </body>
 </html>
